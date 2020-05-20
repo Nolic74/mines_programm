@@ -20,3 +20,14 @@ C:\Users\Nolic\source\repos\new\MinesProgram\obj\Debug\MinesProgram.csproj.CoreC
 C:\Users\Nolic\source\repos\new\MinesProgram\obj\Debug\MinesProgram.csproj.CopyComplete
 C:\Users\Nolic\source\repos\new\MinesProgram\obj\Debug\MinesProgram.exe
 C:\Users\Nolic\source\repos\new\MinesProgram\obj\Debug\MinesProgram.pdb
+C:\Users\Nolic\source\repos\new v2.0\MinesProgram\obj\Debug\MinesProgram.csprojAssemblyReference.cache
+C:\Users\Nolic\source\repos\new v2.0\MinesProgram\obj\Debug\MinesProgram.Form1.resources
+C:\Users\Nolic\source\repos\new v2.0\MinesProgram\obj\Debug\MinesProgram.Properties.Resources.resources
+C:\Users\Nolic\source\repos\new v2.0\MinesProgram\obj\Debug\MinesProgram.csproj.GenerateResource.cache
+C:\Users\Nolic\source\repos\new v2.0\MinesProgram\obj\Debug\MinesProgram.csproj.CoreCompileInputs.cache
+C:\Users\Nolic\source\repos\new v2.0\MinesProgram\obj\Debug\MinesProgram.exe
+C:\Users\Nolic\source\repos\new v2.0\MinesProgram\obj\Debug\MinesProgram.pdb
+C:\Users\Nolic\source\repos\new v2.0\MinesProgram\bin\Debug\MinesProgram.exe.config
+C:\Users\Nolic\source\repos\new v2.0\MinesProgram\bin\Debug\MinesProgram.exe
+C:\Users\Nolic\source\repos\new v2.0\MinesProgram\bin\Debug\MinesProgram.pdb
+C:\Users\Nolic\source\repos\new v2.0\MinesProgram\obj\Debug\MinesProgram.csproj.CopyComplete

@@ -41,6 +41,8 @@
             this.button2 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.linkLabel1 = new System.Windows.Forms.LinkLabel();
+            this.label8 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
@@ -56,6 +58,8 @@
             this.richTextBox1 = new System.Windows.Forms.RichTextBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label2 = new System.Windows.Forms.Label();
+            this.label9 = new System.Windows.Forms.Label();
+            this.textBox3 = new System.Windows.Forms.TextBox();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -65,6 +69,8 @@
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.textBox3);
+            this.panel1.Controls.Add(this.label9);
             this.panel1.Controls.Add(this.button8);
             this.panel1.Controls.Add(this.button7);
             this.panel1.Controls.Add(this.label1);
@@ -130,6 +136,7 @@
             // 
             // button11
             // 
+            this.button11.Enabled = false;
             this.button11.FlatAppearance.BorderSize = 0;
             this.button11.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button11.Image = ((System.Drawing.Image)(resources.GetObject("button11.Image")));
@@ -138,6 +145,7 @@
             this.button11.Size = new System.Drawing.Size(40, 29);
             this.button11.TabIndex = 2;
             this.button11.UseVisualStyleBackColor = true;
+            this.button11.Visible = false;
             this.button11.Click += new System.EventHandler(this.button11_Click);
             // 
             // button5
@@ -202,6 +210,8 @@
             // 
             // panel3
             // 
+            this.panel3.Controls.Add(this.linkLabel1);
+            this.panel3.Controls.Add(this.label8);
             this.panel3.Controls.Add(this.label7);
             this.panel3.Controls.Add(this.label5);
             this.panel3.Controls.Add(this.label4);
@@ -212,14 +222,35 @@
             this.panel3.Size = new System.Drawing.Size(231, 410);
             this.panel3.TabIndex = 2;
             // 
+            // linkLabel1
+            // 
+            this.linkLabel1.AutoSize = true;
+            this.linkLabel1.Location = new System.Drawing.Point(47, 369);
+            this.linkLabel1.Name = "linkLabel1";
+            this.linkLabel1.Size = new System.Drawing.Size(0, 21);
+            this.linkLabel1.TabIndex = 5;
+            this.linkLabel1.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel1_LinkClicked);
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(18, 348);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(0, 21);
+            this.label8.TabIndex = 4;
+            this.label8.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.label8.Click += new System.EventHandler(this.label8_Click);
+            // 
             // label7
             // 
             this.label7.AutoSize = true;
+            this.label7.Enabled = false;
             this.label7.Location = new System.Drawing.Point(6, 114);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(220, 21);
             this.label7.TabIndex = 3;
             this.label7.Text = "Калькулятор расхода пухи";
+            this.label7.Visible = false;
             // 
             // label5
             // 
@@ -382,6 +413,25 @@
             this.label2.TabIndex = 0;
             this.label2.Text = "Версия 1.0";
             // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Location = new System.Drawing.Point(281, 15);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(257, 21);
+            this.label9.TabIndex = 3;
+            this.label9.Text = "Введите название программы:";
+            this.label9.Visible = false;
+            // 
+            // textBox3
+            // 
+            this.textBox3.Enabled = false;
+            this.textBox3.Location = new System.Drawing.Point(544, 14);
+            this.textBox3.Name = "textBox3";
+            this.textBox3.Size = new System.Drawing.Size(178, 27);
+            this.textBox3.TabIndex = 4;
+            this.textBox3.Visible = false;
+            // 
             // Form1
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
@@ -439,6 +489,10 @@
         private System.Windows.Forms.Button button9;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Button button11;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.LinkLabel linkLabel1;
+        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.Label label9;
     }
 }
 
