@@ -16,7 +16,7 @@ namespace MinesProgram
     public partial class Form1 : Form
     {
         bool IsClicked = false;
-
+        bool test2 = false;
 
 
         public Form1()
@@ -38,6 +38,18 @@ namespace MinesProgram
             label2.Text = "Версия 1.1";
             //label8.Text = "Программа от группы";
             //linkLabel1.Text = "Новости Шахт";
+        }
+
+        static void ShiftElements(int[] arr)
+        {
+            int last = arr[arr.Length - 1];
+
+            for (int i = arr.Length - 2; i >= 0; i--)
+            {
+                arr[i + 1] = arr[i];
+            }
+
+            arr[0] = last;
         }
 
         static void massiv (string[] txn)
@@ -2348,16 +2360,157 @@ namespace MinesProgram
                     }
 
                 }
-
-
-
-               /* for (int i = 0; i < codes_t.Length; i++)
+                if (test2)
                 {
-                    if (codes_t[i] == ")")
+                    string[] codes_t4 = new string[codes_t.Length];
+                    string[] code_labels4 = new string[code_labels.Length];
+                    for (int i = 0; i < codes_t.Length; i++) codes_t4[i] = codes_t[i];
+                    for (int i = 0; i < code_labels.Length; i++) code_labels4[i] = code_labels[i];
+
+                    int go1 = 12; int g02 = 0;
+                    while (g02 != 3)
                     {
-                        codes_t = Delete(codes_t, i);
+                        var temp = code_labels[code_labels.Length - 1];
+                        Array.Copy(code_labels, 0, code_labels, 1, code_labels.Length - 1);
+                        code_labels[go1] = temp;
+
+                        var temp1 = codes_t[codes_t.Length - 1];
+                        Array.Copy(codes_t, 0, codes_t, 1, codes_t.Length - 1);
+                        codes_t[go1] = temp1;
+                        g02++;
+
                     }
+                    g02 = 0; go1 = 29;
+
+
+                    for (int i = 0; i < codes_t.Length; i++)
+                    {
+                        if (i < 12)
+                        {
+                            codes_t[i] = codes_t4[i];
+                        }
+                    }
+
+                    for (int i = 0; i < codes_t.Length; i++)
+                    {
+                        if (i < 12)
+                        {
+                            code_labels[i] = code_labels4[i];
+                        }
+                    }
+
+                    for (int i = 0; i < codes_t.Length; i++) codes_t4[i] = codes_t[i];
+                    for (int i = 0; i < code_labels.Length; i++) code_labels4[i] = code_labels[i];
+
+                    while (g02 != 2)
+                    {
+                        var temp = code_labels[code_labels.Length - 1];
+                        Array.Copy(code_labels, 0, code_labels, 1, code_labels.Length - 1);
+                        code_labels[go1] = temp;
+
+                        var temp1 = codes_t[codes_t.Length - 1];
+                        Array.Copy(codes_t, 0, codes_t, 1, codes_t.Length - 1);
+                        codes_t[go1] = temp1;
+                        g02++;
+
+                    }
+
+                    for (int i = 0; i < codes_t.Length; i++)
+                    {
+                        if (i < 29)
+                        {
+                            codes_t[i] = codes_t4[i];
+                        }
+                    }
+
+                    for (int i = 0; i < code_labels.Length; i++)
+                    {
+                        if (i < 29)
+                        {
+                            code_labels[i] = code_labels4[i];
+                        }
+                    }
+                    int h12 = 45 - 16; g02 = 0;
+                    //for (int i = 0; i < 12*16*16; i++)
+                    while (h12 < 500)
+                    {
+                        h12 += 16;
+                        for (int j = 0; j < codes_t.Length; j++) codes_t4[j] = codes_t[j];
+                        for (int j = 0; j < code_labels.Length; j++) code_labels4[j] = code_labels[j];
+
+                        while (g02 != 2)
+                        {
+                            if (h12 < code_labels.Length && h12 < codes_t.Length)
+                            {
+                                var temp = code_labels[code_labels.Length - 1];
+                                Array.Copy(code_labels, 0, code_labels, 1, code_labels.Length - 1);
+                                code_labels[h12] = temp;
+
+
+
+                                var temp1 = codes_t[codes_t.Length - 1];
+                                Array.Copy(codes_t, 0, codes_t, 1, codes_t.Length - 1);
+                                codes_t[h12] = temp1;
+
+                            }
+                            g02++;
+                        }
+
+                        for (int j = 0; j < codes_t.Length; j++)
+                        {
+                            if (j < h12)
+                            {
+                                codes_t[j] = codes_t4[j];
+                            }
+                        }
+
+                        for (int j = 0; j < code_labels.Length; j++)
+                        {
+                            if (j < h12)
+                            {
+                                code_labels[j] = code_labels4[j];
+                            }
+                        }
+                        g02 = 0;
+
+                    }
+                }
+
+                
+
+                /*for(int i = 0; i<codes_t.Length; i++)
+                {
+                    if(i<12)
+                    //codes_t[i] = codes_t4[i];
                 }*/
+
+                //for (int i<)
+                /*for (int i = 0; i < codes_t.Length - 1; ++i)
+                {
+                    nextInd += k1;
+                    nextInd %= codes_t.Length;
+
+                    tmp = codes_t[nextInd];
+                    codes_t[nextInd] = codes_t[0];
+                    codes_t[0] = tmp;
+                }*/
+
+                //Array.Copy(code_labels, 0, code_labels, 1, code_labels.Length - 1);
+
+                //Array.Copy(code_labels, 12, code_labels, 16, code_labels.Length - 16);
+
+
+
+
+                //richTextBox3.Text = string.Join(";", codes_t4);
+
+                /* for (int i = 0; i < codes_t.Length; i++)
+                 {
+                     if (codes_t[i] == ")")
+                     {
+                         codes_t = Delete(codes_t, i);
+                     }
+                 }*/
 
                 for (int i = 0; i < codes.Length; i++)
                 {
@@ -2891,9 +3044,9 @@ namespace MinesProgram
 
 
                 //}
-                
 
-                
+
+
 
                 richTextBox3.Text = string.Join(";", result);
 
@@ -2918,6 +3071,26 @@ namespace MinesProgram
         private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
             System.Diagnostics.Process.Start("https://vk.com/mines_news");
+        }
+
+        private void checkBox1_CheckedChanged(object sender, EventArgs e)
+        {
+            if(checkBox1.Checked == true)
+            {
+                DialogResult dialogResult = MessageBox.Show("Эта функция не до конца проверена, вы действительно хотите её активировать?", "Экспериментальная функция - перенос строчки", MessageBoxButtons.YesNo);
+
+                if (dialogResult == DialogResult.Yes)
+                {
+                    test2 = true;
+                }
+                else if (dialogResult == DialogResult.No)
+                {
+                    checkBox1.Checked = false;
+                    //тут код, который нужно выполнить, если нажали кнопку Нет
+                }
+            }
+            else test2 = false;
+
         }
     }
 }
