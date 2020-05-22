@@ -29,13 +29,15 @@ namespace MinesProgram
             label4.Visible = true;
             label6.Visible = true;
             label5.Visible = true;
-            richTextBox1.Text = "В ближайшее время\n                   Новое в версии 1.1.0.00.0:\n\n  -  Релиз программы.\n   ";
+            richTextBox1.Text = "22.05.2020\n\n                   Новое в сборке1.00.1\n\n - Хотфикс. \n - Добавлена экспериментальная функция - перенос строки. \n - Введён подсчёт символов из старого программатора.\n\n                   В ближайшее время\n                   \n  -  Релиз программы.\n\n";
             textBox1.Text = "Введите программу";//подсказка
             textBox1.ForeColor = Color.Gray;
             textBox2.Text = "Введите программу";//подсказка
             textBox2.ForeColor = Color.Gray;
-            label6.Text = "Сборка 1.00.0";
+            label6.Text = "Сборка 1.00.1";
             label2.Text = "Версия 1.1";
+            checkBox1.Enabled = false;
+            checkBox1.Visible = false;
             //label8.Text = "Программа от группы";
             //linkLabel1.Text = "Новости Шахт";
         }
@@ -356,6 +358,8 @@ namespace MinesProgram
             button9.Enabled = false;
             richTextBox3.Visible = false;
             richTextBox3.Enabled = false;
+            checkBox1.Enabled = false;
+            checkBox1.Visible = false;
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -379,6 +383,8 @@ namespace MinesProgram
             button9.Enabled = false;
             richTextBox3.Visible = false;
             richTextBox3.Enabled = false;
+            checkBox1.Enabled = false;
+            checkBox1.Visible = false;
         }
 
         private void richTextBox1_TextChanged(object sender, EventArgs e)
@@ -407,6 +413,8 @@ namespace MinesProgram
             button9.Enabled = true;
             richTextBox3.Visible = true;
             richTextBox3.Enabled = true;
+            checkBox1.Enabled = true;
+            checkBox1.Visible = true;
         }
 
         private void textBox1_TextChanged(object sender, EventArgs e)
@@ -1052,15 +1060,15 @@ namespace MinesProgram
                         }
                         if (s1[j] == "120")
                         {
-                            s1[j] = "VLe(" + code_labels[j] + "@" + nums[j] + ")";//s1[j] = "VLes(" + code_labels[j] + "@" + nums[j] + ")";
+                            s1[j] = "VLe(" + code_labels[j] + "?" + nums[j] + ")";//s1[j] = "VLes(" + code_labels[j] + "@" + nums[j] + ")";
                         }
                         if (s1[j] == "119")
                         {
-                            s1[j] = "VMore(" + code_labels[j] + "@" + nums[j] + ")";
+                            s1[j] = "VMore(" + code_labels[j] + "?" + nums[j] + ")";
                         }
                         if (s1[j] == "123")
                         {
-                            s1[j] = "VEqu(" + code_labels[j] + "@" + nums[j] + ")";
+                            s1[j] = "VEqu(" + code_labels[j] + "?" + nums[j] + ")";
                         }
                         if (s1[j] == "141")
                         {
@@ -1439,15 +1447,15 @@ namespace MinesProgram
                         }
                         if (tmp[j] == "120")
                         {
-                            tmp[j] = "VLe(" + code_labels[j] + "@" + nums[j] + ")";
+                            tmp[j] = "VLe(" + code_labels[j] + "?" + nums[j] + ")";
                         }
                         if (tmp[j] == "119")
                         {
-                            tmp[j] = "VMore(" + code_labels[j] + "@" + nums[j] + ")";
+                            tmp[j] = "VMore(" + code_labels[j] + "?" + nums[j] + ")";
                         }
                         if (tmp[j] == "123")
                         {
-                            tmp[j] = "VEqu(" + code_labels[j] + "@" + nums[j] + ")";
+                            tmp[j] = "VEqu(" + code_labels[j] + "?" + nums[j] + ")";
                         }
                         if (tmp[j] == "141")
                         {
@@ -1694,6 +1702,11 @@ namespace MinesProgram
         }
         private void button9_Click(object sender, EventArgs e)// конвертация в новый код
         {
+            int undefired = 0;
+                
+
+            string[] sim3 = { "@", "+", "&", "c3", "c4", "c5", "c6", "c7", "c8", "c9", "cb", "cc", "Z1", "Zk", "Zl", "Zm", "Zn", "Zo", "Zp", "Zi", "Zj", "co", "cp", "cq", "cr", "cO", "cP", "cS", "Cf", "Cg", "Cj", "Ch", "Ci", "cQ", "cR", "Zh" };
+
             string[] tx2 = new string[3071];
             massiv(tx2);
             string text; text = textBox2.Text;
@@ -1751,7 +1764,7 @@ namespace MinesProgram
                 /*text = text.Replace("Z0", "Z0,");
                 text = text.Replace("S", "S,");
                 text = text.Replace("->", "->,");*/
-                text = text.Replace("\\", "\\, ");
+                text = text.Replace("\\", "\\,");
                 text = text.Replace(">", ">,");
                 text = text.Replace("<", "<,");
                 text = text.Replace("W", "W,");
@@ -1850,7 +1863,9 @@ namespace MinesProgram
                 text = text.Replace("G5(", "G5(,");
 
 
+                for (int i = 0; i < sim3.Length; i++)
 
+                    text = text.Replace(sim3[i], sim3[i] + ",");
 
 
                 string[] separator = { "," };//, ")", "(" };
@@ -1897,6 +1912,8 @@ namespace MinesProgram
                 //    z3++;
 
                 //}
+                ////
+                /*
                 string[] codes_t3 = new string[codes_t2.Length];
 
                 for (int i = 0; i < codes_text.Length; i++)
@@ -1947,7 +1964,8 @@ namespace MinesProgram
                 }
 
 
-
+                */
+               
 
 
                 /*for (int i = 0; i < codes_text.Length; i++)
@@ -2887,6 +2905,12 @@ namespace MinesProgram
                         {
                             codes[i] = 144;
                         }
+                        for (int j = 0; j < sim3.Length; j++)
+                            if (codes_t[i] == sim3[j])
+                            {
+                                codes[i] = 0;
+                                undefired++;
+                            }
                     }
 
                 }
@@ -2895,7 +2919,7 @@ namespace MinesProgram
                 
                 ////
 
-                string[] line = { "@" };
+                string[] line = { "?" };
                 int s2 = 0;
                 for (int j = 0; j < code_labels.Length; j++)
                 {
@@ -2918,7 +2942,7 @@ namespace MinesProgram
                     // {
                     if (newStr2[i] != "0")
                     {
-                        newStr3 = newStr2[i].Split('@');
+                        newStr3 = newStr2[i].Split('?');
                         t1[i] = newStr3[0];
                         t2[i] = newStr3[1];
                     }
@@ -3045,7 +3069,16 @@ namespace MinesProgram
 
                 //}
 
+                string message = "";
+                if (undefired == 1) message = "Найден символ из предыдущей версии программатора и не найденный в новом! Он будет заменен на пустые строчки";
+                else message = "Найдены " + undefired + " символа из предыдущей версии программатора и не найденный в новом! Они будут заменены на пустые строчки";
 
+                if (undefired > 0)
+                {
+
+                    MessageBox.Show(message, "Внимание!");
+                    undefired = 0;
+                }
 
 
                 richTextBox3.Text = string.Join(";", result);
