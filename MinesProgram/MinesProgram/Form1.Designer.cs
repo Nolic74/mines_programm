@@ -43,6 +43,7 @@
             this.button2 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.checkBox1 = new System.Windows.Forms.CheckBox();
             this.linkLabel1 = new System.Windows.Forms.LinkLabel();
             this.label8 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
@@ -60,7 +61,7 @@
             this.richTextBox1 = new System.Windows.Forms.RichTextBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.checkBox1 = new System.Windows.Forms.CheckBox();
+            this.button10 = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -230,6 +231,7 @@
             // 
             // panel3
             // 
+            this.panel3.Controls.Add(this.button10);
             this.panel3.Controls.Add(this.checkBox1);
             this.panel3.Controls.Add(this.linkLabel1);
             this.panel3.Controls.Add(this.label8);
@@ -242,6 +244,17 @@
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(231, 410);
             this.panel3.TabIndex = 2;
+            // 
+            // checkBox1
+            // 
+            this.checkBox1.AutoSize = true;
+            this.checkBox1.Location = new System.Drawing.Point(51, 251);
+            this.checkBox1.Name = "checkBox1";
+            this.checkBox1.Size = new System.Drawing.Size(167, 25);
+            this.checkBox1.TabIndex = 6;
+            this.checkBox1.Text = "Перенос строчки";
+            this.checkBox1.UseVisualStyleBackColor = true;
+            this.checkBox1.CheckedChanged += new System.EventHandler(this.checkBox1_CheckedChanged);
             // 
             // linkLabel1
             // 
@@ -434,16 +447,15 @@
             this.label2.TabIndex = 0;
             this.label2.Text = "Версия 1.0";
             // 
-            // checkBox1
+            // button10
             // 
-            this.checkBox1.AutoSize = true;
-            this.checkBox1.Location = new System.Drawing.Point(51, 251);
-            this.checkBox1.Name = "checkBox1";
-            this.checkBox1.Size = new System.Drawing.Size(167, 25);
-            this.checkBox1.TabIndex = 6;
-            this.checkBox1.Text = "Перенос строчки";
-            this.checkBox1.UseVisualStyleBackColor = true;
-            this.checkBox1.CheckedChanged += new System.EventHandler(this.checkBox1_CheckedChanged);
+            this.button10.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button10.Location = new System.Drawing.Point(34, 313);
+            this.button10.Name = "button10";
+            this.button10.Size = new System.Drawing.Size(171, 77);
+            this.button10.TabIndex = 7;
+            this.button10.Text = "Сохранить программу в текстовый файл";
+            this.button10.UseVisualStyleBackColor = true;
             // 
             // Form1
             // 
@@ -507,6 +519,7 @@
         private System.Windows.Forms.TextBox textBox3;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.CheckBox checkBox1;
+        private System.Windows.Forms.Button button10;
     }
 }
 
