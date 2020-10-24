@@ -1,0 +1,88 @@
+c:\users\nolic\source\repos\MinesProgram\MinesProgram\bin\Debug\MinesProgram.exe.config
+c:\users\nolic\source\repos\MinesProgram\MinesProgram\bin\Debug\MinesProgram.exe
+c:\users\nolic\source\repos\MinesProgram\MinesProgram\bin\Debug\MinesProgram.pdb
+c:\users\nolic\source\repos\MinesProgram\MinesProgram\obj\Debug\MinesProgram.csprojAssemblyReference.cache
+c:\users\nolic\source\repos\MinesProgram\MinesProgram\obj\Debug\MinesProgram.Form1.resources
+c:\users\nolic\source\repos\MinesProgram\MinesProgram\obj\Debug\MinesProgram.Properties.Resources.resources
+c:\users\nolic\source\repos\MinesProgram\MinesProgram\obj\Debug\MinesProgram.csproj.GenerateResource.cache
+c:\users\nolic\source\repos\MinesProgram\MinesProgram\obj\Debug\MinesProgram.csproj.CoreCompileInputs.cache
+c:\users\nolic\source\repos\MinesProgram\MinesProgram\obj\Debug\MinesProgram.exe
+c:\users\nolic\source\repos\MinesProgram\MinesProgram\obj\Debug\MinesProgram.pdb
+C:\Users\Nolic\source\repos\MinesProgram\MinesProgram\obj\Debug\MinesProgram.csproj.CopyComplete
+C:\Users\Nolic\source\repos\new\MinesProgram\bin\Debug\MinesProgram.exe.config
+C:\Users\Nolic\source\repos\new\MinesProgram\bin\Debug\MinesProgram.exe
+C:\Users\Nolic\source\repos\new\MinesProgram\bin\Debug\MinesProgram.pdb
+C:\Users\Nolic\source\repos\new\MinesProgram\obj\Debug\MinesProgram.csprojAssemblyReference.cache
+C:\Users\Nolic\source\repos\new\MinesProgram\obj\Debug\MinesProgram.Form1.resources
+C:\Users\Nolic\source\repos\new\MinesProgram\obj\Debug\MinesProgram.Properties.Resources.resources
+C:\Users\Nolic\source\repos\new\MinesProgram\obj\Debug\MinesProgram.csproj.GenerateResource.cache
+C:\Users\Nolic\source\repos\new\MinesProgram\obj\Debug\MinesProgram.csproj.CoreCompileInputs.cache
+C:\Users\Nolic\source\repos\new\MinesProgram\obj\Debug\MinesProgram.csproj.CopyComplete
+C:\Users\Nolic\source\repos\new\MinesProgram\obj\Debug\MinesProgram.exe
+C:\Users\Nolic\source\repos\new\MinesProgram\obj\Debug\MinesProgram.pdb
+C:\Users\Nolic\source\repos\new v2.0\MinesProgram\obj\Debug\MinesProgram.csprojAssemblyReference.cache
+C:\Users\Nolic\source\repos\new v2.0\MinesProgram\obj\Debug\MinesProgram.Form1.resources
+C:\Users\Nolic\source\repos\new v2.0\MinesProgram\obj\Debug\MinesProgram.Properties.Resources.resources
+C:\Users\Nolic\source\repos\new v2.0\MinesProgram\obj\Debug\MinesProgram.csproj.GenerateResource.cache
+C:\Users\Nolic\source\repos\new v2.0\MinesProgram\obj\Debug\MinesProgram.csproj.CoreCompileInputs.cache
+C:\Users\Nolic\source\repos\new v2.0\MinesProgram\obj\Debug\MinesProgram.exe
+C:\Users\Nolic\source\repos\new v2.0\MinesProgram\obj\Debug\MinesProgram.pdb
+C:\Users\Nolic\source\repos\new v2.0\MinesProgram\bin\Debug\MinesProgram.exe.config
+C:\Users\Nolic\source\repos\new v2.0\MinesProgram\bin\Debug\MinesProgram.exe
+C:\Users\Nolic\source\repos\new v2.0\MinesProgram\bin\Debug\MinesProgram.pdb
+C:\Users\Nolic\source\repos\new v2.0\MinesProgram\obj\Debug\MinesProgram.csproj.CopyComplete
+C:\Users\Nolic\Documents\GitHub\mines_programm\MinesProgram\MinesProgram\obj\Debug\MinesProgram.csprojAssemblyReference.cache
+C:\Users\Nolic\Documents\GitHub\mines_programm\MinesProgram\MinesProgram\obj\Debug\MinesProgram.Form1.resources
+C:\Users\Nolic\Documents\GitHub\mines_programm\MinesProgram\MinesProgram\obj\Debug\MinesProgram.Properties.Resources.resources
+C:\Users\Nolic\Documents\GitHub\mines_programm\MinesProgram\MinesProgram\obj\Debug\MinesProgram.csproj.GenerateResource.cache
+C:\Users\Nolic\Documents\GitHub\mines_programm\MinesProgram\MinesProgram\obj\Debug\MinesProgram.csproj.CoreCompileInputs.cache
+C:\Users\Nolic\Documents\GitHub\mines_programm\MinesProgram\MinesProgram\obj\Debug\MinesProgram.exe
+C:\Users\Nolic\Documents\GitHub\mines_programm\MinesProgram\MinesProgram\obj\Debug\MinesProgram.pdb
+C:\Users\Nolic\Documents\GitHub\mines_programm\MinesProgram\MinesProgram\bin\Debug\MinesProgram.exe.config
+C:\Users\Nolic\Documents\GitHub\mines_programm\MinesProgram\MinesProgram\bin\Debug\MinesProgram.exe
+C:\Users\Nolic\Documents\GitHub\mines_programm\MinesProgram\MinesProgram\bin\Debug\MinesProgram.pdb
+C:\Users\Nolic\Documents\GitHub\mines_programm\MinesProgram\MinesProgram\obj\Debug\MinesProgram.csproj.CopyComplete
+C:\Users\Nolic\Documents\GitHub\mines_programm\MinesProgram — копия\MinesProgram\obj\Debug\MinesProgram.csprojAssemblyReference.cache
+C:\Users\Nolic\Documents\GitHub\mines_programm\MinesProgram — копия\MinesProgram\obj\Debug\MinesProgram.Form1.resources
+C:\Users\Nolic\Documents\GitHub\mines_programm\MinesProgram — копия\MinesProgram\obj\Debug\MinesProgram.Properties.Resources.resources
+C:\Users\Nolic\Documents\GitHub\mines_programm\MinesProgram — копия\MinesProgram\obj\Debug\MinesProgram.csproj.GenerateResource.cache
+C:\Users\Nolic\Documents\GitHub\mines_programm\MinesProgram — копия\MinesProgram\obj\Debug\MinesProgram.csproj.CoreCompileInputs.cache
+C:\Users\Nolic\Documents\GitHub\mines_programm\MinesProgram — копия\MinesProgram\obj\Debug\MinesProgram.exe
+C:\Users\Nolic\Documents\GitHub\mines_programm\MinesProgram — копия\MinesProgram\obj\Debug\MinesProgram.pdb
+C:\Users\Nolic\Documents\GitHub\mines_programm\MinesProgram — копия\MinesProgram\bin\Debug\MinesProgram.exe.config
+C:\Users\Nolic\Documents\GitHub\mines_programm\MinesProgram — копия\MinesProgram\bin\Debug\MinesProgram.exe
+C:\Users\Nolic\Documents\GitHub\mines_programm\MinesProgram — копия\MinesProgram\bin\Debug\MinesProgram.pdb
+C:\Users\Nolic\Documents\GitHub\mines_programm\MinesProgram — копия\MinesProgram\obj\Debug\MinesProgram.csproj.CopyComplete
+C:\Users\Nolic\Documents\GitHub\mines_programm\MinesProgram — копия — копия — копия\MinesProgram\bin\Debug\MinesProgram.exe.config
+C:\Users\Nolic\Documents\GitHub\mines_programm\MinesProgram — копия — копия — копия\MinesProgram\bin\Debug\MinesProgram.exe
+C:\Users\Nolic\Documents\GitHub\mines_programm\MinesProgram — копия — копия — копия\MinesProgram\bin\Debug\MinesProgram.pdb
+C:\Users\Nolic\Documents\GitHub\mines_programm\MinesProgram — копия — копия — копия\MinesProgram\obj\Debug\MinesProgram.csprojAssemblyReference.cache
+C:\Users\Nolic\Documents\GitHub\mines_programm\MinesProgram — копия — копия — копия\MinesProgram\obj\Debug\MinesProgram.Form1.resources
+C:\Users\Nolic\Documents\GitHub\mines_programm\MinesProgram — копия — копия — копия\MinesProgram\obj\Debug\MinesProgram.Properties.Resources.resources
+C:\Users\Nolic\Documents\GitHub\mines_programm\MinesProgram — копия — копия — копия\MinesProgram\obj\Debug\MinesProgram.csproj.GenerateResource.cache
+C:\Users\Nolic\Documents\GitHub\mines_programm\MinesProgram — копия — копия — копия\MinesProgram\obj\Debug\MinesProgram.csproj.CoreCompileInputs.cache
+C:\Users\Nolic\Documents\GitHub\mines_programm\MinesProgram — копия — копия — копия\MinesProgram\obj\Debug\MinesProgram.csproj.CopyComplete
+C:\Users\Nolic\Documents\GitHub\mines_programm\MinesProgram — копия — копия — копия\MinesProgram\obj\Debug\MinesProgram.exe
+C:\Users\Nolic\Documents\GitHub\mines_programm\MinesProgram — копия — копия — копия\MinesProgram\obj\Debug\MinesProgram.pdb
+C:\Users\Nolic\Documents\GitHub\mines_programm\MinesProgram  копия — копия — копия\MinesProgram\bin\Debug\MinesProgram.exe.config
+C:\Users\Nolic\Documents\GitHub\mines_programm\MinesProgram  копия — копия — копия\MinesProgram\bin\Debug\MinesProgram.exe
+C:\Users\Nolic\Documents\GitHub\mines_programm\MinesProgram  копия — копия — копия\MinesProgram\bin\Debug\MinesProgram.pdb
+C:\Users\Nolic\Documents\GitHub\mines_programm\MinesProgram  копия — копия — копия\MinesProgram\obj\Debug\MinesProgram.csprojAssemblyReference.cache
+C:\Users\Nolic\Documents\GitHub\mines_programm\MinesProgram  копия — копия — копия\MinesProgram\obj\Debug\MinesProgram.Form1.resources
+C:\Users\Nolic\Documents\GitHub\mines_programm\MinesProgram  копия — копия — копия\MinesProgram\obj\Debug\MinesProgram.Properties.Resources.resources
+C:\Users\Nolic\Documents\GitHub\mines_programm\MinesProgram  копия — копия — копия\MinesProgram\obj\Debug\MinesProgram.csproj.GenerateResource.cache
+C:\Users\Nolic\Documents\GitHub\mines_programm\MinesProgram  копия — копия — копия\MinesProgram\obj\Debug\MinesProgram.csproj.CoreCompileInputs.cache
+C:\Users\Nolic\Documents\GitHub\mines_programm\MinesProgram  копия — копия — копия\MinesProgram\obj\Debug\MinesProgram.csproj.CopyComplete
+C:\Users\Nolic\Documents\GitHub\mines_programm\MinesProgram  копия — копия — копия\MinesProgram\obj\Debug\MinesProgram.exe
+C:\Users\Nolic\Documents\GitHub\mines_programm\MinesProgram  копия — копия — копия\MinesProgram\obj\Debug\MinesProgram.pdb
+C:\Users\Nolic\Desktop\MinesProgram result\MinesProgram\bin\Debug\MinesProgram.exe.config
+C:\Users\Nolic\Desktop\MinesProgram result\MinesProgram\bin\Debug\MinesProgram.exe
+C:\Users\Nolic\Desktop\MinesProgram result\MinesProgram\bin\Debug\MinesProgram.pdb
+C:\Users\Nolic\Desktop\MinesProgram result\MinesProgram\obj\Debug\MinesProgram.csprojAssemblyReference.cache
+C:\Users\Nolic\Desktop\MinesProgram result\MinesProgram\obj\Debug\MinesProgram.Form1.resources
+C:\Users\Nolic\Desktop\MinesProgram result\MinesProgram\obj\Debug\MinesProgram.Properties.Resources.resources
+C:\Users\Nolic\Desktop\MinesProgram result\MinesProgram\obj\Debug\MinesProgram.csproj.GenerateResource.cache
+C:\Users\Nolic\Desktop\MinesProgram result\MinesProgram\obj\Debug\MinesProgram.csproj.CoreCompileInputs.cache
+C:\Users\Nolic\Desktop\MinesProgram result\MinesProgram\obj\Debug\MinesProgram.csproj.CopyComplete
+C:\Users\Nolic\Desktop\MinesProgram result\MinesProgram\obj\Debug\MinesProgram.exe
+C:\Users\Nolic\Desktop\MinesProgram result\MinesProgram\obj\Debug\MinesProgram.pdb
