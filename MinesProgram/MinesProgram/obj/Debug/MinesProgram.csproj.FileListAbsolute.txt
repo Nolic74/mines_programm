@@ -93,3 +93,7 @@ C:\Users\Nolic\Documents\GitHub\mines_programm\mines_programm\MinesProgram\Mines
 C:\Users\Nolic\Documents\GitHub\mines_programm\mines_programm\MinesProgram\MinesProgram\obj\Debug\MinesProgram.csproj.CoreCompileInputs.cache
 C:\Users\Nolic\Documents\GitHub\mines_programm\mines_programm\MinesProgram\MinesProgram\obj\Debug\MinesProgram.exe
 C:\Users\Nolic\Documents\GitHub\mines_programm\mines_programm\MinesProgram\MinesProgram\obj\Debug\MinesProgram.pdb
+C:\Users\Nolic\Documents\GitHub\mines_programm\mines_programm\MinesProgram\MinesProgram\bin\Debug\MinesProgram.exe.config
+C:\Users\Nolic\Documents\GitHub\mines_programm\mines_programm\MinesProgram\MinesProgram\bin\Debug\MinesProgram.exe
+C:\Users\Nolic\Documents\GitHub\mines_programm\mines_programm\MinesProgram\MinesProgram\bin\Debug\MinesProgram.pdb
+C:\Users\Nolic\Documents\GitHub\mines_programm\mines_programm\MinesProgram\MinesProgram\obj\Debug\MinesProgram.csproj.CopyComplete
