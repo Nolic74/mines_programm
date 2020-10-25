@@ -31,17 +31,17 @@ namespace MinesProgram
             label4.Visible = true;
             label6.Visible = true;
             label5.Visible = true;
-            richTextBox1.Text = "25.10.2020\n\n - Патч фикс багов 0.01               \n\n24.10.2020\n\n - Новая сборка.                    \n\n22.05.2020\n\n                   Новое в сборке 1.00.1\n\n - Хотфикс. \n - Добавлена экспериментальная функция - перенос строки. \n - Введён подсчёт символов из старого программатора.\n\n                   В ближайшее время\n                   \n  -  Релиз программы.\n\n";
+            richTextBox1.Text = "25.10.2020\n\n              Новое в сборке 1.00.3\n\n - Релиз программы\n - Выход из закрытой беты\n\n";
             textBox1.Text = "Введите программу";//подсказка
             textBox1.ForeColor = Color.Gray;
             textBox2.Text = "Введите программу";//подсказка
             textBox2.ForeColor = Color.Gray;
-            label6.Text = "Сборка 1.00.2";
+            label6.Text = "Сборка 1.00.3";
             label2.Text = "Версия 1.1";
             checkBox1.Enabled = false;
             checkBox1.Visible = false;
-            //label8.Text = "Программа от группы";
-            //linkLabel1.Text = "Новости Шахт";
+            label8.Text = "Программа от группы";
+            linkLabel1.Text = "Новости Шахт";
         }
 
         static void ShiftElements(int[] arr)
@@ -58,8 +58,7 @@ namespace MinesProgram
 
         static void massiv(string[] txn)
         {
-
-            //string[] txn = new string[3071];
+            
             string[] sim1 = { "-", "=", "~" };
             string[] sim2 = { "0", "1", "2", "3", "4", "5", "6", "7", "8", "9", "a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z", "A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z", " ", "!", "@", "#", "$", "%", "^", "&", "*", "(", ")", "-", "_", "+", "=", "[", "]", "{", "}", ",", ".", "<", ">", "?", "/", ";", ":", "|", "~" };
             int f = 0; int t = 1; int gss = 0;
@@ -92,7 +91,7 @@ namespace MinesProgram
                     {
                         if (gss < sim2.Length)
                         {
-                            txn[i] = sim1[1] + t + sim2[gss];// + " " + i.ToString();
+                            txn[i] = sim1[1] + t + sim2[gss];
                             gss++;
                         }
                         if (gss == sim2.Length) { gss = 0; t++; }
@@ -101,7 +100,7 @@ namespace MinesProgram
                     {
                         if (gss < sim2.Length)
                         {
-                            txn[i] = sim1[2] + t + sim2[gss];// + " " + i.ToString();
+                            txn[i] = sim1[2] + t + sim2[gss];
                             gss++;
                         }
                         if (gss == sim2.Length) { gss = 0; t++; }
@@ -114,44 +113,16 @@ namespace MinesProgram
 
         static void zamena(string str)
         {
-            /* char[] sim1 = str.ToCharArray();
-
-             char[] simvoly = new char[sim1.Length + 1];
-             for (int i =0; i<simvoly.Length; i++)
-             {
-                 if (i < sim1.Length)
-                     simvoly[i] = sim1[i];
-                 else simvoly[i] = '0';
-             }
-             for (int i = 0; i < simvoly.Length; i++)
-             {
-
-                 if (simvoly[i] == a && simvoly[i+1 ] == b) //&& simvoly[i+1] != c )
-                 {
-
-                     simvoly[i + 1] = b ;
-
-                 }
-             }
-             string str1 = new string(simvoly);
-             str = str1;*/
+            
             string a = "Z"; string b = "0";
 
             string[] simvoly = str.Split((new[] { "," }), StringSplitOptions.RemoveEmptyEntries);
-            /*string [] simvoly = new string[sim1.Length + 1];
-             for (int i = 0; i < simvoly.Length; i++)
-             {
-                 if (i < sim1.Length)
-                     simvoly[i] = sim1[i];
-                 //else simvoly[i] = "0";
-             }
-             */
+            
             for (int i = 0; i < simvoly.Length; i++)
             {
                 if (simvoly[i] == a)
                 {
                     simvoly[i] = ",";
-                    //simvoly = Delete(simvoly, i+1);
                 }
             }
             string str1 = "";
@@ -193,7 +164,7 @@ namespace MinesProgram
                     {
                         if (gss < sim2.Length)
                         {
-                            txn1[i] = t + sim2[gss];// + " " + i.ToString();
+                            txn1[i] = t + sim2[gss];
                             gss++;
                         }
                         if (gss == sim2.Length) { gss = 0; t++; }
@@ -202,7 +173,7 @@ namespace MinesProgram
                     {
                         if (gss < sim2.Length)
                         {
-                            txn1[i] = t + sim2[gss];// + " " + i.ToString();
+                            txn1[i] = t + sim2[gss];
                             gss++;
                         }
                         if (gss == sim2.Length) { gss = 0; t++; }
@@ -232,10 +203,6 @@ namespace MinesProgram
 
         static string[] Delete(string[] array, int indexToDelete)
         {
-            // Проверки, что наш массив не пуст и что указанный индекс существует.
-            // if (array.Length == 0) return array;
-            //if (array.Length <= indexToDelete) return array;
-
             var output = new string[array.Length - 1];
             int counter = 0;
 
@@ -274,7 +241,7 @@ namespace MinesProgram
             }
             else if (dialogResult == DialogResult.No)
             {
-                //тут код, который нужно выполнить, если нажали кнопку Нет
+                
             }
 
 
@@ -423,15 +390,6 @@ namespace MinesProgram
         {
 
         }
-        //private void textBox1_Enter(object sender, EventArgs e)//происходит когда элемент стает активным
-        //{
-        //    textBox1.Text = null;
-        //    textBox1.Text = "";
-        //    textBox1.ForeColor = Color.Black;
-        //}
-
-
-
         private void textBox1_Enter_1(object sender, EventArgs e)
         {
             if (textBox1.Text == "Введите программу")
@@ -451,7 +409,7 @@ namespace MinesProgram
         {
             if (textBox1.Visible == false && textBox1.Text == "")
             {
-                textBox1.Text = "Введите программу";//подсказка
+                textBox1.Text = "Введите программу";
                 textBox1.ForeColor = Color.Gray;
             }
         }
@@ -481,27 +439,16 @@ namespace MinesProgram
             massiv2(tx3);
             int num = 0;
             string s = textBox1.Text;
-            //string s = "XQAAgABtAAAAAAAAAAACADcIzzmiHvAv8QY6keZxKaCdkxDzdXYmysNyjxmKr6tht0JRCuCJH6c1gUZ0AA==";
-            //byte[] array = SevenZipHelper.Decompress(Convert.FromBase64String(s));
             if (s.Trim() != "")
             {
                 byte[] array = SevenZipHelper.Decompress(Convert.FromBase64String(s));
 
                 num = BitConverter.ToInt32(array, 0);
-                // string[] array2 = Encoding.UTF8.GetString(array, num + 4, array.Length - num - 4).Split(new char[]
-                //{
-                //    ':'
-                //});
-                //int[] number = new int[110];
                 int[] number = new int[16 * 12 * 16];
                 string t;
                 t = BitConverter.ToString(array);
 
                 string h = Encoding.UTF8.GetString(array);
-                //for (int i =0; i < array.Length; i++)
-                //{
-                //    number [i] = BitConverter.ToInt32(array, array.Length - num - 4);
-                // }
                 string[] valu = t.Split('-');
 
                 //тестовая функция
@@ -534,10 +481,6 @@ namespace MinesProgram
 
                 }
                 string f = String.Join(" ", number1);
-
-                //Cut(ref tmp1, 0, 4);
-                //
-
                 Cut(ref valu, num + 4, array.Length - num - 4);
                 Cut(ref valu, 0, 4);
                 string[] tmp = new string[valu.Length];
@@ -548,125 +491,13 @@ namespace MinesProgram
                 for (int i = 0; i < valu.Length; i++)
                 {
 
-                    //if (valu[i] == "08")
-                    //{
-
                     tmp[i] = Convert.ToInt32(valu[i], 16).ToString();
-                    /* if (tmp[i] == "1")
-                     {
-                         tmp[i] = "\\";
-                     }
-                     if (tmp[i] == "2")
-                     {
-                         tmp[i] = ">";
-                     }
-                     if (tmp[i] == "3")
-                     {
-                         tmp[i] = "<";
-                     }
-                     if (tmp[i] == "4")
-                     {
-                         tmp[i] = "W";
-                     }
-                     if (tmp[i] == "5")
-                     {
-                         tmp[i] = "A";
-                     }
-                     if (tmp[i] == "6")
-                     {
-                         tmp[i] = "S";
-                     }
-                     if (tmp[i] == "7")
-                     {
-                         tmp[i] = "D";
-                     }
-                     if (tmp[i] == "8")
-                     {
-                         tmp[i] = "Z0";
-                     }
-                     if (tmp[i] == "9")
-                     {
-                         tmp[i] = "w";
-                     }
-                     if (tmp[i] == "10")
-                     {
-                         tmp[i] = "a";
-                     }
-                     if (tmp[i] == "11")
-                     {
-                         tmp[i] = "s";
-                     }
-                     if (tmp[i] == "12")
-                     {
-                         tmp[i] = "d";
-                     }
-                     if (tmp[i] == "13")
-                     {
-
-                     }
-                     if (tmp[i] == "14")
-                     {
-                         tmp[i] = "Z2";
-                     }
-                     if (tmp[i] == "15")
-                     {
-                         tmp[i] = "Z3";
-                     }
-                     if (tmp[i] == "16")
-                     {
-                         tmp[i] = "Z4";
-                     }
-                     if (tmp[i] == "17")
-                     {
-                         tmp[i] = "Zc";
-                     }
-                     if (tmp[i] == "18")
-                     {
-                         tmp[i] = "Ze";
-                     }
-                     if (tmp[i] == "19")
-                     {
-                         tmp[i] = "Zd";
-                     }
-                     if (tmp[i] == "20")
-                     {
-                         tmp[i] = "Zf";
-                     }
-                     if (tmp[i] == "21")
-                     {
-                         tmp[i] = "Zg";
-                     }
-                     if (tmp[i] == "22")
-                     {
-                         tmp[i] = "Zq";
-                     }
-                     if (tmp[i] == "23")
-                     {
-                         tmp[i] = "Zh";
-                     }*/
-
-
-                    // if (tmp[i] == "24")
-                    //{
-                    //tmp[i] = "G2()";
-                    // }
-                    // valu[i] = "Z";
-                    //}
+                    
 
 
                 }
-                /*if (tmp[tmp.Length - 1] == "0")
-                {
-                    Cut(ref tmp, tmp.Length - 1, tmp.Length - 1);
-                }*/
-                ///richTextBox1.Text = string.Join("", tmp);//string.Join("", valu);
-                //textBox1.Text = tmp[tmp.Length-1].ToString();
-
-                //Clipboard.SetText(richTextBox1.Text);
                 MessageBox.Show("Прога сконвертировалась в старый код и скопирована в буфер обмена!", "Сконвертировано!");
-
-                //// не обратное преобразование
-
+                               
                 int[] nums = new int[16 * 12 * 16];
                 int[] codes = new int[16 * 12 * 16];
                 string[] code_labels = new string[16 * 12 * 16];
@@ -717,26 +548,11 @@ namespace MinesProgram
                     str_codes[i] = codes[i].ToString();
 
                 }
-
-                // Cut(ref array2, num + 4, array.Length - num - 4);
                 string[] cod = new string[tmp.Length];
                 for (int i = 0; i < tmp.Length; i++)
                 {
                     cod[i] = tmp[i];
                 }
-                /*for (int j = 0; j<tmp.Length; j++)
-                {
-                    if (tmp[j] == "24")
-                    {
-                        tmp[j] =  "G2()"+ code_labels[j];
-                    }
-                    
-                    //if (j == 2)
-                }*/
-
-
-
-
                 string[] s1 = new string[tmp.Length - 1];
 
                 int[] s100 = new int[33];
@@ -1062,7 +878,7 @@ namespace MinesProgram
                         }
                         if (s1[j] == "120")
                         {
-                            s1[j] = "VLe(" + code_labels[j] + "@" + nums[j] + ")";//s1[j] = "VLes(" + code_labels[j] + "@" + nums[j] + ")";
+                            s1[j] = "VLe(" + code_labels[j] + "@" + nums[j] + ")";
                         }
                         if (s1[j] == "119")
                         {
@@ -1117,11 +933,7 @@ namespace MinesProgram
                         {
                             s1[j] = "Flip";
                         }
-
-
-
-                        ////
-                        //if (j == 2)
+                        
                     }
 
                     richTextBox2.Text = string.Join(" ", s1);
@@ -1508,12 +1320,7 @@ namespace MinesProgram
                         {
                             tmp[j] = "-";
                         }
-
-
-
-                        ////
-
-                        //if (j == 2)
+                        
                     }
 
 
@@ -1525,7 +1332,7 @@ namespace MinesProgram
                     int length, maxLength = 0;
                     for (int i = 0; i < tmp.Length; i++)
                     {
-                        if (tmp[i] == "-")//&& s2<number.Length)
+                        if (tmp[i] == "-")
                         {
                             length = 0;
                             for (int j = i; j < tmp.Length && tmp[j] == "-"; j++)
@@ -1558,7 +1365,7 @@ namespace MinesProgram
                     int RS = 0;
                     for (int i = 0; i < tmp2.Length; i++)
                     {
-                        RS = RS + tmp2[i];//-s2+1;
+                        RS = RS + tmp2[i];
                     }
                     int[] g2s = new int[s2];
 
@@ -1587,8 +1394,6 @@ namespace MinesProgram
                     }
                     int g4 = 0; int g5 = 0; int g6 = 0; int g7 = 0;
                     string[] tmp3 = new string[tmp.Length - RS];
-                    //for (int i = 0; i<g2s.Length; i++)
-                    //{
                     string[] tmp6 = new string[tmp2.Length];
                     for (int i = 0; i < tmp2.Length; i++)
                     {
@@ -1620,38 +1425,16 @@ namespace MinesProgram
                             if (tmp2[g4] != 1)
                             {
                                 if (tmp2[g4] < 91)
-                                    //tmp[g2s[g4]] = "-" + tmp2[g4];
                                     tmp[g2s[g4]] = "-" + tmp6[g4];
-                                ////tmp = Delete(tmp, g2s[g4+1]);
                                 if (tmp2[g4] >= 91 && tmp2[g4] < 910)
                                     tmp[g2s[g4]] = "=" + tmp6[g4];
                                 if (tmp2[g4] >= 910)
                                     tmp[g2s[g4]] = "~" + tmp6[g4];
 
                             }
-                            else tmp[g2s[g4]] = "_";//+ tmp2[g4];
+                            else tmp[g2s[g4]] = "_";
                             g4++;
                         }
-
-
-
-                        /*for(int j = 0; j<tmp3.Length; j++)
-                        {
-                            if (g4 < g2s.Length)
-                            {
-                                if (i != g2s[g4]&&i<tmp.Length)
-                                {
-                                    tmp3[j] = tmp[i];
-                                    
-                                }
-                                else
-                                {
-                                    j += tmp2[g5];
-                                    g5++;
-                                }
-                                i++;
-                            }*/
-
 
                     }
                     for (int i = 0; i < tmp.Length; i++)
@@ -1686,34 +1469,10 @@ namespace MinesProgram
 
                     // }
                     richTextBox2.Text = string.Join("", tmp);
-                    /*char[] str = text.ToCharArray();
-                   // string text1;
-
-                    for (int i = 0; i <= str.Length; i++)
-                    {
-                        if (i != str.Length - 1)
-                        {
-                            if (str[i] != str[i + 1])
-                            {
-                                Console.Write(str[i]);
-                            }
-                        }
-                        else
-                        {
-                            Console.Write(str[i]);
-                        }
-                    }*/
-
-
-
-
-
-                    //richTextBox1.Text = string.Join("", tmp6);
+                    
                 }
             }
-
-            //
-            //richTextBox2.Text = textBox1.Text;
+            
         }
         private void button9_Click(object sender, EventArgs e)// конвертация в новый код
         {
@@ -1732,7 +1491,6 @@ namespace MinesProgram
             string[] t1 = new string[16 * 12 * 16];
             string[] t2 = new string[16 * 12 * 16];
             int[] g3 = new int[16 * 12 * 16];
-            //string[] codes_t = new string[16 * 12 * 16];
             string[] codes_t2 = new string[16 * 12 * 16];
             string[] code_labels2 = new string[16 * 12 * 16];
 
@@ -1752,13 +1510,8 @@ namespace MinesProgram
                         t1[i * 16 * 12 + j * 16 + k] = "-1";
                         t2[i * 16 * 12 + j * 16 + k] = "-1";
                         g3[i * 16 * 12 + j * 16 + k] = -1;
-                        //codes_t[i * 16 * 12 + j * 16 + k] = "0";
                         codes_t2[i * 16 * 12 + j * 16 + k] = "0";
-                        //code_labels[i * 16 * 12 + j * 16 + k] = "0";
                         zzz[i * 16 * 12 + j * 16 + k] = -1;
-
-                        //code_labels2[i * 16 * 12 + j * 16 + k] = "-1";
-                        //code_labels[i * 16 * 12 + j * 16 + k] = "0";
                     }
                 }
             }
@@ -1776,9 +1529,6 @@ namespace MinesProgram
 
 
                 text = text.Replace("/", "/,");
-                /*text = text.Replace("Z0", "Z0,");
-                text = text.Replace("S", "S,");
-                text = text.Replace("->", "->,");*/
                 text = text.Replace("\\", "\\,");
                 text = text.Replace(">", ">,");
                 text = text.Replace("<", "<,");
@@ -1884,8 +1634,7 @@ namespace MinesProgram
                     text = text.Replace(sim3[i], sim3[i] + ",");
 
 
-                string[] separator = { "," };//, ")", "(" };
-                                             //code_labels[0] = "0";
+                string[] separator = { "," };
                 int z0 = 0;
 
                 codes_text = text.Split(separator, StringSplitOptions.RemoveEmptyEntries);
@@ -1894,7 +1643,7 @@ namespace MinesProgram
 
                 for (int i = 0; i < codes_text.Length; i++)
                 {
-                    //codes_t[i] = codes_text[i];
+                   
                 }
 
 
@@ -1909,275 +1658,14 @@ namespace MinesProgram
                 }
 
                 z02 = zzz[0]; int z3 = 0;
-                //for (int i = 0; i < codes_text.Length; i++)
-                //{
-
-                //        if (codes_text[i] == "->")
-                //        {
-
-
-
-                //        z3 += 53;
-                //        codes_text = Delete(codes_text, i);
-
-
-
-
-                //        }
-                //    codes_t[z3] = codes_text[i];
-                //    z3++;
-
-                //}
-                ////
-                /*
-                string[] codes_t3 = new string[codes_t2.Length];
-
-                for (int i = 0; i < codes_text.Length; i++)
-                {
-
-
-                    codes_t2[i] = codes_t[i];
-                                                          
-                }
-                int f0s=0; int f1s = 0; 
-                for (int i = 0; i < codes_t2.Length; i++)
-                {
-                    if (codes_t2[i] == "L(")
-                    {
-
-
-                        //if (f0s == 0)
-                            //{
-                            codes_t3[i] = codes_t2[i] + ")";
-                            
-                        //}
-                        if (codes_t2[i + 1] != ")") { f1s += 1; f0s += 1; }
-                        if (f1s > 0 &&i>0)
-                        {
-                            codes_t3[i + f1s] = codes_t2[i] + ")";
-                        }
-                    }
-                //f0s++;
-                }
-
-                for (int i = 0; i < codes_t2.Length; i++)
-                {
-                    if (codes_t2[i] == "L(")
-                    {
-
-                        codes_t2[i] = "L";
-                    }
-                }
-
-
-
-                for (int i = 0; i < codes_t2.Length; i++)
-                {
-                    if (codes_t2[i] == ")")
-                    {
-                        codes_t2 = Delete(codes_t2, i);
-                    }
-                }
-
-
-                */
-
-
-
-                /*for (int i = 0; i < codes_text.Length; i++)
-                {
-                    z01 += i;
-                    if (codes_text[i] == "->")
-                    {
-
-                        while (z01 != i + 32)
-                        {
-
-                            codes_t[z01] = "0";
-                            z01++;
-                        }
-
-                        codes_t[z01] = codes_text[i + 1];
-                    }
-                    
-                    
-                }*/
-
-                //richTextBox3.Text = string.Join(";", codes_t);
-
-
-
-                /*for (int i = 0; i < codes_text.Length; i++)
-                {
-                     
-
-                    if (codes_text[i] == "L(")
-                    {
-                        //if (codes_text[i+1] != ")")
-                        z0 = i + 1;
-
-                        if (codes_text[i + 1] == ")")
-                        {
-                            g12++;
-                        }
-
-                        if (codes_text[z0] != "L(")
-                        {
-                            if (codes_text[z0] != ")")
-                            {
-                                code_labels[i - g12] = codes_text[z0];
-                                codes_text = Delete(codes_text, z0);
-                                g12++;
-                                z0++;
-                            }
-                        }
-                    }
-                }
-                for (int i = 0; i < codes_text.Length; i++)
-                {
-                    if (codes_text[i] == "L(")
-                    {
-                        while (codes_text[i + 1] != ")")  ////
-                            if (codes_text[i + 1] != ")")
-                        {
-                            code_labels[i] = code_labels[i] + codes_text[i + 1];
-                            codes_text = Delete(codes_text, i + 1);
-                        }
-                    }
-                }
-
-                //richTextBox3.Text = string.Join(";", code_labels);
-                for (int i = 0; i < codes_text.Length; i++)
-                {
-                    if (codes_text[i] == "L(")
-                    {
-                        codes_text[i] = "L";
-                    }                    
-                }
-
-
-
-                for (int i = 0; i < codes_text.Length; i++)
-                {
-                    if (codes_text[i] == ")")
-                    {
-                        codes_text = Delete(codes_text, i);
-                    }
-                }
-
-                for (int i = 0; i < codes.Length; i++)
-                {
-                    if (i < codes_text.Length)
-                    {
-                        codes[i] = 0;
-                        if (codes_text[i] == "L")
-                        {
-                            codes[i] = 40;
-                        }
-                        if (codes_text[i] == "S")
-                        {
-                            codes[i] = 6;
-                        }
-                        if (codes_text[i] == "Z0")
-                        {
-                            codes[i] = 8;
-                        }
-                    }
-
-                }*/
+                
                 int zzz3 = 0;
-                //z0 = 1;
-                /*for (int i = 0; i < codes_t.Length; i++)
-                {
-                    z0  += 1;
-                    
-                    if (codes_t[i] == "L(" )
-                    {
-
-                        //if (codes_t[i+1] != ")")
-
-                        
-
-
-                        // while (codes_t[i + 1] != ")")  ////
-
-
-
-                        if (codes_t[z0] != "L(")
-                        {
-                            ////
-                            
-                            if (codes_t[z0] != ")")
-                            {
-
-                                //code_labels[ i - g12  ] = codes_t[z0];
-                                codes_t = Delete(codes_t, z0);
-                                g12++;
-                                //z0++;
-
-
-                            }
-                            
-                            
-
-                            ////    
-                            
-                        }
-                        //g12 += 1;
-                        
-
-                    }
-                    //
-                }*/
-
-
-
-
-                /*int g13 = 0;
-
-                for( int i = 0; i< codes_t.Length; i++)
-                {
-                    if(codes_t[i] == "L(")
-                   // while (codes_t[i + 1] != ")")
-                    if (codes_t[i + 1] != ")")
-                    {
-                        //code_labels[i - g13] = code_labels[ i ] + codes_t[i + 1];
-
-                        codes_t = Delete(codes_t, i + 1);
-                            g13 = 1 ;
-                        //zzz3++;
-                    }
-                }
-
-                int h11 = 0;*/
-
-
-
-
-
-
-
-                /*for (int i = 0; i < codes_t.Length; i++)
-                {
-                    if (codes_t[i] == "L(")
-                    {
-                        while (codes_t[i + 1] != ")")  ////
-                            if (codes_t[i + 1] != ")")
-                            {
-                                code_labels[i] = code_labels[i] + codes_t[i + 1];
-                                
-                                codes_t = Delete(codes_t, i + 1);
-                                //zzz3++;
-                            }
-                    }
-                }*/
+                
                 string[] codes_t = new string[16 * 12 * 16 + codes_text.Length * 3 / 2];
                 for (int i = 0; i < codes_text.Length; i++)
                 {
                     codes_t[i] = codes_text[i];
                 }
-
-                // richTextBox3.Text = string.Join(";", codes_text.Length);
 
                 int z4 = 0;
                 for (int i = 0; i < codes_text.Length; i++)
@@ -2218,14 +1706,14 @@ namespace MinesProgram
                             z4 += 191;
                         }
                         z4 += 191;
-                        if (z4 > 191 && z4 < 384) z4 = 191;//if (z3 > 191 && z3 < 384)  z3 = 192;
-                        if (z4 > 384 - 1 && z4 < 576) z4 = 384 - 1;//2
-                        if (z4 > 576 - 1 && z4 < 768) z4 = 576 - 1;//3
-                        if (z4 > 768 - 1 && z4 < 960) z4 = 768 - 1;//4
-                        if (z4 > 960 - 1 && z4 < 1152) z4 = 960 - 1; //5
-                        if (z4 > 1152 - 1 && z4 < 1344) z4 = 1152 - 1; //6
-                        if (z4 > 1344 - 1 && z4 < 1536) z4 = 1344 - 1; //7
-                        if (z4 > 1536 - 1 && z4 < 1728) z4 = 1536 - 1; //7
+                        if (z4 > 191 && z4 < 384) z4 = 191;
+                        if (z4 > 384 - 1 && z4 < 576) z4 = 384 - 1;
+                        if (z4 > 576 - 1 && z4 < 768) z4 = 576 - 1;
+                        if (z4 > 768 - 1 && z4 < 960) z4 = 768 - 1;
+                        if (z4 > 960 - 1 && z4 < 1152) z4 = 960 - 1;
+                        if (z4 > 1152 - 1 && z4 < 1344) z4 = 1152 - 1;
+                        if (z4 > 1344 - 1 && z4 < 1536) z4 = 1344 - 1;
+                        if (z4 > 1536 - 1 && z4 < 1728) z4 = 1536 - 1;
                         if (codes_text[i + 1] == "/")
                         {
                             z4 = z4 + 191 + 191;
@@ -2234,178 +1722,10 @@ namespace MinesProgram
 
 
                     }
-
-                    //// new
-
-
-                    ////
                     z4++;
 
                 }
-                ///////++++++  
-                //for (int i = 0; i < codes_text.Length; i++)
-                //{
-                //    if (codes_text[i] == "L(")
-                //    {
-                //        //if (codes_text[i+1] != ")")
-                //        z0 = i + 1;
-
-                //        if (codes_text[i + 1] == ")")
-                //        {
-                //            //if(codes_text[z0] != ",")
-
-                //            g12++;
-
-
-                //        }
-
-
-                //        if (codes_text[z0] != "L(")
-                //        {
-                //            if (codes_text[z0] != ")")
-                //            {
-                //                //if(codes_text[z0] != ",")
-                //                //if(codes_text[z0] != ",")
-                //                code_labels[i - g12] = codes_text[z0];
-                //                codes_text = Delete(codes_text, z0);
-                //                //codes_text[z0] = null;
-                //                g12++;
-                //                z0++;
-
-                //            }
-
-
-
-                //        }
-
-
-
-
-                //    }
-
-                //    if (codes_text[i] == "G0(")
-                //    {
-                //        //if (codes_text[i+1] != ")")
-                //        z0 = i + 1;
-
-                //        if (codes_text[i + 1] == ")")
-                //        {
-                //            //if(codes_text[z0] != ",")
-
-                //            g12++;
-
-
-                //        }
-
-
-                //        if (codes_text[z0] != "G0(")
-                //        {
-                //            if (codes_text[z0] != ")")
-                //            {
-                //                //if(codes_text[z0] != ",")
-                //                //if(codes_text[z0] != ",")
-                //                code_labels[i - g12] = codes_text[z0];
-                //                codes_text = Delete(codes_text, z0);
-                //               // codes_text[z0] = null;
-                //                g12++;
-                //                z0++;
-
-                //            }
-
-
-
-                //        }
-
-
-
-
-                //    }
-
-                //}
-
-                //пока убираю
-
-                /* for (int i = 0; i < codes_text.Length; i++)
-                 {
-                     if (codes_text[i] == "/")
-                     {
-                         z3 += 191;
-                         if (codes_text[i + 1] == "/")
-                         {
-                             if (codes_text[i + 2] == "/")
-                             {
-                                 if (codes_text[i + 3] == "/")
-                                 {
-                                     if (codes_text[i + 4] == "/")
-                                     {
-                                         if (codes_text[i + 5] == "/")
-                                         {
-                                             if (codes_text[i + 6] == "/")
-                                             {
-                                                 if (codes_text[i + 7] == "/")
-                                                 {
-                                                     z3 = z3 + 191;
-                                                    codes_text = Delete(codes_text, i + 7);
-                                                 }
-                                                 z3 = z3 + 191;
-                                                 codes_text = Delete(codes_text, i + 6);
-                                             }
-                                             z3 = z3 + 191;
-                                             codes_text = Delete(codes_text, i + 5);
-                                         }
-                                         z3 = z3 + 191;
-                                         codes_text = Delete(codes_text, i + 4);
-                                     }
-                                     z3 = z3 + 191;
-                                     codes_text = Delete(codes_text, i + 3);
-                                 }
-                                 codes_text = Delete(codes_text, i + 2);
-
-                             }
-                             z3 = z3 + 191;
-                            codes_text = Delete(codes_text, i + 1);
-
-                         }
-
-
-                         if (z3 > 191 && z3 < 384) z3 = 192;  //1
-                         if (z3 > 384 && z3 < 576) z3 = 384;//2
-                         if (z3 > 576 && z3 < 768) z3 = 576;//3
-                         if (z3 > 768 && z3 < 960) z3 = 768;//4
-                         if (z3 > 960 && z3 < 1152) z3 = 960; //5
-                         if (z3 > 1152 && z3 < 1344) z3 = 1152; //6
-                         if (z3 > 1344 && z3 < 1536) z3 = 1344; //7
-                         //if (z3 > 1536 && z3 < 1728) z3 = 1536; //7
-                         if (z3 > 1536 && z3 < 1728) z3 = 1536; //7
-                         codes_text = Delete(codes_text, i);
-
-
-                     }
-                     for (int j = 0; j < tx2.Length; j++)
-                         if (codes_text[i] == tx2[j])
-                         {
-
-
-
-                             z3 += j + 1;
-                             codes_text = Delete(codes_text, i);
-
-
-
-
-                         }
-
-
-
-                     //codes_t[z3] = codes_text[i];
-                     z3++;
-
-                 }
-                 */
-                //richTextBox3.Text = string.Join(";", codes_t);
-                /// пока убираю
-                /////
-                ///
+                
                 int label = 0; int label1 = 0; int label2 = 0; int label3 = 0; int label4 = 0;
                 for (int i = 0; i < codes_t.Length; i++)
                 {
@@ -2415,14 +1735,13 @@ namespace MinesProgram
 
                             if (codes_t[i + 1] != ")")
                             {
-                                //label++;
                                 if (label == 1)
                                 {
                                     label1 = i;
                                 }
                                 code_labels[label1] = code_labels[label1] + codes_t[i + 1];
                                 codes_t = Delete(codes_t, i + 1);
-                                //label1++;
+                                
                             }
                         label1++;
 
@@ -2437,14 +1756,14 @@ namespace MinesProgram
 
                             if (codes_t[i + 1] != ")")
                             {
-                                //label++;
+                                
                                 if (label == 1)
                                 {
                                     label1 = i;
                                 }
                                 code_labels[label1] = code_labels[label1] + codes_t[i + 1];
                                 codes_t = Delete(codes_t, i + 1);
-                                //label1++;
+                                
                             }
                         label1++;
 
@@ -2466,7 +1785,7 @@ namespace MinesProgram
                                 }
                                 code_labels[label1] = code_labels[label1] + codes_t[i + 1];
                                 codes_t = Delete(codes_t, i + 1);
-                                //label1++;
+                                
                             }
                         label1++;
 
@@ -2503,14 +1822,14 @@ namespace MinesProgram
 
                             if (codes_t[i + 1] != ")")
                             {
-                                // label++;
+                                
                                 if (label == 1)
                                 {
                                     label1 = i;
                                 }
                                 code_labels[label1] = code_labels[label1] + codes_t[i + 1];
                                 codes_t = Delete(codes_t, i + 1);
-                                //label1++;
+                                
                             }
                         label1++;
 
@@ -2525,14 +1844,14 @@ namespace MinesProgram
 
                             if (codes_t[i + 1] != ")")
                             {
-                                //  label++;
+                                
                                 if (label == 1)
                                 {
                                     label1 = i;
                                 }
                                 code_labels[label1] = code_labels[label1] + codes_t[i + 1];
                                 codes_t = Delete(codes_t, i + 1);
-                                //label1++;
+                                
                             }
                         label1++;
 
@@ -2547,14 +1866,14 @@ namespace MinesProgram
 
                             if (codes_t[i + 1] != ")")
                             {
-                                //  label++;
+                                
                                 if (label == 1)
                                 {
                                     label1 = i;
                                 }
                                 code_labels[label1] = code_labels[label1] + codes_t[i + 1];
                                 codes_t = Delete(codes_t, i + 1);
-                                //label1++;
+                                
                             }
                         label1++;
 
@@ -2569,14 +1888,14 @@ namespace MinesProgram
 
                             if (codes_t[i + 1] != ")")
                             {
-                                //  label++;
+                                
                                 if (label == 1)
                                 {
                                     label1 = i;
                                 }
                                 code_labels[label1] = code_labels[label1] + codes_t[i + 1];
                                 codes_t = Delete(codes_t, i + 1);
-                                //label1++;
+                                
                             }
                         label1++;
 
@@ -2591,14 +1910,14 @@ namespace MinesProgram
 
                             if (codes_t[i + 1] != ")")
                             {
-                                //   label++;
+                                
                                 if (label == 1)
                                 {
                                     label1 = i;
                                 }
                                 code_labels[label1] = code_labels[label1] + codes_t[i + 1];
                                 codes_t = Delete(codes_t, i + 1);
-                                //label1++;
+                                
                             }
                         label1++;
 
@@ -2613,14 +1932,14 @@ namespace MinesProgram
 
                             if (codes_t[i + 1] != ")")
                             {
-                                //label++;
+                                
                                 if (label == 1)
                                 {
                                     label1 = i;
                                 }
                                 code_labels[label1] = code_labels[label1] + codes_t[i + 1];
                                 codes_t = Delete(codes_t, i + 1);
-                                //label1++;
+                                
                             }
                         label1++;
 
@@ -2655,60 +1974,7 @@ namespace MinesProgram
 
 
                 }
-                //richTextBox3.Text = string.Join(";",cl1);
-
-
-
-
-
-                /////
-
-
-                //richTextBox3.Text = string.Join(";", code_labels);
-                //for (int i = 0; i < codes_t.Length; i++)
-                //{
-                //    if (codes_t[i] == "L(")
-                //    {
-                //        codes_t[i] = "L";
-                //    }
-                //    if (codes_t[i] == "VEqu(")
-                //    {
-                //        codes_t[i] = "VEqu";
-                //    }
-                //    if (codes_t[i] == "VMore(")
-                //    {
-                //        codes_t[i] = "VMore";
-                //    }
-                //    if (codes_t[i] == "VLe(")
-                //    {
-                //        codes_t[i] = "VLe";
-                //    }
-                //    if (codes_t[i] == "G0(")
-                //    {
-                //        codes_t[i] = "G0";
-                //    }
-                //    if (codes_t[i] == "G1(")
-                //    {
-                //        codes_t[i] = "G1";
-                //    }
-                //    if (codes_t[i] == "G2(")
-                //    {
-                //        codes_t[i] = "G2";
-                //    }
-                //    if (codes_t[i] == "G3(")
-                //    {
-                //        codes_t[i] = "G3";
-                //    }
-                //    if (codes_t[i] == "G4(")
-                //    {
-                //        codes_t[i] = "G4";
-                //    }
-                //    if (codes_t[i] == "G5(")
-                //    {
-                //        codes_t[i] = "G5";
-                //    }
-
-                //}
+                
                 if (test2)
                 {
                     /////
@@ -2790,8 +2056,7 @@ namespace MinesProgram
 
                         while (g02 != 2)
                         {
-                            //if (h12 < code_labels.Length && h12 < codes_t.Length)
-                            //{
+                            
                             var temp = code_labels[code_labels.Length - 1];
                             Array.Copy(code_labels, 0, code_labels, 1, code_labels.Length - 1);
                             code_labels[h12] = temp;
@@ -2826,628 +2091,18 @@ namespace MinesProgram
                     }
 
 
-                    /*string[] codes_t4 = new string[codes_t.Length];
-                    string[] code_labels4 = new string[code_labels.Length];
-                    for (int i = 0; i < codes_t.Length; i++) codes_t4[i] = codes_t[i];
-                    for (int i = 0; i < code_labels.Length; i++) code_labels4[i] = code_labels[i];
-
-                    int go1 = 12; int g02 = 0;
-                    while (g02 != 3)
-                    {
-                        var temp = code_labels[code_labels.Length - 1];
-                        Array.Copy(code_labels, 0, code_labels, 1, code_labels.Length - 1);
-                        code_labels[go1] = temp;
-
-                        var temp1 = codes_t[codes_t.Length - 1];
-                        Array.Copy(codes_t, 0, codes_t, 1, codes_t.Length - 1);
-                        codes_t[go1] = temp1;
-                        g02++;
-
-                    }
-                    g02 = 0; go1 = 29;
-
-
-                    for (int i = 0; i < codes_t.Length; i++)
-                    {
-                        if (i < 12)
-                        {
-                            codes_t[i] = codes_t4[i];
-                        }
-                    }
-
-                    for (int i = 0; i < codes_t.Length; i++)
-                    {
-                        if (i < 12)
-                        {
-                            code_labels[i] = code_labels4[i];
-                        }
-                    }
-
-                    for (int i = 0; i < codes_t.Length; i++) codes_t4[i] = codes_t[i];
-                    for (int i = 0; i < code_labels.Length; i++) code_labels4[i] = code_labels[i];
-
-                    while (g02 != 2)
-                    {
-                        var temp = code_labels[code_labels.Length - 1];
-                        Array.Copy(code_labels, 0, code_labels, 1, code_labels.Length - 1);
-                        code_labels[go1] = temp;
-
-                        var temp1 = codes_t[codes_t.Length - 1];
-                        Array.Copy(codes_t, 0, codes_t, 1, codes_t.Length - 1);
-                        codes_t[go1] = temp1;
-                        g02++;
-
-                    }
-
-                    for (int i = 0; i < codes_t.Length; i++)
-                    {
-                        if (i < 29)
-                        {
-                            codes_t[i] = codes_t4[i];
-                        }
-                    }
-
-                    for (int i = 0; i < code_labels.Length; i++)
-                    {
-                        if (i < 29)
-                        {
-                            code_labels[i] = code_labels4[i];
-                        }
-                    }
-                    int h12 = 45 - 16; g02 = 0;
-                    //for (int i = 0; i < 12*16*16; i++)
-                    while (h12 < 500)
-                    {
-                        h12 += 16;
-                        for (int j = 0; j < codes_t.Length; j++) codes_t4[j] = codes_t[j];
-                        for (int j = 0; j < code_labels.Length; j++) code_labels4[j] = code_labels[j];
-
-                        while (g02 != 2)
-                        {
-                            //if (h12 < code_labels.Length && h12 < codes_t.Length)
-                           //{
-                                var temp = code_labels[code_labels.Length - 1];
-                                Array.Copy(code_labels, 0, code_labels, 1, code_labels.Length - 1);
-                                code_labels[h12] = temp;
-
-
-
-                                var temp1 = codes_t[codes_t.Length - 1];
-                                Array.Copy(codes_t, 0, codes_t, 1, codes_t.Length - 1);
-                                codes_t[h12] = temp1;
-
-                           //}
-                            g02++;
-                        }
-
-                        for (int j = 0; j < codes_t.Length; j++)
-                        {
-                            if (j < h12)
-                            {
-                                codes_t[j] = codes_t4[j];
-                            }
-                        }
-
-                        for (int j = 0; j < code_labels.Length; j++)
-                        {
-                            if (j < h12)
-                            {
-                                code_labels[j] = code_labels4[j];
-                            }
-                        }
-                        g02 = 0;
-
-                    }
-                    g02 = 0;
-
-                    for(int j = 0; j < codes_t.Length; j++) codes_t4[j] = codes_t[j];
-                    for (int j = 0; j < code_labels.Length; j++) code_labels4[j] = code_labels[j];
-                    while (g02 != 4)
-                    {
-                        if (357 < code_labels.Length && 357 < codes_t.Length)
-                        {
-                            var temp = code_labels[code_labels.Length - 1];
-                            Array.Copy(code_labels, 0, code_labels, 1, code_labels.Length - 1);
-                            code_labels[357] = temp;
-
-
-
-                            var temp1 = codes_t[codes_t.Length - 1];
-                            Array.Copy(codes_t, 0, codes_t, 1, codes_t.Length - 1);
-                            codes_t[357] = temp1;
-
-                        }
-                        g02++;
-                    }
-
-                    for (int j = 0; j < codes_t.Length; j++)
-                    {
-                        if (j < 356)
-                        {
-                            codes_t[j] = codes_t4[j];
-                        }
-                    }
-
-                    for (int j = 0; j < code_labels.Length; j++)
-                    {
-                        if (j < 356)
-                        {
-                            code_labels[j] = code_labels4[j];
-                        }
-                    }*/
-
-                    /////
+                    
                 }
 
-
-
-                /*for(int i = 0; i<codes_t.Length; i++)
-                {
-                    if(i<12)
-                    //codes_t[i] = codes_t4[i];
-                }*/
-
-                //for (int i<)
-                /*for (int i = 0; i < codes_t.Length - 1; ++i)
-                {
-                    nextInd += k1;
-                    nextInd %= codes_t.Length;
-
-                    tmp = codes_t[nextInd];
-                    codes_t[nextInd] = codes_t[0];
-                    codes_t[0] = tmp;
-                }*/
-
-                //Array.Copy(code_labels, 0, code_labels, 1, code_labels.Length - 1);
-
-                //Array.Copy(code_labels, 12, code_labels, 16, code_labels.Length - 16);
-
-
-
-
-                //richTextBox3.Text = string.Join(";", codes_t4);
-
-                /* for (int i = 0; i < codes_t.Length; i++)
-                 {
-                     if (codes_t[i] == ")")
-                     {
-                         codes_t = Delete(codes_t, i);
-                     }
-                 }*/
-
-                /*    for (int i = 0; i < codes.Length; i++)
-{
-if (i < codes_t.Length)
-{
-codes[i] = 0;
-if (codes_t[i] == "L")
-{
-    codes[i] = 40;
-}
-if (codes_t[i] == "S")
-{
-    codes[i] = 6;
-}
-if (codes_t[i] == "Z0")
-{
-    codes[i] = 8;
-}
-if (codes_t[i] == "VEqu")
-{
-    codes[i] = 123;
-}
-if (codes_t[i] == "VMore")
-{
-    codes[i] = 119;
-}
-if (codes_t[i] == "VLe")
-{
-    codes[i] = 120;
-}
-if (codes_t[i] == "G2")
-{
-    codes[i] = 24;
-
-}
-if (codes_t[i] == "G3")
-{
-    codes[i] = 25;
-
-}
-if (codes_t[i] == "G4")
-{
-    codes[i] = 26;
-
-}
-if (codes_t[i] == "G5")
-{
-    codes[i] = 137;
-
-}
-if (codes_t[i] == "G0")
-{
-    codes[i] = 139;
-
-}
-if (codes_t[i] == "G1")
-{
-    codes[i] = 140;
-
-}
-if (codes_t[i] == "\\")
-{
-    codes[i] = 1;
-}
-if (codes_t[i] == ">")
-{
-    codes[i] = 2;
-}
-if (codes_t[i] == "<")
-{
-    codes[i] = 3;
-}
-if (codes_t[i] == "W")
-{
-    codes[i] = 4;
-}
-if (codes_t[i] == "A")
-{
-    codes[i] = 5;
-}
-if (codes_t[i] == "S")
-{
-    codes[i] = 6;
-}
-if (codes_t[i] == "D")
-{
-    codes[i] = 7;
-}
-if (codes_t[i] == "Z0")
-{
-    codes[i] = 8;
-}
-if (codes_t[i] == "w")
-{
-    codes[i] = 9;
-}
-if (codes_t[i] == "a")
-{
-    codes[i] = 10;
-}
-if (codes_t[i] == "s")
-{
-    codes[i] = 11;
-}
-if (codes_t[i] == "d")
-{
-    codes[i] = 12;
-}
-if (codes_t[i] == "Z2")
-{
-    codes[i] = 14;
-}
-if (codes_t[i] == "Z3")
-{
-    codes[i] = 15;
-}
-if (codes_t[i] == "Z4")
-{
-    codes[i] = 16;
-}
-if (codes_t[i] == "Zc")
-{
-    codes[i] = 17;
-}
-if (codes_t[i] == "Ze")
-{
-    codes[i] = 18;
-}
-if (codes_t[i] == "Zd")
-{
-    codes[i] = 19;
-}
-if (codes_t[i] == "Zf")
-{
-    codes[i] = 20;
-}
-if (codes_t[i] == "Zg")
-{
-    codes[i] = 21;
-}
-if (codes_t[i] == "Zq")
-{
-    codes[i] = 22;
-}
-if (codes_t[i] == "Zh")
-{
-    codes[i] = 23;
-}
-if (codes_t[i] == "R0")
-{
-    codes[i] = 27;
-}
-if (codes_t[i] == "R1")
-{
-    codes[i] = 28;
-}
-if (codes_t[i] == "R2")
-{
-    codes[i] = 138;
-}
-if (codes_t[i] == "C0")
-{
-    codes[i] = 29;
-}
-if (codes_t[i] == "C8")
-{
-    codes[i] = 30;
-}
-if (codes_t[i] == "C1")
-{
-    codes[i] = 31;
-}
-if (codes_t[i] == "C2")
-{
-    codes[i] = 32;
-}
-if (codes_t[i] == "C3")
-{
-    codes[i] = 33;
-}
-if (codes_t[i] == "C5")
-{
-    codes[i] = 35;
-}
-if (codes_t[i] == "C6")
-{
-    codes[i] = 36;
-}
-if (codes_t[i] == "C7")
-{
-    codes[i] = 37;
-}
-if (codes_t[i] == "M0")
-{
-    codes[i] = 38;
-}
-if (codes_t[i] == "M1")
-{
-    codes[i] = 39;
-}
-if (codes_t[i] == "c0")
-{
-    codes[i] = 43;
-}
-if (codes_t[i] == "c1")
-{
-    codes[i] = 44;
-}
-if (codes_t[i] == "c2")
-{
-    codes[i] = 45;
-}
-if (codes_t[i] == "ck")
-{
-    codes[i] = 46;
-}
-if (codes_t[i] == "cl")
-{
-    codes[i] = 47;
-}
-if (codes_t[i] == "cj")
-{
-    codes[i] = 48;
-}
-if (codes_t[i] == "cd")
-{
-    codes[i] = 49;
-}
-if (codes_t[i] == "cm")
-{
-    codes[i] = 50;
-}
-if (codes_t[i] == "cn")
-{
-    codes[i] = 51;
-}
-if (codes_t[i] == "cv")
-{
-    codes[i] = 52;
-}
-if (codes_t[i] == "ca")
-{
-    codes[i] = 53;
-}
-if (codes_t[i] == "ci")
-{
-    codes[i] = 54;
-}
-if (codes_t[i] == "ce")
-{
-    codes[i] = 57;
-}
-if (codes_t[i] == "cf")
-{
-    codes[i] = 58;
-}
-if (codes_t[i] == "cg")
-{
-    codes[i] = 59;
-}
-if (codes_t[i] == "ch")
-{
-    codes[i] = 60;
-}
-if (codes_t[i] == "ct")
-{
-    codes[i] = 74;
-}
-if (codes_t[i] == "cu")
-{
-    codes[i] = 76;
-}
-if (codes_t[i] == "cs")
-{
-    codes[i] = 77;
-}
-if (codes_t[i] == "B1")
-{
-    codes[i] = 162;
-}
-if (codes_t[i] == "B3")
-{
-    codes[i] = 163;
-}
-if (codes_t[i] == "B2")
-{
-    codes[i] = 164;
-}
-if (codes_t[i] == "VB")
-{
-    codes[i] = 165;
-}
-if (codes_t[i] == "C9")
-{
-    codes[i] = 131;
-}
-if (codes_t[i] == "Ca")
-{
-    codes[i] = 132;
-}
-if (codes_t[i] == "Cb")
-{
-    codes[i] = 133;
-}
-if (codes_t[i] == "Cc")
-{
-    codes[i] = 134;
-}
-if (codes_t[i] == "Cd")
-{
-    codes[i] = 135;
-}
-if (codes_t[i] == "Ce")
-{
-    codes[i] = 136;
-}
-if (codes_t[i] == "Qig+")
-{
-    codes[i] = 158;
-}
-if (codes_t[i] == "Qig-")
-{
-    codes[i] = 159;
-}
-if (codes_t[i] == "gr+")
-{
-    codes[i] = 160;
-}
-if (codes_t[i] == "gr-")
-{
-    codes[i] = 161;
-}
-if (codes_t[i] == "iggs")
-{
-    codes[i] = 141;
-}
-if (codes_t[i] == "Build")
-{
-    codes[i] = 142;
-}
-if (codes_t[i] == "Hea")
-{
-    codes[i] = 143;
-}
-if (codes_t[i] == "MineS")
-{
-    codes[i] = 145;
-}
-if (codes_t[i] == "CLeftH")
-{
-    codes[i] = 156;
-}
-if (codes_t[i] == "CRightH")
-{
-    codes[i] = 157;
-}
-if (codes_t[i] == "CGun")
-{
-    codes[i] = 146;
-}
-if (codes_t[i] == "FGun")
-{
-    codes[i] = 147;
-}
-if (codes_t[i] == "hpf")
-{
-    codes[i] = 148;
-}
-if (codes_t[i] == "hpp")
-{
-    codes[i] = 149;
-}
-if (codes_t[i] == "Flip")
-{
-    codes[i] = 144;
-}
-for (int j = 0; j < sim3.Length; j++)
-    if (codes_t[i] == sim3[j])
-    {
-        codes[i] = 0;
-        undefired++;
-    }
-}
-
-}
-*/
-
-                //// new
                 string[] code_labels5 = new string[code_labels.Length];
 
-                //for (int i = 0; i < codes_text.Length; i++)
-                //{
-                //    if (codes_text[i] == "L(")
-                //    {
-                //        while (codes_text[i + 1] != ")")
-                //            if (codes_text[i + 1] != ")")
-                //            {
-                //                code_labels[i] = code_labels[i] + codes_text[i + 1];
-                //                codes_text = Delete(codes_text, i + 1);
-                //                code_labels = Delete(code_labels, i + 1);
-
-                //            }
-
-                //    }
-
-                //    if (codes_text[i] == "G0(")
-                //    {
-                //        while (codes_text[i + 1] != ")")
-                //            if (codes_text[i + 1] != ")")
-                //            {
-                //                code_labels[i] = code_labels[i] + codes_text[i + 1];
-                //                codes_text = Delete(codes_text, i + 1);
-                //                code_labels = Delete(code_labels, i + 1);
-
-                //            }
-                //    }
-                //}
+                
                 int z223 = 0;
 
-                /*for (int i = 1; i < code_labels.Length; i++)
-                 {
-
-                             if (code_labels[i] == null)
-                             {
-                                 code_labels = Delete(code_labels, i);
-
-                             }
-
-
-
-                 }*/
+                
 
                 string[] codes_t20 = new string[code_labels.Length];
-                // string[] codes_t21 = new string[codes_text.Length];
+                
                 string[] codes_t21 = new string[code_labels.Length];
 
 
@@ -3459,255 +2114,19 @@ for (int j = 0; j < sim3.Length; j++)
 
                 for (int i = 0; i < codes_text.Length; i++)
                 {
-                    //codes_t20[i] = codes_text[i];
+                    
                 }
 
                 int z222 = 0;
-                //for (int i = 0; i < codes_text.Length; i++)
-                //{
-                //    if (codes_text[i] == "L(")
-                //    {
-
-
-
-
-                //        if (codes_text[i + 1] != ")")
-                //        {
-
-
-
-                //            codes_text = Delete(codes_text, i + 1);
-
-
-                //        }
-
-                //    }
-
-
-                //}
-
-                //for (int i = 0; i < codes_t.Length; i++)
-                //{
-                //    if (codes_t[i] == "L")
-                //    {
-                //        //if (codes_text[i + 1] == ")") z222++;
-
-
-
-                //        if (codes_t[i + 1] != ")")
-                //        {
-
-
-                //            //code_labels[z222] = code_labels[z222] + codes_text[i + 1];
-
-                //            //z222++;
-                //            codes_t = Delete(codes_t, i + 1);
-
-
-                //        }
-
-                //    }
-
-
-                //}
-
-                //for (int i = 0; i < codes_text.Length; i++)
-                //{
-                //    codes_t21[i] = codes_text[i];
-
-
-                //}
-
-                //for (int i = 0; i < codes_t21.Length; i++)
-                //{
-                //    if(codes_t21[i] == "L(")
-                //    {
-                //        if(codes_t21[i+1] == ")")
-                //        {
-                //            codes_t21[i] += codes_t21[i + 1];
-                //            codes_t21 = Delete(codes_t21, i + 1);
-                //        }
-                //    }
-
-
-                //}
-
-
-
-
-
                 string[] codes_tt = new string[codes_t.Length];
-
-
-
-
 
                 int j21 = 0;
 
-                //for (int i = 0; i < code_labels.Length; i++)
-                //{
-                //    if(z222 < codes_t20.Length)
-                //    {
-                //        if (codes_t20[z222] == "L(")
-                //        {
-                //            if (codes_t20[j21 + 1] != ")")
-                //            {
-                //                if (codes_tt[j21] == "0")
-                //                {
-                //                    if(code_labels[i] != null)
-                //                    {
-                //                        code_labels[i] = code_labels[i] + codes_t20[z222 + 1];
-                //                        codes_t20 = Delete(codes_t20, z222 + 1);
-                //                    }
+                int zzz1 = 0; 
 
-                //                }
-                //                if (codes_tt[j21] == "-1")
-                //                {
-                //                    j21++;
-                //                }
-                //            }
-
-
-                //        }
-                //        else z222++;
-                //    }
-
-
-
-
-                //    //j21++;
-                //    //if (codes_text[i + 1] == ")") z222++;
-
-
-
-                //}
-                int zzz1 = 0; //richTextBox3.Text = string.Join(";", codes_tt);
-
-
-
-
-
-                //for (int i = 0; i < codes_tt.Length; i++)
-                //{
-                //    if (codes_tt[i] == "-1") { code_labels[i] = null; }
-                //}
-
-
-                //richTextBox3.Text = String.Join(";", codes_tt);
-
-
-                //for (int i = 0; i < codes_tt.Length; i++)
-                //{
-                //    for (int j = 0; j < codes_t20.Length; j++)
-                //        if (code_labels[i] != null)
-                //        {
-                //            if (codes_tt[i] != "-1")
-                //            {
-                //                if(codes_t20[j] == "L(")
-                //                {
-                //                    if (codes_t20[j+1] != ")")
-                //                    {
-                //                        code_labels[i] += codes_t20[j + 1];
-                //                        codes_t20 = Delete(codes_t20, j + 1);
-                //                        i++; 
-                //                    }
-                //                }
-
-                //                //code_labels[i] = codes_tt[i];
-                //           }
-                //        }
-
-                //}
-                int zzz30 = 0; ////++++++
-                               //for (int i = 0; i < codes_t20.Length; i++)
-                               //{ 
-                               //    if (codes_t20[i] == "L(")
-                               //    {
-                               //        if (codes_t20[i + 1] != ")")
-                               //        {
-                               //            //if (code_labels[zzz30] == null) zzz30++;
-                               //            //if (code_labels[zzz30] != null)
-                               //            //{
-                               //                code_labels[zzz30] += codes_t20[i + 1];
-                               //                codes_t20 = Delete(codes_t20, i + 1);
-
-                //                //zzz30++;
-                //                //zzz30++;
-                //            //}
-
-                //            // zzz30++;
-                //            //zzz30++;
-                //        }
-
-
-                //        zzz30++;
-                //    }
-                //    if (code_labels[zzz30] == null) zzz30++;
-
-                //}
-
-                // richTextBox3.Text = String.Join(";", code_labels);
-
-
-
-
-
-                //for (int i = 0; i < codes_text.Length; i++)
-                //{
-
-                //    if (codes_text[i] == "L(")
-                //    {
-                //        codes_text[i] = "L";
-                //    }
-                //    if (codes_text[i] == "G0(")
-                //    {
-                //        codes_text[i] = "G0";
-                //    }
-
-
-                //}
-
-
-
-
-
-                //for (int i = 0; i < codes_text.Length; i++)
-                //{
-
-
-                //    if (codes_text[i] == ")")
-                //    {
-                //        codes_text = Delete(codes_text, i);
-                //    }
-                //}
-
-                /* for(int i = 0; i<codes_t.Length; i++)
-                 {
-                     if(codes_t[i] == ")")
-                     {
-                         codes_t = Delete(codes_t, i);
-                     }
-                 }*/
-
-
-
-
-                //richTextBox3.Text = string.Join(";", code_labels);
-                ///// i
+                int zzz30 = 0; 
                 int zzz31 = 0;
 
-
-
-                /////
-
-
-
-
-
-
-
-
-                //richTextBox3.Text = string.Join(";", codes_t.Length);
 
                 for (int i = 0; i < codes_text.Length; i++)
                 {
@@ -3870,7 +2289,6 @@ for (int j = 0; j < sim3.Length; j++)
                     }
                 }
 
-                //richTextBox3.Text = string.Join(";", codes_t);
                 int z100; z100 = 0; int z101; z101 = 0;
                 string[] code_labels6 = new string[cl1.Length];
 
@@ -3958,94 +2376,7 @@ for (int j = 0; j < sim3.Length; j++)
 
                 }
 
-                ////
-
-
-                //for (int i = 0; i < codes_text.Length; i++)
-                //{
-                //    for (int j = 0; j < tx2.Length; j++)
-                //    {
-                //        if (codes_text[i] == tx2[j])
-
-                //        { z100 += j - 1 + 1; }
-
-                //    }
-
-
-
-                //    //z101 = i;
-                //    if (codes_text[z101] == "L(")
-                //    {
-
-                //        code_labels6[z100] = code_labels6[z100] + code_labels[i];
-
-                //    }
-
-                //    if (codes_text[z101] == "G0(")
-                //    {
-
-                //        code_labels6[z100] = code_labels6[z100] + code_labels[i];
-
-                //    }
-                //    if (codes_text[z101] == "G1(")
-                //    {
-
-                //        code_labels6[z100] = code_labels6[z100] + code_labels[i];
-
-                //    }
-                //    if (codes_text[z101] == "G2(")
-                //    {
-
-                //        code_labels6[z100] = code_labels6[z100] + code_labels[i];
-
-                //    }
-                //    if (codes_text[z101] == "G3(")
-                //    {
-
-                //        code_labels6[z100] = code_labels6[z100] + code_labels[i];
-
-                //    }
-                //    if (codes_text[z101] == "G4(")
-                //    {
-
-                //        code_labels6[z100] = code_labels6[z100] + code_labels[i];
-
-                //    }
-
-                //    if (codes_text[z101] == "G5(")
-                //    {
-
-                //        code_labels6[z100] = code_labels6[z100] + code_labels[i];
-
-                //    }
-                //    if (codes_text[z101] == "VEqu(")
-                //    {
-
-                //        code_labels6[z100] = code_labels6[z100] + code_labels[i];
-
-                //    }
-
-                //    if (codes_text[z101] == "VMore(")
-                //    {
-
-                //        code_labels6[z100] = code_labels6[z100] + code_labels[i];
-
-                //    }
-
-                //    if (codes_text[z101] == "VLe(")
-                //    {
-
-                //        code_labels6[z100] = code_labels6[z100] + code_labels[i];
-
-                //    }
-
-                //    z100++;
-
-
-
-                //}
-
-
+               
                 for (int i = 0; i < codes_t.Length; i++)
                 {
                     if (codes_t[i] == "0")
@@ -4077,7 +2408,7 @@ for (int j = 0; j < sim3.Length; j++)
                     z200++;
                 }
 
-                // richTextBox3.Text = String.Join(";", z100);
+               
 
                 for (int i = 0; i < code_labels.Length; i++) code_labels5[i] = code_labels6[i];
 
@@ -4516,38 +2847,6 @@ for (int j = 0; j < sim3.Length; j++)
 
                 }
 
-
-
-
-                /*for (int i = 0; i < codes.Length; i++)
-                {
-                    if (i < codes_text.Length)
-                    {
-                        codes[i] = 0;
-                        if (codes_text[i] == "L")
-                        {
-                            //codes[i] = 40;
-                            codes[i] = 123;
-                        }
-                        if (codes_text[i] == "S")
-                        {
-                            codes[i] = 6;
-                        }
-                        if (codes_text[i] == "Z0")
-                        {
-                            codes[i] = 8;
-                        }
-                        if (codes_text[i] == "G0")
-                        {
-                            //codes[i] = 139;
-                            codes[i] = 120;
-                        }
-                    }
-
-                }*/
-
-                ////
-
                 string[] t10 = new string[16 * 12 * 16];
                 string[] t22 = new string[16 * 12 * 16];
 
@@ -4557,9 +2856,6 @@ for (int j = 0; j < sim3.Length; j++)
                     {
                         for (int k = 0; k < 16; k++)
                         {
-
-                            //newStr[i * 16 * 12 + j * 16 + k] = -1;
-                            //newStr2[i * 16 * 12 + j * 16 + k] = "0";
                             t10[i * 16 * 12 + j * 16 + k] = "-1";
                             t22[i * 16 * 12 + j * 16 + k] = "-1";
                         }
@@ -4569,22 +2865,7 @@ for (int j = 0; j < sim3.Length; j++)
                 ////
                 string[] line = { "@" };
                 int s20 = 0;
-                //for (int j = 0; j < code_labels5.Length; j++)
-                //{
-                //    if (j < newStr.Length && code_labels5[j] != null)
-                //    {
-
-                //        if (code_labels5[j].IndexOf(line[0]) > 0)
-                //        {
-                //            newStr[s20] = j;
-                //            newStr2[s20] = code_labels5[j];
-                //        }
-                //        s20++;
-                //    }
-                //}
-
-
-
+                
                 for (int j = 0; j < code_labels5.Length; j++)
                 {
                     if (j < newStr.Length && code_labels5[j] != null)
@@ -4592,48 +2873,26 @@ for (int j = 0; j < sim3.Length; j++)
 
                         if (code_labels5[j].IndexOf(line[0]) > 0)
                         {
-                            //newStr[s20] = j;
+                            
                             newStr2[j] = code_labels5[j];
                         }
-                        //s20++;
+                        
                     }
                 }
 
-                //richTextBox3.Text = String.Join(";", code_labels5);
+               
                 for (int i = 0; i < newStr2.Length; i++)
-                {
-                    //if (i < code_labels5.Length)
-                    //{
-                    //if (i < newStr3.Length)
-                    // {
+                {                   
                     if (newStr2[i] != "0")
                     {
                         newStr3 = newStr2[i].Split('@');
                         t10[i] = newStr3[0];
                         t22[i] = newStr3[1];
                     }
-                    //
-
-                    //}
-                    //}
                 }
 
                 int z7 = 0;
-                /*    
-
-                for (int i = 0; i < code_labels5.Length; i++)
-                {
-                    if (i < t10.Length)
-                    {
-                        if (t10[i] != "-1")
-                        {
-                            code_labels5[i] = t10[i];
-                        }
-                    }
-                }
-
-                */
-
+                
                 for (int i = 0; i < code_labels5.Length; i++)
                 {
                     if (z7 < t10.Length)
@@ -4656,19 +2915,6 @@ for (int j = 0; j < sim3.Length; j++)
 
                 int z8 = 0;
 
-
-                //for (int i = 0; i < nums.Length; i++)
-                //{
-                //    if (i < t22.Length)
-                //    {
-                //        if (t22[i] != "-1")
-                //        {
-                //            nums[i] = int.Parse(t22[i]);
-                //        }
-                //    }
-                //}
-
-
                 for (int i = 0; i < codes.Length; i++)
                 {
                     if (z8 < t22.Length)
@@ -4680,29 +2926,11 @@ for (int j = 0; j < sim3.Length; j++)
                                 nums[i] = int.Parse(t22[z8]);
 
                             }
-                            /*if (codes[i] == 120)
-                            {
-                                nums[i] = int.Parse(t22[z8++]);
-
-                            }
-                            if (codes[i] == 119)
-                            {
-                                nums[i] = int.Parse(t22[z8++]);
-
-                            }*/
                             z8++;
-                            //if (codes[i] == 120)
-                            //{
-                            //  nums[i] = int.Parse(t22[z8++]);
-
-                            //}
                         }
                     }
                 }
-                //richTextBox3.Text = string.Join(";", nums);
-                //
-
-
+               
                 int num = 0; int num2 = 0;
                 for (int i = 0; i < codes.Length; i++)
                 {
@@ -4756,49 +2984,7 @@ for (int j = 0; j < sim3.Length; j++)
 
 
 
-                //for (int i = 0; i < codes_text.Length; i++)
-                //{
-
-                //    if (codes_text[i] == "->")
-                //    {
-
-
-
-                //        z3 += 53;
-                //        codes_text = Delete(codes_text, i);
-
-
-
-
-                //    }
-                //    codes_t[z3] = codes_text[i];
-                //    z3++;
-
-                //}
-
-
-
-                //for (int i = 0; i< codes_text.Length; i++)
-                //{
-                //    if (codes_text[i] == "L(")
-                //    {
-                //        while (codes_text[i + 1] != ")")
-                //            if (codes_text[i + 1] != ")")
-                //            {
-                //                code_labels2[i] = code_labels2[i] + codes_text[i+1];
-                //                codes_text = Delete(codes_text, i + 1);
-                //            }
-
-                //        if(codes_text[i + 1] == ")")
-                //        {
-                //            codes_text = Delete(codes_text, i + 1);
-                //        }
-                //    }
-                //    if (codes_text[i] == "->")
-
-
-
-                //}
+                
 
                 string message = "";
                 if (undefired == 1) message = "Найден символ из предыдущей версии программатора и не найденный в новом! Он будет заменен на пустые строчки";
@@ -4817,11 +3003,9 @@ for (int j = 0; j < sim3.Length; j++)
                 {
                     tes1[i] = "L(100)";
                 }
-                //richTextBox3.Text = string.Join(";", codes_t.Length);
-                //richTextBox3.Text = string.Join(";", code_labels.Length);
+               
                 richTextBox3.Text = string.Join(";", result);
 
-                //richTextBox3.Text = string.Join(";",tx2);
 
             }
         }
@@ -4859,7 +3043,7 @@ for (int j = 0; j < sim3.Length; j++)
                 else if (dialogResult == DialogResult.No)
                 {
                     checkBox1.Checked = false;
-                    //тут код, который нужно выполнить, если нажали кнопку Нет
+                    
                 }
             }
             else test2 = false;
@@ -4879,15 +3063,15 @@ for (int j = 0; j < sim3.Length; j++)
 
             {
 
-                //Создаём или перезаписываем существующий файл
+                
 
                 StreamWriter sw = File.CreateText(filename);
 
-                //Записываем текст в поток файла
+                
 
                 sw.WriteLine(textToSave);
 
-                //Закрываем файл
+                
 
                 sw.Close();
 

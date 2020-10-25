@@ -1,9 +1,0 @@
-Программа: Чернь живки
-
-Старый код:
-
-_G2(1)L(0)<L(h)VLe(hhp@70)G0(hhp)HeaL(hhp)R0-6L(1)VEqu(y@14613)G1(2)SG3(per)G3(h)G2(1)L(12)VEqu(x@6632)G1(1)DG3(per)G3(h)G2(12)-2L(2)VEqu(x@6628)G1(3)AG3(per)G3(h)G2(2)L(13)VEqu(y@0)G1(0)_MineSG3(h)G2(13)-2L(3)VEqu(y@14557)G1(4)WG3(per)G3(h)G2(3)L(14)VEqu(x@0)G1(0)_MineSG3(h)G2(14)-2L(4)VEqu(x@6624)G1(5)AG3(per)G3(h)G2(4)L(15)VEqu(y@0)G1(0)_MineSG3(h)G2(15)-2L(5)VEqu(y@14613)G1(6)SG3(per)G3(h)G2(5)L(16)VEqu(x@0)G1(0)_MineSG3(h)G2(16)-2L(6)VEqu(x@6632)G1(7)DG3(per)G3(h)G2(6)L(17)VEqu(y@0)G1(0)_MineSG3(h)G2(17)-2L(7)VEqu(y@14557)G1(8)WG3(per)G3(h)G2(7)L(18)VEqu(x@0)G1(0)_MineSG3(h)G2(18)-2L(8)VEqu(x@6628)G1(9)AG3(per)G3(h)G2(8)L(19)VEqu(y@0)G1(0)_MineSG3(h)G2(19)-2L(9)VEqu(y@14613)G1(10)SG3(per)G3(h)G2(9)L(20)VEqu(x@0)G1(0)_MineSG3(h)G2(20)-2L(10)VEqu(x@6624)G1(11)AG3(per)G3(h)G2(10)L(21)VEqu(y@0)G1(0)_MineSG3(h)G2(21)-2L(11)VEqu(y@14557)G1(12)WG3(per)G3(h)G2(11)L(22)VEqu(x@0)G1(0)_MineSG3(h)G2(22)~29%L(per)CRightHVEqu(cel@68)G1(p1)CLeftHVEqu(cel@68)G1(p2)MineSR0-7L(p1)Z3iggSR0-cL(p2)Z4iggSR0
-
-Новый код:
-
-XQAAgACiGAAAAAAAAAA6ArwZ+wD6FpcLG6K0jmA4uiX3goh8IVMA8rH5vIUR5HYKDI+21MiubvgbuGxcnI2IdTbMNiPn9a+Y9Pk+k2E8sZ/4EBpdWmhagtD7Znm2INBLDfbTJx4jw/KXTqOUPEdqFsWf7IWrr8FVJIsocsBGluzZnFxd5aOcu9aG83Z1FZcCqdrFmjfYMbgfe5/wim6ZsfpUyLzBFcsGTfuD5X65N5OarmeAhmk5fgos4IC6CugP8nf09skEUPIS6lblGvFP4soM2s7svUnoUfxiBHzBtcevTXJ6Q+PUOUsDths3QICclQm10EfAAh1dMuLg+8QyGCqRpRUuAlvXu+iDKofu+CjjjBZZfrBpcylo2epuTWEgrgqYKVm0kPiT4IqFlsqI4q+E/cd3CUgF

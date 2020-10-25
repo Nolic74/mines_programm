@@ -43,6 +43,7 @@
             this.button2 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.label10 = new System.Windows.Forms.Label();
             this.button10 = new System.Windows.Forms.Button();
             this.checkBox1 = new System.Windows.Forms.CheckBox();
             this.linkLabel1 = new System.Windows.Forms.LinkLabel();
@@ -62,7 +63,6 @@
             this.richTextBox1 = new System.Windows.Forms.RichTextBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.label10 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -152,7 +152,7 @@
             this.panel2.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel2.Location = new System.Drawing.Point(0, 40);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(46, 410);
+            this.panel2.Size = new System.Drawing.Size(46, 460);
             this.panel2.TabIndex = 1;
             // 
             // button11
@@ -174,7 +174,7 @@
             this.button5.FlatAppearance.BorderSize = 0;
             this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button5.Image = ((System.Drawing.Image)(resources.GetObject("button5.Image")));
-            this.button5.Location = new System.Drawing.Point(3, 334);
+            this.button5.Location = new System.Drawing.Point(3, 391);
             this.button5.Name = "button5";
             this.button5.Size = new System.Drawing.Size(40, 29);
             this.button5.TabIndex = 1;
@@ -186,7 +186,7 @@
             this.button4.FlatAppearance.BorderSize = 0;
             this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button4.Image = ((System.Drawing.Image)(resources.GetObject("button4.Image")));
-            this.button4.Location = new System.Drawing.Point(3, 369);
+            this.button4.Location = new System.Drawing.Point(3, 426);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(40, 29);
             this.button4.TabIndex = 1;
@@ -231,7 +231,7 @@
             // 
             // panel3
             // 
-            this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
+            this.panel3.BackColor = System.Drawing.Color.Maroon;
             this.panel3.Controls.Add(this.label10);
             this.panel3.Controls.Add(this.button10);
             this.panel3.Controls.Add(this.checkBox1);
@@ -244,13 +244,26 @@
             this.panel3.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel3.Location = new System.Drawing.Point(46, 40);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(231, 410);
+            this.panel3.Size = new System.Drawing.Size(231, 460);
             this.panel3.TabIndex = 2;
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.BackColor = System.Drawing.Color.Maroon;
+            this.label10.ForeColor = System.Drawing.Color.Yellow;
+            this.label10.Location = new System.Drawing.Point(18, 289);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(50, 21);
+            this.label10.TabIndex = 8;
+            this.label10.Text = "new*";
+            this.label10.Visible = false;
+            this.label10.Click += new System.EventHandler(this.label10_Click);
             // 
             // button10
             // 
             this.button10.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button10.Location = new System.Drawing.Point(34, 313);
+            this.button10.Location = new System.Drawing.Point(18, 313);
             this.button10.Name = "button10";
             this.button10.Size = new System.Drawing.Size(171, 77);
             this.button10.TabIndex = 7;
@@ -272,7 +285,7 @@
             // linkLabel1
             // 
             this.linkLabel1.AutoSize = true;
-            this.linkLabel1.Location = new System.Drawing.Point(47, 369);
+            this.linkLabel1.Location = new System.Drawing.Point(47, 421);
             this.linkLabel1.Name = "linkLabel1";
             this.linkLabel1.Size = new System.Drawing.Size(0, 21);
             this.linkLabel1.TabIndex = 5;
@@ -281,7 +294,7 @@
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(18, 348);
+            this.label8.Location = new System.Drawing.Point(18, 400);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(0, 21);
             this.label8.TabIndex = 4;
@@ -342,7 +355,7 @@
             this.panel4.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel4.Location = new System.Drawing.Point(277, 40);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(523, 410);
+            this.panel4.Size = new System.Drawing.Size(523, 460);
             this.panel4.TabIndex = 3;
             // 
             // button9
@@ -421,7 +434,7 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(201, 157);
+            this.label6.Location = new System.Drawing.Point(195, 157);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(122, 21);
             this.label6.TabIndex = 2;
@@ -461,23 +474,11 @@
             this.label2.TabIndex = 0;
             this.label2.Text = "Версия 1.0";
             // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
-            this.label10.ForeColor = System.Drawing.Color.Yellow;
-            this.label10.Location = new System.Drawing.Point(31, 289);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(50, 21);
-            this.label10.TabIndex = 8;
-            this.label10.Text = "new*";
-            this.label10.Click += new System.EventHandler(this.label10_Click);
-            // 
             // Form1
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(31)))), ((int)(((byte)(31)))));
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(800, 500);
             this.Controls.Add(this.panel4);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel2);
