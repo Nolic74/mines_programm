@@ -1,6 +1,0 @@
-C:\Users\Nolic\Downloads\-1724526549_CompressedCookie\SevenZip\Compress\LzmaAlone\bin\Debug\Lzma#.dll
-C:\Users\Nolic\Downloads\-1724526549_CompressedCookie\SevenZip\Compress\LzmaAlone\bin\Debug\Lzma#.pdb
-C:\Users\Nolic\Downloads\-1724526549_CompressedCookie\SevenZip\Compress\LzmaAlone\obj\Debug\Lzma.csprojAssemblyReference.cache
-C:\Users\Nolic\Downloads\-1724526549_CompressedCookie\SevenZip\Compress\LzmaAlone\obj\Debug\Lzma.csproj.CoreCompileInputs.cache
-C:\Users\Nolic\Downloads\-1724526549_CompressedCookie\SevenZip\Compress\LzmaAlone\obj\Debug\Lzma#.dll
-C:\Users\Nolic\Downloads\-1724526549_CompressedCookie\SevenZip\Compress\LzmaAlone\obj\Debug\Lzma#.pdb

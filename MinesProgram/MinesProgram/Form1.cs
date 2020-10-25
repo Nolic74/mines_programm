@@ -9,6 +9,8 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using SevenZip.Compression.LZMA;
 
+using System.IO;
+
 using System.Windows;
 
 namespace MinesProgram
@@ -29,7 +31,7 @@ namespace MinesProgram
             label4.Visible = true;
             label6.Visible = true;
             label5.Visible = true;
-            richTextBox1.Text = "22.05.2020\n\n                   Новое в сборке1.00.1\n\n - Хотфикс. \n - Добавлена экспериментальная функция - перенос строки. \n - Введён подсчёт символов из старого программатора.\n\n                   В ближайшее время\n                   \n  -  Релиз программы.\n\n";
+            richTextBox1.Text = "24.10.2020\n\n - Новая сборка.                    \n\n22.05.2020\n\n                   Новое в сборке1.00.1\n\n - Хотфикс. \n - Добавлена экспериментальная функция - перенос строки. \n - Введён подсчёт символов из старого программатора.\n\n                   В ближайшее время\n                   \n  -  Релиз программы.\n\n";
             textBox1.Text = "Введите программу";//подсказка
             textBox1.ForeColor = Color.Gray;
             textBox2.Text = "Введите программу";//подсказка
@@ -54,9 +56,9 @@ namespace MinesProgram
             arr[0] = last;
         }
 
-        static void massiv (string[] txn)
+        static void massiv(string[] txn)
         {
-             
+
             //string[] txn = new string[3071];
             string[] sim1 = { "-", "=", "~" };
             string[] sim2 = { "0", "1", "2", "3", "4", "5", "6", "7", "8", "9", "a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z", "A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z", " ", "!", "@", "#", "$", "%", "^", "&", "*", "(", ")", "-", "_", "+", "=", "[", "]", "{", "}", ",", ".", "<", ">", "?", "/", ";", ":", "|", "~" };
@@ -104,7 +106,7 @@ namespace MinesProgram
                         }
                         if (gss == sim2.Length) { gss = 0; t++; }
                     }
-                    
+
                 }
 
             }
@@ -135,15 +137,15 @@ namespace MinesProgram
              str = str1;*/
             string a = "Z"; string b = "0";
 
-            string [] simvoly= str.Split((new[] { "," }), StringSplitOptions.RemoveEmptyEntries);
-           /*string [] simvoly = new string[sim1.Length + 1];
-            for (int i = 0; i < simvoly.Length; i++)
-            {
-                if (i < sim1.Length)
-                    simvoly[i] = sim1[i];
-                //else simvoly[i] = "0";
-            }
-            */
+            string[] simvoly = str.Split((new[] { "," }), StringSplitOptions.RemoveEmptyEntries);
+            /*string [] simvoly = new string[sim1.Length + 1];
+             for (int i = 0; i < simvoly.Length; i++)
+             {
+                 if (i < sim1.Length)
+                     simvoly[i] = sim1[i];
+                 //else simvoly[i] = "0";
+             }
+             */
             for (int i = 0; i < simvoly.Length; i++)
             {
                 if (simvoly[i] == a)
@@ -155,7 +157,7 @@ namespace MinesProgram
             string str1 = "";
             str1 = string.Join("", simvoly);
             str = str1;
-            
+
         }
 
         static void massiv2(string[] txn1)
@@ -191,7 +193,7 @@ namespace MinesProgram
                     {
                         if (gss < sim2.Length)
                         {
-                            txn1[i] =  t + sim2[gss];// + " " + i.ToString();
+                            txn1[i] = t + sim2[gss];// + " " + i.ToString();
                             gss++;
                         }
                         if (gss == sim2.Length) { gss = 0; t++; }
@@ -208,7 +210,7 @@ namespace MinesProgram
 
                 }
 
-            
+
             }
 
         }
@@ -413,8 +415,8 @@ namespace MinesProgram
             button9.Enabled = true;
             richTextBox3.Visible = true;
             richTextBox3.Enabled = true;
-            checkBox1.Enabled = true;
-            checkBox1.Visible = true;
+            //checkBox1.Enabled = true;
+            //checkBox1.Visible = true;
         }
 
         private void textBox1_TextChanged(object sender, EventArgs e)
@@ -1060,7 +1062,7 @@ namespace MinesProgram
                         }
                         if (s1[j] == "120")
                         {
-                            s1[j] = "VLe(" + code_labels[j] + "@" + nums[j] + ")";//s1[j] = "VLes(" + code_labels[j] + "@" + nums[j] + ")";
+                            s1[j] = "VLe(" + code_labels[j] + "@" + nums[j] + ")";
                         }
                         if (s1[j] == "119")
                         {
@@ -1115,11 +1117,6 @@ namespace MinesProgram
                         {
                             s1[j] = "Flip";
                         }
-
-
-
-                        ////
-                        //if (j == 2)
                     }
 
                     richTextBox2.Text = string.Join(" ", s1);
@@ -1163,9 +1160,6 @@ namespace MinesProgram
                         {
                             tmp[j] = "G1(" + code_labels[j] + ")";
                         }
-
-
-                        ////
                         if (tmp[j] == "1")
                         {
                             tmp[j] = "\\";
@@ -1523,7 +1517,7 @@ namespace MinesProgram
                     int length, maxLength = 0;
                     for (int i = 0; i < tmp.Length; i++)
                     {
-                        if (tmp[i] == "-")//&& s2<number.Length)
+                        if (tmp[i] == "-")
                         {
                             length = 0;
                             for (int j = i; j < tmp.Length && tmp[j] == "-"; j++)
@@ -1556,7 +1550,7 @@ namespace MinesProgram
                     int RS = 0;
                     for (int i = 0; i < tmp2.Length; i++)
                     {
-                        RS = RS + tmp2[i];//-s2+1;
+                        RS = RS + tmp2[i];
                     }
                     int[] g2s = new int[s2];
 
@@ -1585,8 +1579,6 @@ namespace MinesProgram
                     }
                     int g4 = 0; int g5 = 0; int g6 = 0; int g7 = 0;
                     string[] tmp3 = new string[tmp.Length - RS];
-                    //for (int i = 0; i<g2s.Length; i++)
-                    //{
                     string[] tmp6 = new string[tmp2.Length];
                     for (int i = 0; i < tmp2.Length; i++)
                     {
@@ -1597,17 +1589,17 @@ namespace MinesProgram
                     {
                         for (int j = 10; j < tx3.Length; j++)
                         {
-                            if (tmp6[i] == (j+1).ToString())
+                            if (tmp6[i] == (j + 1).ToString())
                             {
                                 tmp6[i] = tx3[j];
                             }
                         }
-                        
-                        if (tmp6[i] == "10"){
+
+                        if (tmp6[i] == "10") {
                             tmp6[i] = "a";
                         }
-                        
-                        ////
+
+                       
                     }
 
                     for (int i = 0; i < tmp.Length; i++)
@@ -1617,40 +1609,22 @@ namespace MinesProgram
                             if (tmp2[g4] != 1)
                             {
                                 if (tmp2[g4] < 91)
-                                    //tmp[g2s[g4]] = "-" + tmp2[g4];
+                                    
                                     tmp[g2s[g4]] = "-" + tmp6[g4];
-                                ////tmp = Delete(tmp, g2s[g4+1]);
-                                if (tmp2[g4] >= 91 && tmp2[g4] < 910)
+                                
+                               if (tmp2[g4] >= 91 && tmp2[g4] < 910)
                                     tmp[g2s[g4]] = "=" + tmp6[g4];
                                 if (tmp2[g4] >= 910)
                                     tmp[g2s[g4]] = "~" + tmp6[g4];
 
                             }
-                            else tmp[g2s[g4]] = "_";//+ tmp2[g4];
+                            else tmp[g2s[g4]] = "_";
                             g4++;
                         }
 
 
 
-                        /*for(int j = 0; j<tmp3.Length; j++)
-                        {
-                            if (g4 < g2s.Length)
-                            {
-                                if (i != g2s[g4]&&i<tmp.Length)
-                                {
-                                    tmp3[j] = tmp[i];
-                                    
-                                }
-                                else
-                                {
-                                    j += tmp2[g5];
-                                    g5++;
-                                }
-                                i++;
-                            }*/
-
-
-                    }
+                        
                     for (int i = 0; i < tmp.Length; i++)
                     {
                         if (g5 < g2s.Length)//&&g6<g2s[g5])
@@ -1669,7 +1643,18 @@ namespace MinesProgram
                         }
                         g5++;
                     }
-                    // }
+                    for (int i = 0; i < tmp.Length; i++)
+                    {
+                        if (tmp[i] == "=a")
+                        {
+                            tmp[i] = "=10";
+                        }
+                        if (tmp[i] == "~a")
+                        {
+                            tmp[i] = "~10";
+                        }
+                    }
+                    
                     richTextBox2.Text = string.Join("", tmp);
                     /*char[] str = text.ToCharArray();
                    // string text1;
@@ -1703,9 +1688,9 @@ namespace MinesProgram
         private void button9_Click(object sender, EventArgs e)// конвертация в новый код
         {
             int undefired = 0;
-                
 
-            string[] sim3 = { "@", "+", "&", "c3", "c4", "c5", "c6", "c7", "c8", "c9", "cb", "cc", "Z1", "Zk", "Zl", "Zm", "Zn", "Zo", "Zp", "Zi", "Zj", "co", "cp", "cq", "cr", "cO", "cP", "cS", "Cf", "Cg", "Cj", "Ch", "Ci", "cQ", "cR", "Zh" };
+
+            string[] sim3 = { "+", "&", "c3", "c4", "c5", "c6", "c7", "c8", "c9", "cb", "cc", "Z1", "Zk", "Zl", "Zm", "Zn", "Zo", "Zp", "Zi", "Zj", "co", "cp", "cq", "cr", "cO", "cP", "cS", "Cf", "Cg", "Cj", "Ch", "Ci", "cQ", "cR" };
 
             string[] tx2 = new string[3071];
             massiv(tx2);
@@ -1717,7 +1702,7 @@ namespace MinesProgram
             string[] t1 = new string[16 * 12 * 16];
             string[] t2 = new string[16 * 12 * 16];
             int[] g3 = new int[16 * 12 * 16];
-            string[] codes_t = new string[16 * 12 * 16];
+            //string[] codes_t = new string[16 * 12 * 16];
             string[] codes_t2 = new string[16 * 12 * 16];
             string[] code_labels2 = new string[16 * 12 * 16];
 
@@ -1737,11 +1722,11 @@ namespace MinesProgram
                         t1[i * 16 * 12 + j * 16 + k] = "-1";
                         t2[i * 16 * 12 + j * 16 + k] = "-1";
                         g3[i * 16 * 12 + j * 16 + k] = -1;
-                        codes_t[i * 16 * 12 + j * 16 + k] = "0";
+                        //codes_t[i * 16 * 12 + j * 16 + k] = "0";
                         codes_t2[i * 16 * 12 + j * 16 + k] = "0";
                         //code_labels[i * 16 * 12 + j * 16 + k] = "0";
                         zzz[i * 16 * 12 + j * 16 + k] = -1;
-                        
+
                         //code_labels2[i * 16 * 12 + j * 16 + k] = "-1";
                         //code_labels[i * 16 * 12 + j * 16 + k] = "0";
                     }
@@ -1754,10 +1739,10 @@ namespace MinesProgram
                 char[] str1 = text.ToCharArray();
                 char[] str = new char[str1.Length];
 
-                
+
 
                 string testt2;
-                    testt2 = new string (str);
+                testt2 = new string(str);
 
 
                 text = text.Replace("/", "/,");
@@ -1832,7 +1817,7 @@ namespace MinesProgram
                 text = text.Replace("Qig-", "Qig-,");
                 text = text.Replace("gr+", "gr+,");
                 text = text.Replace("gr-", "gr-,");
-                text = text.Replace("iggs", "iggs,");
+                text = text.Replace("iggS", "iggS,");
                 text = text.Replace("Build", "Build,");
                 text = text.Replace("MineS", "MineS,");
                 text = text.Replace("CLeftH", "CLeftH,");
@@ -1843,14 +1828,15 @@ namespace MinesProgram
                 text = text.Replace("hpp", "hpp,");
                 text = text.Replace("Flip", "Flip,");
                 text = text.Replace("Hea", "Hea,");
+                //text = text.Replace("@", "@,");
 
                 for (int i = 0; i < tx2.Length; i++)
                     if (i < tx2.Length)
                         text = text.Replace(tx2[i], tx2[i] + ",");
 
 
-                text = text.Replace(")", ",),");
-                
+
+
                 text = text.Replace("L(", "L(,");
                 text = text.Replace("VEqu(", "VEqu(,");
                 text = text.Replace("VMore(", "VMore(,");
@@ -1861,7 +1847,7 @@ namespace MinesProgram
                 text = text.Replace("G3(", "G3(,");
                 text = text.Replace("G4(", "G4(,");
                 text = text.Replace("G5(", "G5(,");
-
+                text = text.Replace(")", ",),");
 
                 for (int i = 0; i < sim3.Length; i++)
 
@@ -1874,14 +1860,14 @@ namespace MinesProgram
 
                 codes_text = text.Split(separator, StringSplitOptions.RemoveEmptyEntries);
                 int g12 = 0; int z01 = zzz[0]; int z02 = 0;
-                
+
 
                 for (int i = 0; i < codes_text.Length; i++)
                 {
                     //codes_t[i] = codes_text[i];
                 }
 
-                
+
                 for (int i = 0; i < codes_text.Length; i++)
                 {
                     if (codes_text[i] == "->")
@@ -1889,13 +1875,13 @@ namespace MinesProgram
                         zzz[z00] = i;
                         z00++;
                     }
-                        
+
                 }
 
                 z02 = zzz[0]; int z3 = 0;
                 //for (int i = 0; i < codes_text.Length; i++)
                 //{
-                   
+
                 //        if (codes_text[i] == "->")
                 //        {
 
@@ -1965,7 +1951,7 @@ namespace MinesProgram
 
 
                 */
-               
+
 
 
                 /*for (int i = 0; i < codes_text.Length; i++)
@@ -2155,14 +2141,21 @@ namespace MinesProgram
                             }
                     }
                 }*/
+                string[] codes_t = new string[16 * 12 * 16 + codes_text.Length*3/2];
+                for (int i = 0; i < codes_text.Length; i++)
+                {
+                    codes_t[i] = codes_text[i];
+                }
+
+               // richTextBox3.Text = string.Join(";", codes_text.Length);
 
                 int z4 = 0;
                 for (int i = 0; i < codes_text.Length; i++)
                 {
-                    for(int j = 0; j<tx2.Length;j++)
-                    if (codes_text[i] == tx2[j])
+                    for (int j = 0; j < tx2.Length; j++)
+                        if (codes_text[i] == tx2[j])
 
-                    { z4 += j-1+1; }
+                        { z4 += j - 1 + 1; }
 
                     if (codes_text[i] == "/") {
                         if (codes_text[i + 1] == "/")
@@ -2193,357 +2186,498 @@ namespace MinesProgram
                             }
                             z4 += 191;
                         }
-                                                    z4 += 191;
+                        z4 += 191;
                         if (z4 > 191 && z4 < 384) z4 = 191;//if (z3 > 191 && z3 < 384)  z3 = 192;
-                        /*if (z4 > 576-1 && z4 < 767 - 1) z4 = 576-1;
-                        if (z4 > 767 && z4 < 959) z4 = 767;
-                        if (z4 > 959 && z4 < 1151) z4 = 959;
-                        if (z4 > 1151 && z4 < 1337) z4 = 1151 ;
-                        if (z4 > 1343 && z4 < 1536) z4 = 1343 ;
-                        if (z4 > 1535 && z4 < 1727) z4 = 1535 ;*/
-                        if (z4 > 384-1 && z4 < 576) z4 = 384-1;//2
-                        if (z4 > 576-1 && z4 < 768 ) z4 = 576-1;//3
-                        if (z4 > 768-1 && z4 < 960) z4 = 768-1;//4
-                        if (z4 > 960-1 && z4 < 1152) z4 = 960-1; //5
-                        if (z4 > 1152-1 && z4 < 1344) z4 = 1152-1; //6
-                        if (z4 > 1344-1 && z4 < 1536) z4 = 1344-1; //7
-                        if (z4 > 1536-1 && z4 < 1728 ) z4 = 1536-1; //7
-                        if(codes_text[i+1] == "/")
+                        if (z4 > 384 - 1 && z4 < 576) z4 = 384 - 1;//2
+                        if (z4 > 576 - 1 && z4 < 768) z4 = 576 - 1;//3
+                        if (z4 > 768 - 1 && z4 < 960) z4 = 768 - 1;//4
+                        if (z4 > 960 - 1 && z4 < 1152) z4 = 960 - 1; //5
+                        if (z4 > 1152 - 1 && z4 < 1344) z4 = 1152 - 1; //6
+                        if (z4 > 1344 - 1 && z4 < 1536) z4 = 1344 - 1; //7
+                        if (z4 > 1536 - 1 && z4 < 1728) z4 = 1536 - 1; //7
+                        if (codes_text[i + 1] == "/")
                         {
-                            z4 = z4+191+191;
+                            z4 = z4 + 191 + 191;
                         }
 
-
+                        
 
                     }
-                                        
-                    if (codes_text[i] == "L(")
-                    {
-                        while (codes_text[i + 1] != ")")
-                            if (codes_text[i + 1] != ")")
-                            {
-                                code_labels[z4] = code_labels[z4] + codes_text[i + 1];
-                                codes_text = Delete(codes_text, i + 1);
-                            }
 
-                        if (codes_text[i + 1] == ")")
-                        {
-                            codes_text = Delete(codes_text, i + 1);
-                        }
-                    }
+                    //// new
+                    
 
-                    if (codes_text[i] == "VEqu(")
-                    {
-                        while (codes_text[i + 1] != ")")
-                            if (codes_text[i + 1] != ")")
-                            {
-                                code_labels[z4] = code_labels[z4] + codes_text[i + 1];
-                                codes_text = Delete(codes_text, i + 1);
-                            }
-
-                        if (codes_text[i + 1] == ")")
-                        {
-                            codes_text = Delete(codes_text, i + 1);
-                        }
-                    }
-
-                    if (codes_text[i] == "VMore(")
-                    {
-                        while (codes_text[i + 1] != ")")
-                            if (codes_text[i + 1] != ")")
-                            {
-                                code_labels[z4] = code_labels[z4] + codes_text[i + 1];
-                                codes_text = Delete(codes_text, i + 1);
-                            }
-
-                        if (codes_text[i + 1] == ")")
-                        {
-                            codes_text = Delete(codes_text, i + 1);
-                        }
-                    }
-                    if (codes_text[i] == "VLe(")
-                    {
-                        while (codes_text[i + 1] != ")")
-                            if (codes_text[i + 1] != ")")
-                            {
-                                code_labels[z4] = code_labels[z4] + codes_text[i + 1];
-                                codes_text = Delete(codes_text, i + 1);
-                            }
-
-                        if (codes_text[i + 1] == ")")
-                        {
-                            codes_text = Delete(codes_text, i + 1);
-                        }
-                    }
-                    if (codes_text[i] == "G0(")
-                    {
-                        while (codes_text[i + 1] != ")")
-                            if (codes_text[i + 1] != ")")
-                            {
-                                code_labels[z4] = code_labels[z4] + codes_text[i + 1];
-                                codes_text = Delete(codes_text, i + 1);
-                            }
-
-                        if (codes_text[i + 1] == ")")
-                        {
-                            codes_text = Delete(codes_text, i + 1);
-                        }
-                    }
-                    if (codes_text[i] == "G1(")
-                    {
-                        while (codes_text[i + 1] != ")")
-                            if (codes_text[i + 1] != ")")
-                            {
-                                code_labels[z4] = code_labels[z4] + codes_text[i + 1];
-                                codes_text = Delete(codes_text, i + 1);
-                            }
-
-                        if (codes_text[i + 1] == ")")
-                        {
-                            codes_text = Delete(codes_text, i + 1);
-                        }
-                    }
-                    if (codes_text[i] == "G2(")
-                    {
-                        while (codes_text[i + 1] != ")")
-                            if (codes_text[i + 1] != ")")
-                            {
-                                code_labels[z4] = code_labels[z4] + codes_text[i + 1];
-                                codes_text = Delete(codes_text, i + 1);
-                            }
-
-                        if (codes_text[i + 1] == ")")
-                        {
-                            codes_text = Delete(codes_text, i + 1);
-                        }
-                    }
-                    if (codes_text[i] == "G3(")
-                    {
-                        while (codes_text[i + 1] != ")")
-                            if (codes_text[i + 1] != ")")
-                            {
-                                code_labels[z4] = code_labels[z4] + codes_text[i + 1];
-                                codes_text = Delete(codes_text, i + 1);
-                            }
-
-                        if (codes_text[i + 1] == ")")
-                        {
-                            codes_text = Delete(codes_text, i + 1);
-                        }
-                    }
-                    if (codes_text[i] == "G4(")
-                    {
-                        while (codes_text[i + 1] != ")")
-                            if (codes_text[i + 1] != ")")
-                            {
-                                code_labels[z4] = code_labels[z4] + codes_text[i + 1];
-                                codes_text = Delete(codes_text, i + 1);
-                            }
-
-                        if (codes_text[i + 1] == ")")
-                        {
-                            codes_text = Delete(codes_text, i + 1);
-                        }
-                    }
-                    if (codes_text[i] == "G5(")
-                    {
-                        while (codes_text[i + 1] != ")")
-                            if (codes_text[i + 1] != ")")
-                            {
-                                code_labels[z4] = code_labels[z4] + codes_text[i + 1];
-                                codes_text = Delete(codes_text, i + 1);
-                            }
-
-                        if (codes_text[i + 1] == ")")
-                        {
-                            codes_text = Delete(codes_text, i + 1);
-                        }
-                    }
-
+                    ////
                     z4++;
 
                 }
+                ///////++++++  
+                //for (int i = 0; i < codes_text.Length; i++)
+                //{
+                //    if (codes_text[i] == "L(")
+                //    {
+                //        //if (codes_text[i+1] != ")")
+                //        z0 = i + 1;
+
+                //        if (codes_text[i + 1] == ")")
+                //        {
+                //            //if(codes_text[z0] != ",")
+
+                //            g12++;
 
 
-                for (int i = 0; i < codes_text.Length; i++)
-                {
-                    if (codes_text[i] == "/")
-                    {
-                        z3 += 191;
-                        if (codes_text[i + 1] == "/")
-                        {
-                            if (codes_text[i + 2] == "/")
-                            {
-                                if (codes_text[i + 3] == "/")
-                                {
-                                    if (codes_text[i + 4] == "/")
-                                    {
-                                        if (codes_text[i + 5] == "/")
-                                        {
-                                            if (codes_text[i + 6] == "/")
-                                            {
-                                                if (codes_text[i + 7] == "/")
-                                                {
-                                                    z3 = z3 + 191;
-                                                    /*if (z3 > 191 && z3 < 384) z3 = 192;  //1
-                                                    if (z3 > 384 && z3 < 576) z3 = 384;//2
-                                                    if (z3 > 576 && z3 < 768) z3 = 576;//3
-                                                    if (z3 > 768 && z3 < 960) z3 = 768;//4
-                                                    if (z3 > 960 && z3 < 1152) z3 = 960; //5
-                                                    if (z3 > 1152 && z3 < 1344) z3 = 1152; //6
-                                                    if (z3 > 1344 && z3 < 1536) z3 = 1344; //7
-                                                    if (z3 > 1536 && z3 < 1728) z3 = 1536; *///7
+                //        }
+
+
+                //        if (codes_text[z0] != "L(")
+                //        {
+                //            if (codes_text[z0] != ")")
+                //            {
+                //                //if(codes_text[z0] != ",")
+                //                //if(codes_text[z0] != ",")
+                //                code_labels[i - g12] = codes_text[z0];
+                //                codes_text = Delete(codes_text, z0);
+                //                //codes_text[z0] = null;
+                //                g12++;
+                //                z0++;
+
+                //            }
+
+
+
+                //        }
+
+
+
+
+                //    }
+
+                //    if (codes_text[i] == "G0(")
+                //    {
+                //        //if (codes_text[i+1] != ")")
+                //        z0 = i + 1;
+
+                //        if (codes_text[i + 1] == ")")
+                //        {
+                //            //if(codes_text[z0] != ",")
+
+                //            g12++;
+
+
+                //        }
+
+
+                //        if (codes_text[z0] != "G0(")
+                //        {
+                //            if (codes_text[z0] != ")")
+                //            {
+                //                //if(codes_text[z0] != ",")
+                //                //if(codes_text[z0] != ",")
+                //                code_labels[i - g12] = codes_text[z0];
+                //                codes_text = Delete(codes_text, z0);
+                //               // codes_text[z0] = null;
+                //                g12++;
+                //                z0++;
+
+                //            }
+
+
+
+                //        }
+
+
+
+
+                //    }
+
+                //}
+
+                //пока убираю
+
+                /* for (int i = 0; i < codes_text.Length; i++)
+                 {
+                     if (codes_text[i] == "/")
+                     {
+                         z3 += 191;
+                         if (codes_text[i + 1] == "/")
+                         {
+                             if (codes_text[i + 2] == "/")
+                             {
+                                 if (codes_text[i + 3] == "/")
+                                 {
+                                     if (codes_text[i + 4] == "/")
+                                     {
+                                         if (codes_text[i + 5] == "/")
+                                         {
+                                             if (codes_text[i + 6] == "/")
+                                             {
+                                                 if (codes_text[i + 7] == "/")
+                                                 {
+                                                     z3 = z3 + 191;
                                                     codes_text = Delete(codes_text, i + 7);
-                                                }
-                                                z3 = z3 + 191;
-                                                /*if (z3 > 191 && z3 < 384) z3 = 192;  //1
-                                                if (z3 > 384 && z3 < 576) z3 = 384;//2
-                                                if (z3 > 576 && z3 < 768) z3 = 576;//3
-                                                if (z3 > 768 && z3 < 960) z3 = 768;//4
-                                                if (z3 > 960 && z3 < 1152) z3 = 960; //5
-                                                if (z3 > 1152 && z3 < 1344) z3 = 1152; //6
-                                                if (z3 > 1344 && z3 < 1536) z3 = 1344; //7
-                                                if (z3 > 1536 && z3 < 1728) z3 = 1536;*/ //7
-                                                codes_text = Delete(codes_text, i + 6);
-                                            }
-                                            z3 = z3 + 191;
-                                            /*if (z3 > 191 && z3 < 384) z3 = 192;  //1
-                                                if (z3 > 384 && z3 < 576) z3 = 384;//2
-                                                if (z3 > 576 && z3 < 768) z3 = 576;//3
-                                                if (z3 > 768 && z3 < 960) z3 = 768;//4
-                                                if (z3 > 960 && z3 < 1152) z3 = 960; //5
-                                                if (z3 > 1152 && z3 < 1344) z3 = 1152; //6
-                                                if (z3 > 1344 && z3 < 1536) z3 = 1344; //7
-                                                if (z3 > 1536 && z3 < 1728) z3 = 1536;*/
-                                            codes_text = Delete(codes_text, i + 5);
-                                        }
-                                        z3 = z3 + 191;
-                                        /*if (z3 > 191 && z3 < 384) z3 = 192;  //1
-                                                if (z3 > 384 && z3 < 576) z3 = 384;//2
-                                                if (z3 > 576 && z3 < 768) z3 = 576;//3
-                                                if (z3 > 768 && z3 < 960) z3 = 768;//4
-                                                if (z3 > 960 && z3 < 1152) z3 = 960; //5
-                                                if (z3 > 1152 && z3 < 1344) z3 = 1152; //6
-                                                if (z3 > 1344 && z3 < 1536) z3 = 1344; //7
-                                                if (z3 > 1536 && z3 < 1728) z3 = 1536;*/
-                                        codes_text = Delete(codes_text, i + 4);
-                                    }
-                                    z3 = z3 + 191;
-                                    /*if (z3 > 191 && z3 < 384) z3 = 192;  //1
-                                                if (z3 > 384 && z3 < 576) z3 = 384;//2
-                                                if (z3 > 576 && z3 < 768) z3 = 576;//3
-                                                if (z3 > 768 && z3 < 960) z3 = 768;//4
-                                                if (z3 > 960 && z3 < 1152) z3 = 960; //5
-                                                if (z3 > 1152 && z3 < 1344) z3 = 1152; //6
-                                                if (z3 > 1344 && z3 < 1536) z3 = 1344; //7
-                                                if (z3 > 1536 && z3 < 1728) z3 = 1536;*/
-                                    codes_text = Delete(codes_text, i + 3);
-                                }
-                                //z3 = z3+191;
-                                /* if (z3 > 191 && z3 < 384) z3 = 192;  //1
-                                                 if (z3 > 384 && z3 < 576) z3 = 384;//2
-                                                 if (z3 > 576 && z3 < 768) z3 = 576;//3
-                                                 if (z3 > 768 && z3 < 960) z3 = 768;//4
-                                                 if (z3 > 960 && z3 < 1152) z3 = 960; //5
-                                                 if (z3 > 1152 && z3 < 1344) z3 = 1152; //6
-                                                 if (z3 > 1344 && z3 < 1536) z3 = 1344; //7
-                                                 if (z3 > 1536 && z3 < 1728) z3 = 1536;*/
-                                codes_text = Delete(codes_text, i + 2);
-                                
-                            }
-                            z3 = z3 + 191 ;
-                            /*if (z3 > 191 && z3 < 384) z3 = 192;  //1
-                                                if (z3 > 384 && z3 < 576) z3 = 384;//2
-                                                if (z3 > 576 && z3 < 768) z3 = 576;//3
-                                                if (z3 > 768 && z3 < 960) z3 = 768;//4
-                                                if (z3 > 960 && z3 < 1152) z3 = 960; //5
-                                                if (z3 > 1152 && z3 < 1344) z3 = 1152; //6
-                                                if (z3 > 1344 && z3 < 1536) z3 = 1344; //7
-                                                if (z3 > 1536 && z3 < 1728) z3 = 1536;*/
+                                                 }
+                                                 z3 = z3 + 191;
+                                                 codes_text = Delete(codes_text, i + 6);
+                                             }
+                                             z3 = z3 + 191;
+                                             codes_text = Delete(codes_text, i + 5);
+                                         }
+                                         z3 = z3 + 191;
+                                         codes_text = Delete(codes_text, i + 4);
+                                     }
+                                     z3 = z3 + 191;
+                                     codes_text = Delete(codes_text, i + 3);
+                                 }
+                                 codes_text = Delete(codes_text, i + 2);
+
+                             }
+                             z3 = z3 + 191;
                             codes_text = Delete(codes_text, i + 1);
 
-                        }
-                        
-                        
-                        if (z3 > 191 && z3 < 384) z3 = 192;  //1
-                        if (z3 > 384 && z3 < 576) z3 = 384;//2
-                        if (z3 > 576 && z3 < 768) z3 = 576;//3
-                        if (z3 > 768 && z3 < 960) z3 = 768;//4
-                        if (z3 > 960 && z3 < 1152) z3 = 960; //5
-                        if (z3 > 1152 && z3 < 1344) z3 = 1152; //6
-                        if (z3 > 1344 && z3 < 1536) z3 = 1344; //7
-                        if (z3 > 1536 && z3 < 1728) z3 = 1536; //7
-                        codes_text = Delete(codes_text, i);
+                         }
 
 
-                    }
-                    for (int j = 0; j<tx2.Length; j++)
-                    if (codes_text[i] == tx2[j])
-                    {
+                         if (z3 > 191 && z3 < 384) z3 = 192;  //1
+                         if (z3 > 384 && z3 < 576) z3 = 384;//2
+                         if (z3 > 576 && z3 < 768) z3 = 576;//3
+                         if (z3 > 768 && z3 < 960) z3 = 768;//4
+                         if (z3 > 960 && z3 < 1152) z3 = 960; //5
+                         if (z3 > 1152 && z3 < 1344) z3 = 1152; //6
+                         if (z3 > 1344 && z3 < 1536) z3 = 1344; //7
+                         //if (z3 > 1536 && z3 < 1728) z3 = 1536; //7
+                         if (z3 > 1536 && z3 < 1728) z3 = 1536; //7
+                         codes_text = Delete(codes_text, i);
 
 
-
-                        z3 += j+1;
-                        codes_text = Delete(codes_text, i);
+                     }
+                     for (int j = 0; j < tx2.Length; j++)
+                         if (codes_text[i] == tx2[j])
+                         {
 
 
 
-
-                    }
-
-                    
-                    codes_t[z3] = codes_text[i];
-                    z3++;
-
-                }
+                             z3 += j + 1;
+                             codes_text = Delete(codes_text, i);
 
 
 
-                //richTextBox3.Text = string.Join(";", code_labels);
+
+                         }
+
+
+
+                     //codes_t[z3] = codes_text[i];
+                     z3++;
+
+                 }
+                 */
+                //richTextBox3.Text = string.Join(";", codes_t);
+                /// пока убираю
+                /////
+                ///
+                int label = 0; int label1 = 0; int label2 = 0; int label3 = 0; int label4 = 0;
                 for (int i = 0; i < codes_t.Length; i++)
                 {
                     if (codes_t[i] == "L(")
                     {
-                        codes_t[i] = "L";
-                    }
-                    if (codes_t[i] == "VEqu(")
-                    {
-                        codes_t[i] = "VEqu";
-                    }
-                    if (codes_t[i] == "VMore(")
-                    {
-                        codes_t[i] = "VMore";
-                    }
-                    if (codes_t[i] == "VLe(")
-                    {
-                        codes_t[i] = "VLe";
+                        while (codes_t[i + 1] != ")")
+                        
+                            if (codes_t[i + 1] != ")")
+                            {
+                                //label++;
+                                if (label == 1)
+                                {
+                                    label1 = i;
+                                }
+                                code_labels[label1] = code_labels[label1] + codes_t[i + 1];
+                                codes_t = Delete(codes_t, i + 1);
+                                //label1++;
+                            }
+                            label1++;
+                        
+                        if (codes_t[i + 1] == ")")
+                        {
+                            codes_t = Delete(codes_t, i + 1);
+                        }
                     }
                     if (codes_t[i] == "G0(")
                     {
-                        codes_t[i] = "G0";
+                        while (codes_t[i + 1] != ")")
+
+                            if (codes_t[i + 1] != ")")
+                            {
+                                //label++;
+                                if (label == 1)
+                                {
+                                    label1 = i;
+                                }
+                                code_labels[label1] = code_labels[label1] + codes_t[i + 1];
+                                codes_t = Delete(codes_t, i + 1);
+                                //label1++;
+                            }
+                        label1++;
+
+                        if (codes_t[i + 1] == ")")
+                        {
+                            codes_t = Delete(codes_t, i + 1);
+                        }
                     }
                     if (codes_t[i] == "G1(")
                     {
-                        codes_t[i] = "G1";
+                        while (codes_t[i + 1] != ")")
+
+                            if (codes_t[i + 1] != ")")
+                            {
+                                //label++;
+                                if (label == 1)
+                                {
+                                    label1 = i;
+                                }
+                                code_labels[label1] = code_labels[label1] + codes_t[i + 1];
+                                codes_t = Delete(codes_t, i + 1);
+                                //label1++;
+                            }
+                        label1++;
+
+                        if (codes_t[i + 1] == ")")
+                        {
+                            codes_t = Delete(codes_t, i + 1);
+                        }
                     }
                     if (codes_t[i] == "G2(")
                     {
-                        codes_t[i] = "G2";
+                        while (codes_t[i + 1] != ")")
+
+                            if (codes_t[i + 1] != ")")
+                            {
+                                //label++;
+                                if (label == 1)
+                                {
+                                    label1 = i;
+                                }
+                                code_labels[label1] = code_labels[label1] + codes_t[i + 1];
+                                codes_t = Delete(codes_t, i + 1);
+                                //label1++;
+                            }
+                        label1++;
+
+                        if (codes_t[i + 1] == ")")
+                        {
+                            codes_t = Delete(codes_t, i + 1);
+                        }
                     }
                     if (codes_t[i] == "G3(")
                     {
-                        codes_t[i] = "G3";
+                        while (codes_t[i + 1] != ")")
+
+                            if (codes_t[i + 1] != ")")
+                            {
+                               // label++;
+                                if (label == 1)
+                                {
+                                    label1 = i;
+                                }
+                                code_labels[label1] = code_labels[label1] + codes_t[i + 1];
+                                codes_t = Delete(codes_t, i + 1);
+                                //label1++;
+                            }
+                        label1++;
+
+                        if (codes_t[i + 1] == ")")
+                        {
+                            codes_t = Delete(codes_t, i + 1);
+                        }
                     }
                     if (codes_t[i] == "G4(")
                     {
-                        codes_t[i] = "G4";
+                        while (codes_t[i + 1] != ")")
+
+                            if (codes_t[i + 1] != ")")
+                            {
+                              //  label++;
+                                if (label == 1)
+                                {
+                                    label1 = i;
+                                }
+                                code_labels[label1] = code_labels[label1] + codes_t[i + 1];
+                                codes_t = Delete(codes_t, i + 1);
+                                //label1++;
+                            }
+                        label1++;
+
+                        if (codes_t[i + 1] == ")")
+                        {
+                            codes_t = Delete(codes_t, i + 1);
+                        }
                     }
                     if (codes_t[i] == "G5(")
                     {
-                        codes_t[i] = "G5";
+                        while (codes_t[i + 1] != ")")
+
+                            if (codes_t[i + 1] != ")")
+                            {
+                              //  label++;
+                                if (label == 1)
+                                {
+                                    label1 = i;
+                                }
+                                code_labels[label1] = code_labels[label1] + codes_t[i + 1];
+                                codes_t = Delete(codes_t, i + 1);
+                                //label1++;
+                            }
+                        label1++;
+
+                        if (codes_t[i + 1] == ")")
+                        {
+                            codes_t = Delete(codes_t, i + 1);
+                        }
                     }
+                    if (codes_t[i] == "VEqu(")
+                    {
+                        while (codes_t[i + 1] != ")")
+
+                            if (codes_t[i + 1] != ")")
+                            {
+                              //  label++;
+                                if (label == 1)
+                                {
+                                    label1 = i;
+                                }
+                                code_labels[label1] = code_labels[label1] + codes_t[i + 1];
+                                codes_t = Delete(codes_t, i + 1);
+                                //label1++;
+                            }
+                        label1++;
+
+                        if (codes_t[i + 1] == ")")
+                        {
+                            codes_t = Delete(codes_t, i + 1);
+                        }
+                    }
+                    if (codes_t[i] == "VMore(")
+                    {
+                        while (codes_t[i + 1] != ")")
+
+                            if (codes_t[i + 1] != ")")
+                            {
+                             //   label++;
+                                if (label == 1)
+                                {
+                                    label1 = i;
+                                }
+                                code_labels[label1] = code_labels[label1] + codes_t[i + 1];
+                                codes_t = Delete(codes_t, i + 1);
+                                //label1++;
+                            }
+                        label1++;
+
+                        if (codes_t[i + 1] == ")")
+                        {
+                            codes_t = Delete(codes_t, i + 1);
+                        }
+                    }
+                    if (codes_t[i] == "VLe(")
+                    {
+                        while (codes_t[i + 1] != ")")
+
+                            if (codes_t[i + 1] != ")")
+                            {
+                                //label++;
+                                if (label == 1)
+                                {
+                                    label1 = i;
+                                }
+                                code_labels[label1] = code_labels[label1] + codes_t[i + 1];
+                                codes_t = Delete(codes_t, i + 1);
+                                //label1++;
+                            }
+                        label1++;
+
+                        if (codes_t[i + 1] == ")")
+                        {
+                            codes_t = Delete(codes_t, i + 1);
+                        }
+                    }
+                }
+
+                int[] label5 = new int[codes_t.Length];
+                for (int i = 0; i < codes_t.Length; i++)
+                {
+                    if (codes_t[i] == "L(" || codes_t[i] == "G0(" || codes_t[i] == "G1(" || codes_t[i] == "G2(" || codes_t[i] == "G3(" || codes_t[i] == "G4(" || codes_t[i] == "G5(" || codes_t[i] == "VEqu(" || codes_t[i] == "VMore(" || codes_t[i] == "VLe(")
+                        label5[i] = 1;
+                    
+                        
+                    else label5[i] = 0;
+                }
+
+
+                string[] cl1 = new string[code_labels.Length]; 
+
+                for (int i = 0; i < label5.Length; i++)
+                {
+                    
+                    if (label5[i] == 1)
+                    {
+                        cl1[i] = code_labels[label4]; label4++;
+                    }
+                                        
+                   
 
                 }
+                //richTextBox3.Text = string.Join(";",cl1);
+
+                
+               
+                
+
+                /////
+
+
+                //richTextBox3.Text = string.Join(";", code_labels);
+                //for (int i = 0; i < codes_t.Length; i++)
+                //{
+                //    if (codes_t[i] == "L(")
+                //    {
+                //        codes_t[i] = "L";
+                //    }
+                //    if (codes_t[i] == "VEqu(")
+                //    {
+                //        codes_t[i] = "VEqu";
+                //    }
+                //    if (codes_t[i] == "VMore(")
+                //    {
+                //        codes_t[i] = "VMore";
+                //    }
+                //    if (codes_t[i] == "VLe(")
+                //    {
+                //        codes_t[i] = "VLe";
+                //    }
+                //    if (codes_t[i] == "G0(")
+                //    {
+                //        codes_t[i] = "G0";
+                //    }
+                //    if (codes_t[i] == "G1(")
+                //    {
+                //        codes_t[i] = "G1";
+                //    }
+                //    if (codes_t[i] == "G2(")
+                //    {
+                //        codes_t[i] = "G2";
+                //    }
+                //    if (codes_t[i] == "G3(")
+                //    {
+                //        codes_t[i] = "G3";
+                //    }
+                //    if (codes_t[i] == "G4(")
+                //    {
+                //        codes_t[i] = "G4";
+                //    }
+                //    if (codes_t[i] == "G5(")
+                //    {
+                //        codes_t[i] = "G5";
+                //    }
+
+                //}
                 if (test2)
                 {
                     /////
@@ -2816,417 +2950,1533 @@ namespace MinesProgram
 
 
 
-                                            /*for(int i = 0; i<codes_t.Length; i++)
-                                            {
-                                                if(i<12)
-                                                //codes_t[i] = codes_t4[i];
-                                            }*/
-
-                                            //for (int i<)
-                                            /*for (int i = 0; i < codes_t.Length - 1; ++i)
-                                            {
-                                                nextInd += k1;
-                                                nextInd %= codes_t.Length;
-
-                                                tmp = codes_t[nextInd];
-                                                codes_t[nextInd] = codes_t[0];
-                                                codes_t[0] = tmp;
-                                            }*/
-
-                                            //Array.Copy(code_labels, 0, code_labels, 1, code_labels.Length - 1);
-
-                                            //Array.Copy(code_labels, 12, code_labels, 16, code_labels.Length - 16);
-
-
-
-
-                                            //richTextBox3.Text = string.Join(";", codes_t4);
-
-                                            /* for (int i = 0; i < codes_t.Length; i++)
-                                             {
-                                                 if (codes_t[i] == ")")
-                                                 {
-                                                     codes_t = Delete(codes_t, i);
-                                                 }
-                                             }*/
-
-                                            for (int i = 0; i < codes.Length; i++)
+                /*for(int i = 0; i<codes_t.Length; i++)
                 {
-                    if (i < codes_t.Length)
+                    if(i<12)
+                    //codes_t[i] = codes_t4[i];
+                }*/
+
+                //for (int i<)
+                /*for (int i = 0; i < codes_t.Length - 1; ++i)
+                {
+                    nextInd += k1;
+                    nextInd %= codes_t.Length;
+
+                    tmp = codes_t[nextInd];
+                    codes_t[nextInd] = codes_t[0];
+                    codes_t[0] = tmp;
+                }*/
+
+                //Array.Copy(code_labels, 0, code_labels, 1, code_labels.Length - 1);
+
+                //Array.Copy(code_labels, 12, code_labels, 16, code_labels.Length - 16);
+
+
+
+
+                //richTextBox3.Text = string.Join(";", codes_t4);
+
+                /* for (int i = 0; i < codes_t.Length; i++)
+                 {
+                     if (codes_t[i] == ")")
+                     {
+                         codes_t = Delete(codes_t, i);
+                     }
+                 }*/
+
+                /*    for (int i = 0; i < codes.Length; i++)
+{
+if (i < codes_t.Length)
+{
+codes[i] = 0;
+if (codes_t[i] == "L")
+{
+    codes[i] = 40;
+}
+if (codes_t[i] == "S")
+{
+    codes[i] = 6;
+}
+if (codes_t[i] == "Z0")
+{
+    codes[i] = 8;
+}
+if (codes_t[i] == "VEqu")
+{
+    codes[i] = 123;
+}
+if (codes_t[i] == "VMore")
+{
+    codes[i] = 119;
+}
+if (codes_t[i] == "VLe")
+{
+    codes[i] = 120;
+}
+if (codes_t[i] == "G2")
+{
+    codes[i] = 24;
+
+}
+if (codes_t[i] == "G3")
+{
+    codes[i] = 25;
+
+}
+if (codes_t[i] == "G4")
+{
+    codes[i] = 26;
+
+}
+if (codes_t[i] == "G5")
+{
+    codes[i] = 137;
+
+}
+if (codes_t[i] == "G0")
+{
+    codes[i] = 139;
+
+}
+if (codes_t[i] == "G1")
+{
+    codes[i] = 140;
+
+}
+if (codes_t[i] == "\\")
+{
+    codes[i] = 1;
+}
+if (codes_t[i] == ">")
+{
+    codes[i] = 2;
+}
+if (codes_t[i] == "<")
+{
+    codes[i] = 3;
+}
+if (codes_t[i] == "W")
+{
+    codes[i] = 4;
+}
+if (codes_t[i] == "A")
+{
+    codes[i] = 5;
+}
+if (codes_t[i] == "S")
+{
+    codes[i] = 6;
+}
+if (codes_t[i] == "D")
+{
+    codes[i] = 7;
+}
+if (codes_t[i] == "Z0")
+{
+    codes[i] = 8;
+}
+if (codes_t[i] == "w")
+{
+    codes[i] = 9;
+}
+if (codes_t[i] == "a")
+{
+    codes[i] = 10;
+}
+if (codes_t[i] == "s")
+{
+    codes[i] = 11;
+}
+if (codes_t[i] == "d")
+{
+    codes[i] = 12;
+}
+if (codes_t[i] == "Z2")
+{
+    codes[i] = 14;
+}
+if (codes_t[i] == "Z3")
+{
+    codes[i] = 15;
+}
+if (codes_t[i] == "Z4")
+{
+    codes[i] = 16;
+}
+if (codes_t[i] == "Zc")
+{
+    codes[i] = 17;
+}
+if (codes_t[i] == "Ze")
+{
+    codes[i] = 18;
+}
+if (codes_t[i] == "Zd")
+{
+    codes[i] = 19;
+}
+if (codes_t[i] == "Zf")
+{
+    codes[i] = 20;
+}
+if (codes_t[i] == "Zg")
+{
+    codes[i] = 21;
+}
+if (codes_t[i] == "Zq")
+{
+    codes[i] = 22;
+}
+if (codes_t[i] == "Zh")
+{
+    codes[i] = 23;
+}
+if (codes_t[i] == "R0")
+{
+    codes[i] = 27;
+}
+if (codes_t[i] == "R1")
+{
+    codes[i] = 28;
+}
+if (codes_t[i] == "R2")
+{
+    codes[i] = 138;
+}
+if (codes_t[i] == "C0")
+{
+    codes[i] = 29;
+}
+if (codes_t[i] == "C8")
+{
+    codes[i] = 30;
+}
+if (codes_t[i] == "C1")
+{
+    codes[i] = 31;
+}
+if (codes_t[i] == "C2")
+{
+    codes[i] = 32;
+}
+if (codes_t[i] == "C3")
+{
+    codes[i] = 33;
+}
+if (codes_t[i] == "C5")
+{
+    codes[i] = 35;
+}
+if (codes_t[i] == "C6")
+{
+    codes[i] = 36;
+}
+if (codes_t[i] == "C7")
+{
+    codes[i] = 37;
+}
+if (codes_t[i] == "M0")
+{
+    codes[i] = 38;
+}
+if (codes_t[i] == "M1")
+{
+    codes[i] = 39;
+}
+if (codes_t[i] == "c0")
+{
+    codes[i] = 43;
+}
+if (codes_t[i] == "c1")
+{
+    codes[i] = 44;
+}
+if (codes_t[i] == "c2")
+{
+    codes[i] = 45;
+}
+if (codes_t[i] == "ck")
+{
+    codes[i] = 46;
+}
+if (codes_t[i] == "cl")
+{
+    codes[i] = 47;
+}
+if (codes_t[i] == "cj")
+{
+    codes[i] = 48;
+}
+if (codes_t[i] == "cd")
+{
+    codes[i] = 49;
+}
+if (codes_t[i] == "cm")
+{
+    codes[i] = 50;
+}
+if (codes_t[i] == "cn")
+{
+    codes[i] = 51;
+}
+if (codes_t[i] == "cv")
+{
+    codes[i] = 52;
+}
+if (codes_t[i] == "ca")
+{
+    codes[i] = 53;
+}
+if (codes_t[i] == "ci")
+{
+    codes[i] = 54;
+}
+if (codes_t[i] == "ce")
+{
+    codes[i] = 57;
+}
+if (codes_t[i] == "cf")
+{
+    codes[i] = 58;
+}
+if (codes_t[i] == "cg")
+{
+    codes[i] = 59;
+}
+if (codes_t[i] == "ch")
+{
+    codes[i] = 60;
+}
+if (codes_t[i] == "ct")
+{
+    codes[i] = 74;
+}
+if (codes_t[i] == "cu")
+{
+    codes[i] = 76;
+}
+if (codes_t[i] == "cs")
+{
+    codes[i] = 77;
+}
+if (codes_t[i] == "B1")
+{
+    codes[i] = 162;
+}
+if (codes_t[i] == "B3")
+{
+    codes[i] = 163;
+}
+if (codes_t[i] == "B2")
+{
+    codes[i] = 164;
+}
+if (codes_t[i] == "VB")
+{
+    codes[i] = 165;
+}
+if (codes_t[i] == "C9")
+{
+    codes[i] = 131;
+}
+if (codes_t[i] == "Ca")
+{
+    codes[i] = 132;
+}
+if (codes_t[i] == "Cb")
+{
+    codes[i] = 133;
+}
+if (codes_t[i] == "Cc")
+{
+    codes[i] = 134;
+}
+if (codes_t[i] == "Cd")
+{
+    codes[i] = 135;
+}
+if (codes_t[i] == "Ce")
+{
+    codes[i] = 136;
+}
+if (codes_t[i] == "Qig+")
+{
+    codes[i] = 158;
+}
+if (codes_t[i] == "Qig-")
+{
+    codes[i] = 159;
+}
+if (codes_t[i] == "gr+")
+{
+    codes[i] = 160;
+}
+if (codes_t[i] == "gr-")
+{
+    codes[i] = 161;
+}
+if (codes_t[i] == "iggs")
+{
+    codes[i] = 141;
+}
+if (codes_t[i] == "Build")
+{
+    codes[i] = 142;
+}
+if (codes_t[i] == "Hea")
+{
+    codes[i] = 143;
+}
+if (codes_t[i] == "MineS")
+{
+    codes[i] = 145;
+}
+if (codes_t[i] == "CLeftH")
+{
+    codes[i] = 156;
+}
+if (codes_t[i] == "CRightH")
+{
+    codes[i] = 157;
+}
+if (codes_t[i] == "CGun")
+{
+    codes[i] = 146;
+}
+if (codes_t[i] == "FGun")
+{
+    codes[i] = 147;
+}
+if (codes_t[i] == "hpf")
+{
+    codes[i] = 148;
+}
+if (codes_t[i] == "hpp")
+{
+    codes[i] = 149;
+}
+if (codes_t[i] == "Flip")
+{
+    codes[i] = 144;
+}
+for (int j = 0; j < sim3.Length; j++)
+    if (codes_t[i] == sim3[j])
+    {
+        codes[i] = 0;
+        undefired++;
+    }
+}
+
+}
+*/
+               
+                //// new
+                string[] code_labels5 = new string[code_labels.Length];
+
+                //for (int i = 0; i < codes_text.Length; i++)
+                //{
+                //    if (codes_text[i] == "L(")
+                //    {
+                //        while (codes_text[i + 1] != ")")
+                //            if (codes_text[i + 1] != ")")
+                //            {
+                //                code_labels[i] = code_labels[i] + codes_text[i + 1];
+                //                codes_text = Delete(codes_text, i + 1);
+                //                code_labels = Delete(code_labels, i + 1);
+
+                //            }
+
+                //    }
+
+                //    if (codes_text[i] == "G0(")
+                //    {
+                //        while (codes_text[i + 1] != ")")
+                //            if (codes_text[i + 1] != ")")
+                //            {
+                //                code_labels[i] = code_labels[i] + codes_text[i + 1];
+                //                codes_text = Delete(codes_text, i + 1);
+                //                code_labels = Delete(code_labels, i + 1);
+
+                //            }
+                //    }
+                //}
+                int z223 = 0;
+
+                /*for (int i = 1; i < code_labels.Length; i++)
+                 {
+
+                             if (code_labels[i] == null)
+                             {
+                                 code_labels = Delete(code_labels, i);
+
+                             }
+
+
+
+                 }*/
+                
+                string[] codes_t20 = new string[code_labels.Length];
+                // string[] codes_t21 = new string[codes_text.Length];
+                string[] codes_t21 = new string[code_labels.Length];
+
+
+
+                string[] codes_t22 = new string[codes_t.Length];
+
+
+
+
+                for (int i = 0; i< codes_text.Length; i++)
+                {
+                    //codes_t20[i] = codes_text[i];
+                }
+
+                int z222 = 0;
+                //for (int i = 0; i < codes_text.Length; i++)
+                //{
+                //    if (codes_text[i] == "L(")
+                //    {
+                        
+
+                        
+                        
+                //        if (codes_text[i + 1] != ")")
+                //        {
+
+
+                            
+                //            codes_text = Delete(codes_text, i + 1);
+                            
+
+                //        }
+
+                //    }
+                    
+
+                //}
+
+                //for (int i = 0; i < codes_t.Length; i++)
+                //{
+                //    if (codes_t[i] == "L")
+                //    {
+                //        //if (codes_text[i + 1] == ")") z222++;
+
+
+
+                //        if (codes_t[i + 1] != ")")
+                //        {
+
+
+                //            //code_labels[z222] = code_labels[z222] + codes_text[i + 1];
+
+                //            //z222++;
+                //            codes_t = Delete(codes_t, i + 1);
+
+
+                //        }
+
+                //    }
+
+
+                //}
+
+                //for (int i = 0; i < codes_text.Length; i++)
+                //{
+                //    codes_t21[i] = codes_text[i];
+                   
+
+                //}
+
+                //for (int i = 0; i < codes_t21.Length; i++)
+                //{
+                //    if(codes_t21[i] == "L(")
+                //    {
+                //        if(codes_t21[i+1] == ")")
+                //        {
+                //            codes_t21[i] += codes_t21[i + 1];
+                //            codes_t21 = Delete(codes_t21, i + 1);
+                //        }
+                //    }
+
+
+                //}
+                
+
+
+                
+
+                string[] codes_tt = new string[codes_t.Length];
+
+                
+
+                
+
+                int j21 = 0;
+
+                //for (int i = 0; i < code_labels.Length; i++)
+                //{
+                //    if(z222 < codes_t20.Length)
+                //    {
+                //        if (codes_t20[z222] == "L(")
+                //        {
+                //            if (codes_t20[j21 + 1] != ")")
+                //            {
+                //                if (codes_tt[j21] == "0")
+                //                {
+                //                    if(code_labels[i] != null)
+                //                    {
+                //                        code_labels[i] = code_labels[i] + codes_t20[z222 + 1];
+                //                        codes_t20 = Delete(codes_t20, z222 + 1);
+                //                    }
+
+                //                }
+                //                if (codes_tt[j21] == "-1")
+                //                {
+                //                    j21++;
+                //                }
+                //            }
+
+
+                //        }
+                //        else z222++;
+                //    }
+
+
+
+
+                //    //j21++;
+                //    //if (codes_text[i + 1] == ")") z222++;
+
+
+                
+                //}
+                int zzz1 = 0; //richTextBox3.Text = string.Join(";", codes_tt);
+
+                
+                
+
+                 
+                //for (int i = 0; i < codes_tt.Length; i++)
+                //{
+                //    if (codes_tt[i] == "-1") { code_labels[i] = null; }
+                //}
+
+
+                //richTextBox3.Text = String.Join(";", codes_tt);
+
+
+                //for (int i = 0; i < codes_tt.Length; i++)
+                //{
+                //    for (int j = 0; j < codes_t20.Length; j++)
+                //        if (code_labels[i] != null)
+                //        {
+                //            if (codes_tt[i] != "-1")
+                //            {
+                //                if(codes_t20[j] == "L(")
+                //                {
+                //                    if (codes_t20[j+1] != ")")
+                //                    {
+                //                        code_labels[i] += codes_t20[j + 1];
+                //                        codes_t20 = Delete(codes_t20, j + 1);
+                //                        i++; 
+                //                    }
+                //                }
+
+                //                //code_labels[i] = codes_tt[i];
+                //           }
+                //        }
+
+                //}
+                int zzz30 = 0; ////++++++
+                //for (int i = 0; i < codes_t20.Length; i++)
+                //{ 
+                //    if (codes_t20[i] == "L(")
+                //    {
+                //        if (codes_t20[i + 1] != ")")
+                //        {
+                //            //if (code_labels[zzz30] == null) zzz30++;
+                //            //if (code_labels[zzz30] != null)
+                //            //{
+                //                code_labels[zzz30] += codes_t20[i + 1];
+                //                codes_t20 = Delete(codes_t20, i + 1);
+                                
+                //                //zzz30++;
+                //                //zzz30++;
+                //            //}
+                            
+                //            // zzz30++;
+                //            //zzz30++;
+                //        }
+                        
+
+                //        zzz30++;
+                //    }
+                //    if (code_labels[zzz30] == null) zzz30++;
+
+                //}
+
+               // richTextBox3.Text = String.Join(";", code_labels);
+
+
+
+                
+
+                //for (int i = 0; i < codes_text.Length; i++)
+                //{
+
+                //    if (codes_text[i] == "L(")
+                //    {
+                //        codes_text[i] = "L";
+                //    }
+                //    if (codes_text[i] == "G0(")
+                //    {
+                //        codes_text[i] = "G0";
+                //    }
+
+
+                //}
+
+
+
+                
+
+                //for (int i = 0; i < codes_text.Length; i++)
+                //{
+
+
+                //    if (codes_text[i] == ")")
+                //    {
+                //        codes_text = Delete(codes_text, i);
+                //    }
+                //}
+
+                /* for(int i = 0; i<codes_t.Length; i++)
+                 {
+                     if(codes_t[i] == ")")
+                     {
+                         codes_t = Delete(codes_t, i);
+                     }
+                 }*/
+                
+
+               
+                
+                //richTextBox3.Text = string.Join(";", code_labels);
+                ///// i
+                int zzz31 = 0;
+
+                
+
+                /////
+
+
+                
+
+
+
+                
+
+                //richTextBox3.Text = string.Join(";", codes_t.Length);
+
+                for (int i = 0; i < codes_text.Length; i++)
+                {
+                    if (codes_text[i] == "L(")
+                    {
+                        while (codes_text[i + 1] != ")")
+                            if (codes_text[i + 1] != ")")
+                            {
+                                codes_text = Delete(codes_text, i + 1);
+                            }
+
+                        if (codes_text[i + 1] == ")")
+                        {
+                            codes_text = Delete(codes_text, i + 1);
+                        }
+                    }
+
+                    if (codes_text[i] == "VEqu(")
+                    {
+                        while (codes_text[i + 1] != ")")
+                            if (codes_text[i + 1] != ")")
+                            {
+                                codes_text = Delete(codes_text, i + 1);
+                            }
+
+                        if (codes_text[i + 1] == ")")
+                        {
+                            codes_text = Delete(codes_text, i + 1);
+                        }
+                    }
+
+                    if (codes_text[i] == "VMore(")
+                    {
+                        while (codes_text[i + 1] != ")")
+                            if (codes_text[i + 1] != ")")
+                            {
+
+                                codes_text = Delete(codes_text, i + 1);
+                            }
+
+                        if (codes_text[i + 1] == ")")
+                        {
+                            codes_text = Delete(codes_text, i + 1);
+                        }
+                    }
+                    if (codes_text[i] == "VLe(")
+                    {
+                        while (codes_text[i + 1] != ")")
+                            if (codes_text[i + 1] != ")")
+                            {
+
+                                codes_text = Delete(codes_text, i + 1);
+                            }
+
+                        if (codes_text[i + 1] == ")")
+                        {
+                            codes_text = Delete(codes_text, i + 1);
+                        }
+                    }
+                    if (codes_text[i] == "G0(")
+                    {
+                        while (codes_text[i + 1] != ")")
+                            if (codes_text[i + 1] != ")")
+                            {
+
+                                codes_text = Delete(codes_text, i + 1);
+                            }
+
+                        if (codes_text[i + 1] == ")")
+                        {
+                            codes_text = Delete(codes_text, i + 1);
+                        }
+                    }
+                    if (codes_text[i] == "G1(")
+                    {
+                        while (codes_text[i + 1] != ")")
+                            if (codes_text[i + 1] != ")")
+                            {
+
+                                codes_text = Delete(codes_text, i + 1);
+                            }
+
+                        if (codes_text[i + 1] == ")")
+                        {
+                            codes_text = Delete(codes_text, i + 1);
+                        }
+                    }
+                    if (codes_text[i] == "G2(")
+                    {
+                        while (codes_text[i + 1] != ")")
+                            if (codes_text[i + 1] != ")")
+                            {
+
+                                codes_text = Delete(codes_text, i + 1);
+                            }
+
+                        if (codes_text[i + 1] == ")")
+                        {
+                            codes_text = Delete(codes_text, i + 1);
+                        }
+                    }
+                    if (codes_text[i] == "G3(")
+                    {
+                        while (codes_text[i + 1] != ")")
+                            if (codes_text[i + 1] != ")")
+                            {
+
+                                codes_text = Delete(codes_text, i + 1);
+                            }
+
+                        if (codes_text[i + 1] == ")")
+                        {
+                            codes_text = Delete(codes_text, i + 1);
+                        }
+                    }
+                    if (codes_text[i] == "G4(")
+                    {
+                        while (codes_text[i + 1] != ")")
+                            if (codes_text[i + 1] != ")")
+                            {
+
+                                codes_text = Delete(codes_text, i + 1);
+                            }
+
+                        if (codes_text[i + 1] == ")")
+                        {
+                            codes_text = Delete(codes_text, i + 1);
+                        }
+                    }
+                    if (codes_text[i] == "G5(")
+                    {
+                        while (codes_text[i + 1] != ")")
+                            if (codes_text[i + 1] != ")")
+                            {
+
+                                codes_text = Delete(codes_text, i + 1);
+                            }
+
+                        if (codes_text[i + 1] == ")")
+                        {
+                            codes_text = Delete(codes_text, i + 1);
+                        }
+                    }
+                }
+
+
+
+                int z200 = 0; string[] codes_t200 = new string[16 * 12 * 16];
+
+                for (int i = 0; i < 16; i++)
+                {
+                    for (int j = 0; j < 12; j++)
+                    {
+                        for (int k = 0; k < 16; k++)
+                        {
+
+                            codes_t200[i * 16 * 12 + j * 16 + k] = "0";
+
+                        }
+                    }
+                }
+               
+                //richTextBox3.Text = string.Join(";", codes_t);
+                int z100; z100 = 0; int z101; z101 = 0;
+                string[] code_labels6 = new string[cl1.Length];
+
+                for (int i = 0; i < codes_t.Length; i++)
+                {
+                    for (int j = 0; j < tx2.Length; j++)
+                    {
+                        if (codes_t[i] == tx2[j])
+
+                        { z100 += j - 1 + 1; }
+
+                    }
+
+
+
+                    z101 = i;
+                    if (codes_t[z101] == "L(")
+                    {
+
+                        code_labels6[z100] = code_labels6[z100] + cl1[i];
+
+                    }
+
+                    if (codes_t[z101] == "G0(")
+                    {
+
+                        code_labels6[z100] = code_labels6[z100] + cl1[i];
+
+                    }
+                    if (codes_t[z101] == "G1(")
+                    {
+
+                        code_labels6[z100] = code_labels6[z100] + cl1[i];
+
+                    }
+                    if (codes_t[z101] == "G2(")
+                    {
+
+                        code_labels6[z100] = code_labels6[z100] + cl1[i];
+
+                    }
+                    if (codes_t[z101] == "G3(")
+                    {
+
+                        code_labels6[z100] = code_labels6[z100] + cl1[i];
+
+                    }
+                    if (codes_t[z101] == "G4(")
+                    {
+
+                        code_labels6[z100] = code_labels6[z100] + cl1[i];
+
+                    }
+
+                    if (codes_t[z101] == "G5(")
+                    {
+
+                        code_labels6[z100] = code_labels6[z100] + cl1[i];
+
+                    }
+                    if (codes_t[z101] == "VEqu(")
+                    {
+
+                        code_labels6[z100] = code_labels6[z100] + cl1[i];
+
+                    }
+
+                    if (codes_t[z101] == "VMore(")
+                    {
+
+                        code_labels6[z100] = code_labels6[z100] + cl1[i];
+
+                    }
+
+                    if (codes_t[z101] == "VLe(")
+                    {
+
+                        code_labels6[z100] = code_labels6[z100] + cl1[i];
+
+                    }
+
+                    z100++;
+
+
+
+                }
+                
+                ////
+
+
+                //for (int i = 0; i < codes_text.Length; i++)
+                //{
+                //    for (int j = 0; j < tx2.Length; j++)
+                //    {
+                //        if (codes_text[i] == tx2[j])
+
+                //        { z100 += j - 1 + 1; }
+
+                //    }
+
+
+
+                //    //z101 = i;
+                //    if (codes_text[z101] == "L(")
+                //    {
+
+                //        code_labels6[z100] = code_labels6[z100] + code_labels[i];
+
+                //    }
+
+                //    if (codes_text[z101] == "G0(")
+                //    {
+
+                //        code_labels6[z100] = code_labels6[z100] + code_labels[i];
+
+                //    }
+                //    if (codes_text[z101] == "G1(")
+                //    {
+
+                //        code_labels6[z100] = code_labels6[z100] + code_labels[i];
+
+                //    }
+                //    if (codes_text[z101] == "G2(")
+                //    {
+
+                //        code_labels6[z100] = code_labels6[z100] + code_labels[i];
+
+                //    }
+                //    if (codes_text[z101] == "G3(")
+                //    {
+
+                //        code_labels6[z100] = code_labels6[z100] + code_labels[i];
+
+                //    }
+                //    if (codes_text[z101] == "G4(")
+                //    {
+
+                //        code_labels6[z100] = code_labels6[z100] + code_labels[i];
+
+                //    }
+
+                //    if (codes_text[z101] == "G5(")
+                //    {
+
+                //        code_labels6[z100] = code_labels6[z100] + code_labels[i];
+
+                //    }
+                //    if (codes_text[z101] == "VEqu(")
+                //    {
+
+                //        code_labels6[z100] = code_labels6[z100] + code_labels[i];
+
+                //    }
+
+                //    if (codes_text[z101] == "VMore(")
+                //    {
+
+                //        code_labels6[z100] = code_labels6[z100] + code_labels[i];
+
+                //    }
+
+                //    if (codes_text[z101] == "VLe(")
+                //    {
+
+                //        code_labels6[z100] = code_labels6[z100] + code_labels[i];
+
+                //    }
+
+                //    z100++;
+
+
+
+                //}
+
+
+                for (int i = 0; i<codes_t.Length; i++)
+                {
+                    if(codes_t[i] == "0")
+                    {
+                        
+                        codes_t[i] = null;
+                    }
+                }
+
+                
+
+
+                for (int i = 0; i < codes_text.Length; i++)
+                {
+                    for (int j = 0; j < tx2.Length; j++)
+                        if (codes_text[i] == tx2[j])
+                        {
+
+
+
+                            z200 += j + 1;
+                           codes_text = Delete(codes_text, i);
+
+
+
+
+                        }
+                    codes_t200[z200] = codes_text[i];
+                    z200++;
+                }
+
+               // richTextBox3.Text = String.Join(";", z100);
+
+                for (int i = 0; i < code_labels.Length; i++) code_labels5[i] = code_labels6[i];
+
+                
+
+                for (int i = 0; i < codes_t200.Length; i++)
+                {
+                    if (codes_t200[i] == "L(")
+                    {
+                        codes_t200[i] = "L";
+                    }
+                    if (codes_t200[i] == "VEqu(")
+                    {
+                        codes_t200[i] = "VEqu";
+                    }
+                    if (codes_t200[i] == "VMore(")
+                    {
+                        codes_t200[i] = "VMore";
+                    }
+                    if (codes_t200[i] == "VLe(")
+                    {
+                        codes_t200[i] = "VLe";
+                    }
+                    if (codes_t200[i] == "G0(")
+                    {
+                        codes_t200[i] = "G0";
+                    }
+                    if (codes_t200[i] == "G1(")
+                    {
+                        codes_t200[i] = "G1";
+                    }
+                    if (codes_t200[i] == "G2(")
+                    {
+                        codes_t200[i] = "G2";
+                    }
+                    if (codes_t200[i] == "G3(")
+                    {
+                        codes_t200[i] = "G3";
+                    }
+                    if (codes_t200[i] == "G4(")
+                    {
+                        codes_t200[i] = "G4";
+                    }
+                    if (codes_t200[i] == "G5(")
+                    {
+                        codes_t200[i] = "G5";
+                    }
+
+                }
+
+                ;
+
+                for (int i = 0; i < codes.Length; i++)
+                {
+                    if (i < codes_t200.Length)
                     {
                         codes[i] = 0;
-                        if (codes_t[i] == "L")
+                        if (codes_t200[i] == "L")
                         {
                             codes[i] = 40;
+
                         }
-                        if (codes_t[i] == "S")
+                        if (codes_t200[i] == "S")
                         {
                             codes[i] = 6;
                         }
-                        if (codes_t[i] == "Z0")
+                        if (codes_t200[i] == "Z0")
                         {
                             codes[i] = 8;
                         }
-                        if (codes_t[i] == "VEqu")
+                        if (codes_t200[i] == "VEqu")
                         {
                             codes[i] = 123;
                         }
-                        if (codes_t[i] == "VMore")
+                        if (codes_t200[i] == "VMore")
                         {
                             codes[i] = 119;
                         }
-                        if (codes_t[i] == "VLe")
+                        if (codes_t200[i] == "VLe")
                         {
                             codes[i] = 120;
                         }
-                        if (codes_t[i] == "G2")
+                        if (codes_t200[i] == "G2")
                         {
                             codes[i] = 24;
 
                         }
-                        if (codes_t[i] == "G3")
+                        if (codes_t200[i] == "G3")
                         {
                             codes[i] = 25;
 
                         }
-                        if (codes_t[i] == "G4")
+                        if (codes_t200[i] == "G4")
                         {
                             codes[i] = 26;
 
                         }
-                        if (codes_t[i] == "G5")
+                        if (codes_t200[i] == "G5")
                         {
                             codes[i] = 137;
 
                         }
-                        if (codes_t[i] == "G0")
+                        if (codes_t200[i] == "G0")
                         {
                             codes[i] = 139;
 
                         }
-                        if (codes_t[i] == "G1")
+                        if (codes_t200[i] == "G1")
                         {
                             codes[i] = 140;
 
                         }
-                        if (codes_t[i] == "\\")
+                        if (codes_t200[i] == "\\")
                         {
                             codes[i] = 1;
                         }
-                        if (codes_t[i] == ">")
+                        if (codes_t200[i] == ">")
                         {
                             codes[i] = 2;
                         }
-                        if (codes_t[i] == "<")
+                        if (codes_t200[i] == "<")
                         {
                             codes[i] = 3;
                         }
-                        if (codes_t[i] == "W")
+                        if (codes_t200[i] == "W")
                         {
                             codes[i] = 4;
                         }
-                        if (codes_t[i] == "A")
+                        if (codes_t200[i] == "A")
                         {
                             codes[i] = 5;
                         }
-                        if (codes_t[i] == "S")
+                        if (codes_t200[i] == "S")
                         {
                             codes[i] = 6;
                         }
-                        if (codes_t[i] == "D")
+                        if (codes_t200[i] == "D")
                         {
                             codes[i] = 7;
                         }
-                        if (codes_t[i] == "Z0")
+                        if (codes_t200[i] == "Z0")
                         {
                             codes[i] = 8;
                         }
-                        if (codes_t[i] == "w")
+                        if (codes_t200[i] == "w")
                         {
                             codes[i] = 9;
                         }
-                        if (codes_t[i] == "a")
+                        if (codes_t200[i] == "a")
                         {
                             codes[i] = 10;
                         }
-                        if (codes_t[i] == "s")
+                        if (codes_t200[i] == "s")
                         {
                             codes[i] = 11;
                         }
-                        if (codes_t[i] == "d")
+                        if (codes_t200[i] == "d")
                         {
                             codes[i] = 12;
                         }
-                        if (codes_t[i] == "Z2")
+                        if (codes_t200[i] == "Z2")
                         {
                             codes[i] = 14;
                         }
-                        if (codes_t[i] == "Z3")
+                        if (codes_t200[i] == "Z3")
                         {
                             codes[i] = 15;
                         }
-                        if (codes_t[i] == "Z4")
+                        if (codes_t200[i] == "Z4")
                         {
                             codes[i] = 16;
                         }
-                        if (codes_t[i] == "Zc")
+                        if (codes_t200[i] == "Zc")
                         {
                             codes[i] = 17;
                         }
-                        if (codes_t[i] == "Ze")
+                        if (codes_t200[i] == "Ze")
                         {
                             codes[i] = 18;
                         }
-                        if (codes_t[i] == "Zd")
+                        if (codes_t200[i] == "Zd")
                         {
                             codes[i] = 19;
                         }
-                        if (codes_t[i] == "Zf")
+                        if (codes_t200[i] == "Zf")
                         {
                             codes[i] = 20;
                         }
-                        if (codes_t[i] == "Zg")
+                        if (codes_t200[i] == "Zg")
                         {
                             codes[i] = 21;
                         }
-                        if (codes_t[i] == "Zq")
+                        if (codes_t200[i] == "Zq")
                         {
                             codes[i] = 22;
                         }
-                        if (codes_t[i] == "Zh")
+                        if (codes_t200[i] == "Zh")
                         {
                             codes[i] = 23;
                         }
-                        if (codes_t[i] == "R0")
+                        if (codes_t200[i] == "R0")
                         {
                             codes[i] = 27;
                         }
-                        if (codes_t[i] == "R1")
+                        if (codes_t200[i] == "R1")
                         {
                             codes[i] = 28;
                         }
-                        if (codes_t[i] == "R2")
+                        if (codes_t200[i] == "R2")
                         {
                             codes[i] = 138;
                         }
-                        if (codes_t[i] == "C0")
+                        if (codes_t200[i] == "C0")
                         {
                             codes[i] = 29;
                         }
-                        if (codes_t[i] == "C8")
+                        if (codes_t200[i] == "C8")
                         {
                             codes[i] = 30;
                         }
-                        if (codes_t[i] == "C1")
+                        if (codes_t200[i] == "C1")
                         {
                             codes[i] = 31;
                         }
-                        if (codes_t[i] == "C2")
+                        if (codes_t200[i] == "C2")
                         {
                             codes[i] = 32;
                         }
-                        if (codes_t[i] == "C3")
+                        if (codes_t200[i] == "C3")
                         {
                             codes[i] = 33;
                         }
-                        if (codes_t[i] == "C5")
+                        if (codes_t200[i] == "C5")
                         {
                             codes[i] = 35;
                         }
-                        if (codes_t[i] == "C6")
+                        if (codes_t200[i] == "C6")
                         {
                             codes[i] = 36;
                         }
-                        if (codes_t[i] == "C7")
+                        if (codes_t200[i] == "C7")
                         {
                             codes[i] = 37;
                         }
-                        if (codes_t[i] == "M0")
+                        if (codes_t200[i] == "M0")
                         {
                             codes[i] = 38;
                         }
-                        if (codes_t[i] == "M1")
+                        if (codes_t200[i] == "M1")
                         {
                             codes[i] = 39;
                         }
-                        if (codes_t[i] == "c0")
+                        if (codes_t200[i] == "c0")
                         {
                             codes[i] = 43;
                         }
-                        if (codes_t[i] == "c1")
+                        if (codes_t200[i] == "c1")
                         {
                             codes[i] = 44;
                         }
-                        if (codes_t[i] == "c2")
+                        if (codes_t200[i] == "c2")
                         {
                             codes[i] = 45;
                         }
-                        if (codes_t[i] == "ck")
+                        if (codes_t200[i] == "ck")
                         {
                             codes[i] = 46;
                         }
-                        if (codes_t[i] == "cl")
+                        if (codes_t200[i] == "cl")
                         {
                             codes[i] = 47;
                         }
-                        if (codes_t[i] == "cj")
+                        if (codes_t200[i] == "cj")
                         {
                             codes[i] = 48;
                         }
-                        if (codes_t[i] == "cd")
+                        if (codes_t200[i] == "cd")
                         {
                             codes[i] = 49;
                         }
-                        if (codes_t[i] == "cm")
+                        if (codes_t200[i] == "cm")
                         {
                             codes[i] = 50;
                         }
-                        if (codes_t[i] == "cn")
+                        if (codes_t200[i] == "cn")
                         {
                             codes[i] = 51;
                         }
-                        if (codes_t[i] == "cv")
+                        if (codes_t200[i] == "cv")
                         {
                             codes[i] = 52;
                         }
-                        if (codes_t[i] == "ca")
+                        if (codes_t200[i] == "ca")
                         {
                             codes[i] = 53;
                         }
-                        if (codes_t[i] == "ci")
+                        if (codes_t200[i] == "ci")
                         {
                             codes[i] = 54;
                         }
-                        if (codes_t[i] == "ce")
+                        if (codes_t200[i] == "ce")
                         {
                             codes[i] = 57;
                         }
-                        if (codes_t[i] == "cf")
+                        if (codes_t200[i] == "cf")
                         {
                             codes[i] = 58;
                         }
-                        if (codes_t[i] == "cg")
+                        if (codes_t200[i] == "cg")
                         {
                             codes[i] = 59;
                         }
-                        if (codes_t[i] == "ch")
+                        if (codes_t200[i] == "ch")
                         {
                             codes[i] = 60;
                         }
-                        if (codes_t[i] == "ct")
+                        if (codes_t200[i] == "ct")
                         {
                             codes[i] = 74;
                         }
-                        if (codes_t[i] == "cu")
+                        if (codes_t200[i] == "cu")
                         {
                             codes[i] = 76;
                         }
-                        if (codes_t[i] == "cs")
+                        if (codes_t200[i] == "cs")
                         {
                             codes[i] = 77;
                         }
-                        if (codes_t[i] == "B1")
+                        if (codes_t200[i] == "B1")
                         {
                             codes[i] = 162;
                         }
-                        if (codes_t[i] == "B3")
+                        if (codes_t200[i] == "B3")
                         {
                             codes[i] = 163;
                         }
-                        if (codes_t[i] == "B2")
+                        if (codes_t200[i] == "B2")
                         {
                             codes[i] = 164;
                         }
-                        if (codes_t[i] == "VB")
+                        if (codes_t200[i] == "VB")
                         {
                             codes[i] = 165;
                         }
-                        if (codes_t[i] == "C9")
+                        if (codes_t200[i] == "C9")
                         {
                             codes[i] = 131;
                         }
-                        if (codes_t[i] == "Ca")
+                        if (codes_t200[i] == "Ca")
                         {
                             codes[i] = 132;
                         }
-                        if (codes_t[i] == "Cb")
+                        if (codes_t200[i] == "Cb")
                         {
                             codes[i] = 133;
                         }
-                        if (codes_t[i] == "Cc")
+                        if (codes_t200[i] == "Cc")
                         {
                             codes[i] = 134;
                         }
-                        if (codes_t[i] == "Cd")
+                        if (codes_t200[i] == "Cd")
                         {
                             codes[i] = 135;
                         }
-                        if (codes_t[i] == "Ce")
+                        if (codes_t200[i] == "Ce")
                         {
                             codes[i] = 136;
                         }
-                        if (codes_t[i] == "Qig+")
+                        if (codes_t200[i] == "Qig+")
                         {
                             codes[i] = 158;
                         }
-                        if (codes_t[i] == "Qig-")
+                        if (codes_t200[i] == "Qig-")
                         {
                             codes[i] = 159;
                         }
-                        if (codes_t[i] == "gr+")
+                        if (codes_t200[i] == "gr+")
                         {
                             codes[i] = 160;
                         }
-                        if (codes_t[i] == "gr-")
+                        if (codes_t200[i] == "gr-")
                         {
                             codes[i] = 161;
                         }
-                        if (codes_t[i] == "iggs")
+                        if (codes_t200[i] == "iggS")
                         {
                             codes[i] = 141;
                         }
-                        if (codes_t[i] == "Build")
+                        if (codes_t200[i] == "Build")
                         {
                             codes[i] = 142;
                         }
-                        if (codes_t[i] == "Hea")
+                        if (codes_t200[i] == "Hea")
                         {
                             codes[i] = 143;
                         }
-                        if (codes_t[i] == "MineS")
+                        if (codes_t200[i] == "MineS")
                         {
                             codes[i] = 145;
                         }
-                        if (codes_t[i] == "CLeftH")
+                        if (codes_t200[i] == "CLeftH")
                         {
                             codes[i] = 156;
                         }
-                        if (codes_t[i] == "CRightH")
+                        if (codes_t200[i] == "CRightH")
                         {
                             codes[i] = 157;
                         }
-                        if (codes_t[i] == "CGun")
+                        if (codes_t200[i] == "CGun")
                         {
                             codes[i] = 146;
                         }
-                        if (codes_t[i] == "FGun")
+                        if (codes_t200[i] == "FGun")
                         {
                             codes[i] = 147;
                         }
-                        if (codes_t[i] == "hpf")
+                        if (codes_t200[i] == "hpf")
                         {
                             codes[i] = 148;
                         }
-                        if (codes_t[i] == "hpp")
+                        if (codes_t200[i] == "hpp")
                         {
                             codes[i] = 149;
                         }
-                        if (codes_t[i] == "Flip")
+                        if (codes_t200[i] == "Flip")
                         {
                             codes[i] = 144;
                         }
                         for (int j = 0; j < sim3.Length; j++)
-                            if (codes_t[i] == sim3[j])
+                            if (codes_t200[i] == sim3[j])
                             {
                                 codes[i] = 0;
                                 undefired++;
@@ -3235,64 +4485,191 @@ namespace MinesProgram
 
                 }
 
-                
+
+
+
+                /*for (int i = 0; i < codes.Length; i++)
+                {
+                    if (i < codes_text.Length)
+                    {
+                        codes[i] = 0;
+                        if (codes_text[i] == "L")
+                        {
+                            //codes[i] = 40;
+                            codes[i] = 123;
+                        }
+                        if (codes_text[i] == "S")
+                        {
+                            codes[i] = 6;
+                        }
+                        if (codes_text[i] == "Z0")
+                        {
+                            codes[i] = 8;
+                        }
+                        if (codes_text[i] == "G0")
+                        {
+                            //codes[i] = 139;
+                            codes[i] = 120;
+                        }
+                    }
+
+                }*/
 
                 ////
 
-                string[] line = { "@" };
-                int s2 = 0;
-                for (int j = 0; j < code_labels.Length; j++)
-                {
-                    if (j < newStr.Length && code_labels[j]!=null)
-                    {
+                string[] t10 = new string[16 * 12 * 16];
+                string[] t22 = new string[16 * 12 * 16];
 
-                        if (code_labels[j].IndexOf(line[0]) > 0 )
+                for (int i = 0; i < 16; i++)
+                {
+                    for (int j = 0; j < 12; j++)
+                    {
+                        for (int k = 0; k < 16; k++)
                         {
-                            newStr[s2] = j;
-                            newStr2[s2] = code_labels[j];
+
+                            //newStr[i * 16 * 12 + j * 16 + k] = -1;
+                            //newStr2[i * 16 * 12 + j * 16 + k] = "0";
+                            t10[i * 16 * 12 + j * 16 + k] = "-1";
+                            t22[i * 16 * 12 + j * 16 + k] = "-1";
                         }
-                        s2++;
                     }
                 }
+                
+                ////
+                string[] line = { "@" };
+                int s20 = 0;
+                //for (int j = 0; j < code_labels5.Length; j++)
+                //{
+                //    if (j < newStr.Length && code_labels5[j] != null)
+                //    {
+
+                //        if (code_labels5[j].IndexOf(line[0]) > 0)
+                //        {
+                //            newStr[s20] = j;
+                //            newStr2[s20] = code_labels5[j];
+                //        }
+                //        s20++;
+                //    }
+                //}
+
+
+
+                for (int j = 0; j < code_labels5.Length; j++)
+                {
+                    if (j < newStr.Length && code_labels5[j] != null)
+                    {
+
+                        if (code_labels5[j].IndexOf(line[0]) > 0)
+                        {
+                            //newStr[s20] = j;
+                            newStr2[j] = code_labels5[j];
+                        }
+                        //s20++;
+                    }
+                }
+                
+                //richTextBox3.Text = String.Join(";", code_labels5);
                 for (int i = 0; i < newStr2.Length; i++)
                 {
-                    //if (i < code_labels.Length)
+                    //if (i < code_labels5.Length)
                     //{
                     //if (i < newStr3.Length)
                     // {
                     if (newStr2[i] != "0")
                     {
                         newStr3 = newStr2[i].Split('@');
-                        t1[i] = newStr3[0];
-                        t2[i] = newStr3[1];
+                        t10[i] = newStr3[0];
+                        t22[i] = newStr3[1];
                     }
                     //
 
                     //}
                     //}
                 }
-                for (int i = 0; i < code_labels.Length; i++)
-                {
-                    if (i < t1.Length)
-                    {
-                        if (t1[i] != "-1")
-                        {
-                            code_labels[i] = t1[i];
-                        }
-                    }
-                }
-                for (int i = 0; i < nums.Length; i++)
-                {
-                    if (i < t2.Length)
-                    {
-                        if (t2[i] != "-1")
-                        {
-                            nums[i] = int.Parse(t2[i]);
-                        }
-                    }
-                }
                 
-                ////
+                int z7 = 0;
+                /*    
+
+                for (int i = 0; i < code_labels5.Length; i++)
+                {
+                    if (i < t10.Length)
+                    {
+                        if (t10[i] != "-1")
+                        {
+                            code_labels5[i] = t10[i];
+                        }
+                    }
+                }
+
+                */
+
+                for (int i = 0; i < code_labels5.Length; i++)
+                {
+                    if (z7 < t10.Length)
+                    {
+                        if (t10[z7] != "-1")
+                        {
+                            if (code_labels5[i] != null)
+                            {
+                                code_labels5[i] = t10[z7];
+                                z7++;
+                            }
+
+                        }
+                    }
+                }
+
+                
+
+
+
+                int z8 = 0;
+
+
+                //for (int i = 0; i < nums.Length; i++)
+                //{
+                //    if (i < t22.Length)
+                //    {
+                //        if (t22[i] != "-1")
+                //        {
+                //            nums[i] = int.Parse(t22[i]);
+                //        }
+                //    }
+                //}
+
+
+                 for (int i = 0; i < codes.Length; i++)
+                 {
+                     if (z8 < t22.Length)
+                     {
+                         if (t22[z8] != "-1")
+                         {
+                             if (codes[i] == 123 || codes[i] == 120|| codes[i] == 119)
+                             {
+                                 nums[i] = int.Parse(t22[z8]);
+                                
+                             }
+                            /*if (codes[i] == 120)
+                            {
+                                nums[i] = int.Parse(t22[z8++]);
+
+                            }
+                            if (codes[i] == 119)
+                            {
+                                nums[i] = int.Parse(t22[z8++]);
+
+                            }*/
+                            z8++;
+                            //if (codes[i] == 120)
+                            //{
+                            //  nums[i] = int.Parse(t22[z8++]);
+
+                            //}
+                        }
+                     }
+                 }
+                //richTextBox3.Text = string.Join(";", nums);
+                //
 
 
                 int num = 0; int num2 = 0;
@@ -3307,9 +4684,9 @@ namespace MinesProgram
                 {
                     num = 1;
                 }
-                for (int j = 0; j < code_labels.Length; j++)
+                for (int j = 0; j < code_labels5.Length; j++)
                 {
-                    if (code_labels[j] != "0" || nums[j] != 0)
+                    if (code_labels5[j] != "0" || nums[j] != 0)
                     {
                         num2 = j;
                     }
@@ -3319,7 +4696,7 @@ namespace MinesProgram
                     num2 = 1;
                 }
                 string[] array = new string[num2 + 1];
-                Array.Copy(code_labels, array, num2 + 1);
+                Array.Copy(code_labels5, array, num2 + 1);
                 for (int k = 0; k < array.Length; k++)
                 {
                     if (nums[k] != 0)
@@ -3343,8 +4720,11 @@ namespace MinesProgram
                 Buffer.BlockCopy(bytes, 0, array4, bytes2.Length + array3.Length, bytes.Length);
 
                 string result;
+                //richTextBox1.Text = String.Join(";", code_labels);
                 result = Convert.ToBase64String(SevenZipHelper.Compress(array4));
 
+
+                
                 //for (int i = 0; i < codes_text.Length; i++)
                 //{
 
@@ -3400,8 +4780,16 @@ namespace MinesProgram
                     undefired = 0;
                 }
 
+                string[] tes1 = new string[16 * 12 * 16];
 
-                richTextBox3.Text = string.Join(";",result);
+                for(int i = 0; i<tes1.Length; i++)
+                {
+                    tes1[i] = "L(100)";
+                }
+                //richTextBox3.Text = string.Join(";", codes_t.Length);
+                //richTextBox3.Text = string.Join(";", code_labels.Length);
+                richTextBox3.Text = string.Join(";", result);
+                // richTextBox3.Text = string.Join(";",nums);
 
             }                
         }
@@ -3443,6 +4831,55 @@ namespace MinesProgram
                 }
             }
             else test2 = false;
+
+        }
+
+        private void textBox3_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void saveAsOwnTextFormat(string filename, string textToSave)
+
+        {
+
+            try
+
+            {
+
+                //Создаём или перезаписываем существующий файл
+
+                StreamWriter sw = File.CreateText(filename);
+
+                //Записываем текст в поток файла
+
+                sw.WriteLine(textToSave);
+
+                //Закрываем файл
+
+                sw.Close();
+
+            }
+
+            catch (Exception ex)
+
+            {
+
+                MessageBox.Show
+
+                ("Error: " + ex.Message);
+
+            }
+
+        }
+
+        private void button10_Click(object sender, EventArgs e)
+        {
+            saveAsOwnTextFormat("program.txt", "Программа: "+ textBox3.Text+"\n\n"+"Старый код:\n\n" +richTextBox2.Text+"\n\nНовый код:\n\n" + richTextBox3.Text);
+        }
+
+        private void label10_Click(object sender, EventArgs e)
+        {
 
         }
     }

@@ -43,6 +43,7 @@
             this.button2 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.button10 = new System.Windows.Forms.Button();
             this.checkBox1 = new System.Windows.Forms.CheckBox();
             this.linkLabel1 = new System.Windows.Forms.LinkLabel();
             this.label8 = new System.Windows.Forms.Label();
@@ -61,7 +62,7 @@
             this.richTextBox1 = new System.Windows.Forms.RichTextBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.button10 = new System.Windows.Forms.Button();
+            this.label10 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -71,6 +72,7 @@
             // 
             // panel1
             // 
+            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.panel1.Controls.Add(this.textBox3);
             this.panel1.Controls.Add(this.label9);
             this.panel1.Controls.Add(this.button8);
@@ -87,22 +89,20 @@
             // 
             // textBox3
             // 
-            this.textBox3.Enabled = false;
-            this.textBox3.Location = new System.Drawing.Point(544, 14);
+            this.textBox3.Location = new System.Drawing.Point(543, 10);
             this.textBox3.Name = "textBox3";
             this.textBox3.Size = new System.Drawing.Size(178, 27);
             this.textBox3.TabIndex = 4;
-            this.textBox3.Visible = false;
+            this.textBox3.TextChanged += new System.EventHandler(this.textBox3_TextChanged);
             // 
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(281, 15);
+            this.label9.Location = new System.Drawing.Point(281, 12);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(257, 21);
             this.label9.TabIndex = 3;
             this.label9.Text = "Введите название программы:";
-            this.label9.Visible = false;
             // 
             // button8
             // 
@@ -231,6 +231,8 @@
             // 
             // panel3
             // 
+            this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
+            this.panel3.Controls.Add(this.label10);
             this.panel3.Controls.Add(this.button10);
             this.panel3.Controls.Add(this.checkBox1);
             this.panel3.Controls.Add(this.linkLabel1);
@@ -244,6 +246,17 @@
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(231, 410);
             this.panel3.TabIndex = 2;
+            // 
+            // button10
+            // 
+            this.button10.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button10.Location = new System.Drawing.Point(34, 313);
+            this.button10.Name = "button10";
+            this.button10.Size = new System.Drawing.Size(171, 77);
+            this.button10.TabIndex = 7;
+            this.button10.Text = "Сохранить программу в текстовый файл";
+            this.button10.UseVisualStyleBackColor = true;
+            this.button10.Click += new System.EventHandler(this.button10_Click);
             // 
             // checkBox1
             // 
@@ -315,6 +328,7 @@
             // 
             // panel4
             // 
+            this.panel4.BackColor = System.Drawing.Color.Purple;
             this.panel4.Controls.Add(this.button9);
             this.panel4.Controls.Add(this.textBox2);
             this.panel4.Controls.Add(this.richTextBox3);
@@ -418,7 +432,7 @@
             this.richTextBox1.BackColor = System.Drawing.SystemColors.InactiveCaptionText;
             this.richTextBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.richTextBox1.ForeColor = System.Drawing.Color.White;
-            this.richTextBox1.Location = new System.Drawing.Point(80, 251);
+            this.richTextBox1.Location = new System.Drawing.Point(85, 251);
             this.richTextBox1.Name = "richTextBox1";
             this.richTextBox1.ReadOnly = true;
             this.richTextBox1.Size = new System.Drawing.Size(354, 147);
@@ -447,15 +461,17 @@
             this.label2.TabIndex = 0;
             this.label2.Text = "Версия 1.0";
             // 
-            // button10
+            // label10
             // 
-            this.button10.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button10.Location = new System.Drawing.Point(34, 313);
-            this.button10.Name = "button10";
-            this.button10.Size = new System.Drawing.Size(171, 77);
-            this.button10.TabIndex = 7;
-            this.button10.Text = "Сохранить программу в текстовый файл";
-            this.button10.UseVisualStyleBackColor = true;
+            this.label10.AutoSize = true;
+            this.label10.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
+            this.label10.ForeColor = System.Drawing.Color.Yellow;
+            this.label10.Location = new System.Drawing.Point(31, 289);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(50, 21);
+            this.label10.TabIndex = 8;
+            this.label10.Text = "new*";
+            this.label10.Click += new System.EventHandler(this.label10_Click);
             // 
             // Form1
             // 
@@ -518,8 +534,9 @@
         private System.Windows.Forms.LinkLabel linkLabel1;
         private System.Windows.Forms.TextBox textBox3;
         private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.CheckBox checkBox1;
         private System.Windows.Forms.Button button10;
+        private System.Windows.Forms.CheckBox checkBox1;
+        private System.Windows.Forms.Label label10;
     }
 }
 
