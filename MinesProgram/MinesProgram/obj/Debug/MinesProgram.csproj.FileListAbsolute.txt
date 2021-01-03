@@ -97,3 +97,14 @@ C:\Users\Nolic\Documents\GitHub\mines_programm\mines_programm\MinesProgram\Mines
 C:\Users\Nolic\Documents\GitHub\mines_programm\mines_programm\MinesProgram\MinesProgram\bin\Debug\MinesProgram.exe
 C:\Users\Nolic\Documents\GitHub\mines_programm\mines_programm\MinesProgram\MinesProgram\bin\Debug\MinesProgram.pdb
 C:\Users\Nolic\Documents\GitHub\mines_programm\mines_programm\MinesProgram\MinesProgram\obj\Debug\MinesProgram.csproj.CopyComplete
+D:\mines_programm\MinesProgram\MinesProgram\bin\Debug\MinesProgram.exe.config
+D:\mines_programm\MinesProgram\MinesProgram\bin\Debug\MinesProgram.exe
+D:\mines_programm\MinesProgram\MinesProgram\bin\Debug\MinesProgram.pdb
+D:\mines_programm\MinesProgram\MinesProgram\obj\Debug\MinesProgram.csprojAssemblyReference.cache
+D:\mines_programm\MinesProgram\MinesProgram\obj\Debug\MinesProgram.Form1.resources
+D:\mines_programm\MinesProgram\MinesProgram\obj\Debug\MinesProgram.Properties.Resources.resources
+D:\mines_programm\MinesProgram\MinesProgram\obj\Debug\MinesProgram.csproj.GenerateResource.cache
+D:\mines_programm\MinesProgram\MinesProgram\obj\Debug\MinesProgram.csproj.CoreCompileInputs.cache
+D:\mines_programm\MinesProgram\MinesProgram\obj\Debug\MinesProgram.csproj.CopyComplete
+D:\mines_programm\MinesProgram\MinesProgram\obj\Debug\MinesProgram.exe
+D:\mines_programm\MinesProgram\MinesProgram\obj\Debug\MinesProgram.pdb

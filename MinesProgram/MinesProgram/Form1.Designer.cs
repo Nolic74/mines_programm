@@ -53,6 +53,7 @@
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.panel4 = new System.Windows.Forms.Panel();
+            this.button12 = new System.Windows.Forms.Button();
             this.button9 = new System.Windows.Forms.Button();
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.richTextBox3 = new System.Windows.Forms.RichTextBox();
@@ -342,6 +343,7 @@
             // panel4
             // 
             this.panel4.BackColor = System.Drawing.Color.Purple;
+            this.panel4.Controls.Add(this.button12);
             this.panel4.Controls.Add(this.button9);
             this.panel4.Controls.Add(this.textBox2);
             this.panel4.Controls.Add(this.richTextBox3);
@@ -357,6 +359,18 @@
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(523, 460);
             this.panel4.TabIndex = 3;
+            // 
+            // button12
+            // 
+            this.button12.Enabled = false;
+            this.button12.Location = new System.Drawing.Point(199, 426);
+            this.button12.Name = "button12";
+            this.button12.Size = new System.Drawing.Size(75, 23);
+            this.button12.TabIndex = 6;
+            this.button12.Text = "button12";
+            this.button12.UseVisualStyleBackColor = true;
+            this.button12.Visible = false;
+            this.button12.Click += new System.EventHandler(this.button12_Click);
             // 
             // button9
             // 
@@ -538,6 +552,7 @@
         private System.Windows.Forms.Button button10;
         private System.Windows.Forms.CheckBox checkBox1;
         private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.Button button12;
     }
 }
 

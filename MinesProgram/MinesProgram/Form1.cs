@@ -31,7 +31,7 @@ namespace MinesProgram
             label4.Visible = true;
             label6.Visible = true;
             label5.Visible = true;
-            richTextBox1.Text = "25.10.2020\n\n              Новое в сборке 1.00.3\n\n - Релиз программы\n - Выход из закрытой беты\n\n";
+            richTextBox1.Text = "03.01.2020\n\n              Новое в сборке 1.00.0\n\n - Релиз программы\n - Выход из закрытой беты\n\n";
             textBox1.Text = "Введите программу";//подсказка
             textBox1.ForeColor = Color.Gray;
             textBox2.Text = "Введите программу";//подсказка
@@ -3063,11 +3063,11 @@ namespace MinesProgram
 
             {
 
-                
+                string dir = Path.GetDirectoryName(Application.ExecutablePath);
 
-                StreamWriter sw = File.CreateText(filename);
+                StreamWriter sw = File.CreateText(@dir +"\\"+ filename);
+                //StreamWriter sw = new StreamWriter(File.Create(Path.Combine(dir,filename)));
 
-                
 
                 sw.WriteLine(textToSave);
 
@@ -3086,17 +3086,33 @@ namespace MinesProgram
                 ("Error: " + ex.Message);
 
             }
-
+            
         }
 
         private void button10_Click(object sender, EventArgs e)
         {
-            saveAsOwnTextFormat("program.txt", "Программа: " + textBox3.Text + "\n\n" + "Старый код:\n\n" + richTextBox2.Text + "\n\nНовый код:\n\n" + richTextBox3.Text);
+            string text = "";
+            text = textBox3.Text;
+            string dir = Path.GetDirectoryName(Application.ExecutablePath);
+            //string dir = Path.GetTempPath();
+            string test = ""; //string dir = Path.GetPathRoot(Application.ExecutablePath);
+            test = dir + "\\" + text + ".txt";
+            
+
+            saveAsOwnTextFormat(text+".txt", "Программа: " + textBox3.Text + "\n\n" + "Старый код:\n\n" + richTextBox2.Text + "\n\nНовый код:\n\n" + richTextBox3.Text);
+            //richTextBox3.Text = string.Join(";", test);
+
         }
 
         private void label10_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void button12_Click(object sender, EventArgs e)
+        {
+            Form2 newForm = new Form2();
+            newForm.Show();
         }
     }
 }
